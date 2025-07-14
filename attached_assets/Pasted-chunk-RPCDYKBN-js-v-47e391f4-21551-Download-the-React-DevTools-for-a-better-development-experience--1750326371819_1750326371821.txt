@@ -1,0 +1,35 @@
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+useNotifications.ts:103 WebSocket connection to 'wss://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/ws' failed: WebSocket is closed before the connection is established.
+(anonymous) @ useNotifications.ts:103
+safelyCallDestroy @ chunk-RPCDYKBN.js?v=47e391f4:16748
+commitHookEffectListUnmount @ chunk-RPCDYKBN.js?v=47e391f4:16875
+commitPassiveUnmountInsideDeletedTreeOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18283
+commitPassiveUnmountEffectsInsideOfDeletedTree_begin @ chunk-RPCDYKBN.js?v=47e391f4:18245
+commitPassiveUnmountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18181
+commitPassiveUnmountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18169
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19489
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:19328
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+useNotifications.ts:96 ❌ WebSocket hatası: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+websocket.onerror @ useNotifications.ts:96
+useNotifications.ts:84 📡 Bildirim sistemi bağlantısı kesildi
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:09 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:12 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:14 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:16 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:18 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:20 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:43:22 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:44:07 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:45:07 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:45:55 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:45:55 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:45:57 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:45:59 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:46:02 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:46:04 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:46:06 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 2:46:07 AM

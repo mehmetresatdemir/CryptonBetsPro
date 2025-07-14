@@ -1,0 +1,65 @@
+api/auth/me:1 
+            
+            
+           Failed to load resource: the server responded with a status of 401 ()
+index-KC3TGNhd.js:314 API İsteği: POST /api/auth/login Object
+index-KC3TGNhd.js:314 API Yanıtı: Status 200
+index-KC3TGNhd.js:314 API Yanıt Verileri: Object
+index-KC3TGNhd.js:314 🔐 TokenService setToken çağrıldı: eyJhbGciOiJIUzI1NiIs...
+index-KC3TGNhd.js:454 🚀 INSTANT slot loading - TÜM oyunlar tek istekte...
+index-KC3TGNhd.js:454 ⚡ INSTANT SUCCESS: 22515 slot oyunu yüklendi
+index-KC3TGNhd.js:454 📊 Sağlayıcılar: 70
+index-KC3TGNhd.js:441 Oyun başlatma hatası: Error: Oyunlar sadece cryptonbets1.com domain üzerinden çalışır. Production deployment gerekli.
+    at index-KC3TGNhd.js:441:881
+(anonymous) @ index-KC3TGNhd.js:441
+index-KC3TGNhd.js:441 Oyun başlatma hatası: Error: Insufficient balance. Please deposit funds to play with real money.
+    at index-KC3TGNhd.js:441:881
+(anonymous) @ index-KC3TGNhd.js:441
+index-KC3TGNhd.js:441 Oyun başlatma hatası: Error: Insufficient balance. Please deposit funds to play with real money.
+    at index-KC3TGNhd.js:441:881
+(anonymous) @ index-KC3TGNhd.js:441
+Promise.catch
+x @ index-KC3TGNhd.js:441
+US @ index-KC3TGNhd.js:38
+$S @ index-KC3TGNhd.js:38
+KS @ index-KC3TGNhd.js:38
+D0 @ index-KC3TGNhd.js:38
+sb @ index-KC3TGNhd.js:38
+(anonymous) @ index-KC3TGNhd.js:38
+jh @ index-KC3TGNhd.js:41
+Pv @ index-KC3TGNhd.js:38
+Bd @ index-KC3TGNhd.js:38
+Zf @ index-KC3TGNhd.js:38
+c3 @ index-KC3TGNhd.js:38
+index-KC3TGNhd.js:441 Oyun başlatma hatası: Error: Insufficient balance. Please deposit funds to play with real money.
+    at index-KC3TGNhd.js:441:881
+(anonymous) @ index-KC3TGNhd.js:441
+Promise.catch
+x @ index-KC3TGNhd.js:441
+US @ index-KC3TGNhd.js:38
+$S @ index-KC3TGNhd.js:38
+KS @ index-KC3TGNhd.js:38
+D0 @ index-KC3TGNhd.js:38
+sb @ index-KC3TGNhd.js:38
+(anonymous) @ index-KC3TGNhd.js:38
+jh @ index-KC3TGNhd.js:41
+Pv @ index-KC3TGNhd.js:38
+Bd @ index-KC3TGNhd.js:38
+Zf @ index-KC3TGNhd.js:38
+c3 @ index-KC3TGNhd.js:38
+index-KC3TGNhd.js:441 Oyun başlatma hatası: Error: Insufficient balance. Please deposit funds to play with real money.
+    at index-KC3TGNhd.js:441:881
+(anonymous) @ index-KC3TGNhd.js:441
+Promise.catch
+x @ index-KC3TGNhd.js:441
+US @ index-KC3TGNhd.js:38
+$S @ index-KC3TGNhd.js:38
+KS @ index-KC3TGNhd.js:38
+D0 @ index-KC3TGNhd.js:38
+sb @ index-KC3TGNhd.js:38
+(anonymous) @ index-KC3TGNhd.js:38
+jh @ index-KC3TGNhd.js:41
+Pv @ index-KC3TGNhd.js:38
+Bd @ index-KC3TGNhd.js:38
+Zf @ index-KC3TGNhd.js:38
+c3 @ index-KC3TGNhd.js:38

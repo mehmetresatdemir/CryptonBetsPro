@@ -1,0 +1,155 @@
+client:536 WebSocket connection to 'wss://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/?token=FO6vkA7X6DTY' failed: 
+setupWebSocket @ client:536
+(anonymous) @ client:531
+client:536 Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=FO6vkA7X6DTY' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+setupWebSocket @ client:536
+fallback @ client:509
+(anonymous) @ client:555
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:17:54 AM
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:17:56 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:17:58 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:01 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:03 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:05 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:07 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:09 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:11 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:13 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:15 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:17 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:19 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:21 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:23 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:25 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:27 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:29 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:31 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:33 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:35 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:37 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:39 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:41 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:43 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:45 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:47 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:49 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:51 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:53 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:55 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:57 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:18:59 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:01 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:03 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:04 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:06 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:08 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:10 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:12 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:15 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:17 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:19 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:21 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:23 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:25 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:27 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:29 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:31 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:33 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:35 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:37 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:40 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:41 AM
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:19:43 AM
+ 📊 Anlık veriler güncellendi: 3:19:45 AM
+  GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/stats 502 (Bad Gateway)
+fetchStats @ Dashboard.tsx:57
+setInterval
+(anonymous) @ Dashboard.tsx:75
+commitHookEffectListMount @ chunk-RPCDYKBN.js:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js:9119
+commitRootImpl @ chunk-RPCDYKBN.js:19432
+commitRoot @ chunk-RPCDYKBN.js:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js:18718
+workLoop @ chunk-RPCDYKBN.js:197
+flushWork @ chunk-RPCDYKBN.js:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js:384
+  GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/stats 502 (Bad Gateway)
+fetchStats @ Dashboard.tsx:57
+setInterval
+(anonymous) @ Dashboard.tsx:75
+commitHookEffectListMount @ chunk-RPCDYKBN.js:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js:9119
+commitRootImpl @ chunk-RPCDYKBN.js:19432
+commitRoot @ chunk-RPCDYKBN.js:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js:18718
+workLoop @ chunk-RPCDYKBN.js:197
+flushWork @ chunk-RPCDYKBN.js:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js:384
+  GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/stats 502 (Bad Gateway)
+fetchStats @ Dashboard.tsx:57
+setInterval
+(anonymous) @ Dashboard.tsx:75
+commitHookEffectListMount @ chunk-RPCDYKBN.js:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js:9119
+commitRootImpl @ chunk-RPCDYKBN.js:19432
+commitRoot @ chunk-RPCDYKBN.js:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js:18718
+workLoop @ chunk-RPCDYKBN.js:197
+flushWork @ chunk-RPCDYKBN.js:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js:384
+ 📊 Anlık veriler güncellendi: 3:19:53 AM
+ 📊 Anlık veriler güncellendi: 3:20:02 AM
+ 📊 Anlık veriler güncellendi: 3:20:04 AM
+ 📊 Anlık veriler güncellendi: 3:20:04 AM
+ 📊 Anlık veriler güncellendi: 3:20:04 AM
+ 📊 Anlık veriler güncellendi: 3:20:04 AM
+ 📊 Anlık veriler güncellendi: 3:20:06 AM
+ 📊 Anlık veriler güncellendi: 3:20:08 AM
+ 📊 Anlık veriler güncellendi: 3:20:09 AM
+ 📊 Anlık veriler güncellendi: 3:20:11 AM
+ 📊 Anlık veriler güncellendi: 3:20:13 AM
+ 📊 Anlık veriler güncellendi: 3:21:09 AM
+ 📊 Anlık veriler güncellendi: 3:22:09 AM
+ 📊 Anlık veriler güncellendi: 3:22:13 AM
+ 📊 Anlık veriler güncellendi: 3:22:15 AM
+ 📊 Anlık veriler güncellendi: 3:22:17 AM
+ 📊 Anlık veriler güncellendi: 3:22:19 AM
+ 📊 Anlık veriler güncellendi: 3:22:21 AM
+ 📊 Anlık veriler güncellendi: 3:22:22 AM
+ 📊 Anlık veriler güncellendi: 3:22:24 AM
+ 📊 Anlık veriler güncellendi: 3:22:26 AM
+ 📊 Anlık veriler güncellendi: 3:22:28 AM
+ 📊 Anlık veriler güncellendi: 3:22:30 AM
+ 📊 Anlık veriler güncellendi: 3:22:32 AM
+ 📊 Anlık veriler güncellendi: 3:22:34 AM
+ 📊 Anlık veriler güncellendi: 3:22:36 AM

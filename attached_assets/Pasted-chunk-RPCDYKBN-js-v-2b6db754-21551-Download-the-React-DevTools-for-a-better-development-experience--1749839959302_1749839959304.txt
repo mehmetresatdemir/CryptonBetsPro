@@ -1,0 +1,240 @@
+chunk-RPCDYKBN.js?v=2b6db754:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+/api/auth/me:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 (Not Found)
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Games.tsx:207 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Games.tsx:207 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+chunk-RPCDYKBN.js?v=2b6db754:14032 The above error occurred in the <_c5> component:
+
+    at _c5 (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:183:3)
+    at div
+    at div
+    at main
+    at div
+    at div
+    at AdminLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/admin/AdminLayout.tsx:53:24)
+    at Games (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:315:21)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=gYHk18CV8j6f_Ra_5yiDW:112:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=2b6db754:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=2b6db754:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=2b6db754:2805:3)
+    at App
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=2b6db754:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=2b6db754:14032
+client:536 WebSocket connection to 'wss://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/?token=RVjWYoShM1qx' failed: 
+setupWebSocket @ client:536
+errorHandler.ts:21 Unhandled promise rejection: SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=RVjWYoShM1qx' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+(anonymous) @ errorHandler.ts:21
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Games.tsx:207 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Games.tsx:207 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+chunk-RPCDYKBN.js?v=2b6db754:14032 The above error occurred in the <_c5> component:
+
+    at _c5 (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:183:3)
+    at div
+    at div
+    at main
+    at div
+    at div
+    at AdminLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/admin/AdminLayout.tsx:53:24)
+    at Games (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:315:21)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=gYHk18CV8j6f_Ra_5yiDW:112:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=2b6db754:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=2b6db754:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=2b6db754:2805:3)
+    at App
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=2b6db754:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=2b6db754:14032
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Games.tsx:207 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Games.tsx:207 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:207:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+chunk-RPCDYKBN.js?v=2b6db754:14032 The above error occurred in the <_c5> component:
+
+    at _c5 (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:183:3)
+    at div
+    at div
+    at main
+    at div
+    at div
+    at AdminLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/admin/AdminLayout.tsx:53:24)
+    at Games (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:315:21)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=gYHk18CV8j6f_Ra_5yiDW:112:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=2b6db754:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=2b6db754:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=2b6db754:2805:3)
+    at App
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=2b6db754:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=2b6db754:14032

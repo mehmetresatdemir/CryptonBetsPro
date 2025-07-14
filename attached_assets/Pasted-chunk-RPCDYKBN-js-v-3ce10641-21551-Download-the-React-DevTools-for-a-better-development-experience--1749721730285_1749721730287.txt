@@ -1,0 +1,352 @@
+chunk-RPCDYKBN.js?v=3ce10641:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+SlotPage.tsx:182 🚀 INSTANT slot loading - TÜM oyunlar tek istekte...
+SlotPage.tsx:197 ⚡ INSTANT SUCCESS: 22515 slot oyunu yüklendi
+SlotPage.tsx:198 📊 Sağlayıcılar: 70
+GameDetailModal.tsx:303 Game response received: {success: true, url: 'https://gis.slotegrator.com/api/index.php/v1/games…E9NNy94cVV1b1F1RHBYYTdGOGg0OGpWWE80QlFqM09BPT0%3D', mode: 'real', currency: 'TRY', message: 'Gerçek para oyunu başlatıldı'}
+GameDetailModal.tsx:574 Oyun iframe yüklendi
+vcd15cbe7772f49c399c6a5babf22c1241717689176015:1 
+            
+            
+           POST https://run.evoplay.games/cdn-cgi/rum? 404 (Not Found)
+t.sendObjectBeacon @ vcd15cbe7772f49c399c6a5babf22c1241717689176015:1
+P @ vcd15cbe7772f49c399c6a5babf22c1241717689176015:1
+R @ vcd15cbe7772f49c399c6a5babf22c1241717689176015:1
+setTimeout
+(anonymous) @ vcd15cbe7772f49c399c6a5babf22c1241717689176015:1
+index.js?version=0.61.0:16013 Texture added to the cache with an id [store_icon] that already had an entry
+Texture.addToCache @ index.js?version=0.61.0:16013
+Spritesheet._processFrames @ index.js?version=0.61.0:34695
+Spritesheet.parse @ index.js?version=0.61.0:34656
+onImageLoad @ index.js?version=0.61.0:34821
+dispatch @ index.js?version=0.61.0:24472
+(anonymous) @ index.js?version=0.61.0:26802
+next @ index.js?version=0.61.0:24593
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+ImageParser.use @ index.js?version=0.61.0:69694
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+use @ index.js?version=0.61.0:47252
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+SpritesheetLoader.use @ index.js?version=0.61.0:34805
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+BitmapFontLoader.use @ index.js?version=0.61.0:37642
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+TextureLoader.use @ index.js?version=0.61.0:26950
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+parsing @ index.js?version=0.61.0:26132
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+eachSeries @ index.js?version=0.61.0:24606
+_onLoad @ index.js?version=0.61.0:26799
+dispatch @ index.js?version=0.61.0:24472
+_finish @ index.js?version=0.61.0:25359
+complete @ index.js?version=0.61.0:25178
+controller.js:169 WRAPPER 12-06-25 02:48:25.563 [undefined] Logger set to ERROR, WARNING, INFO, DEBUG
+api.js:26  Evoplay Wrapper 1.1.169
+controller.js:169 WRAPPER 12-06-25 02:48:25.990 [ModulesLogicController v2] init
+controller.js:169 WRAPPER 12-06-25 02:48:25.993 [ModulesTransportService] init
+controller.js:169 WRAPPER 12-06-25 02:48:25.996 [ModulesTransportCommunicatorXhr] READY 
+controller.js:169 WRAPPER 12-06-25 02:48:26.1 [OpenApiHelper] helper inited, service url: https://api-kube.evoplay.games/tournament-service
+controller.js:169 WRAPPER 12-06-25 02:48:26.3 [OpenApiHelper] helper inited, service url: https://api-kube.evoplay.games/notification-service
+controller.js:169 WRAPPER 12-06-25 02:48:26.4 [ModulesTransportService] init
+controller.js:169 WRAPPER 12-06-25 02:48:26.20 [ModulesTransportCommunicatorIo] CREATED 
+controller.js:169 WRAPPER 12-06-25 02:48:26.23 [ComponentsRealityCheckController] init
+controller.ts:60 Feature flags __VUE_OPTIONS_API__, __VUE_PROD_DEVTOOLS__, __VUE_PROD_HYDRATION_MISMATCH_DETAILS__ are not explicitly defined. You are running the esm-bundler build of Vue, which expects these compile-time feature flags to be globally injected via the bundler config in order to get better tree-shaking in the production bundle.
+
+For more details, see https://link.vuejs.org/feature-flags.
+initFeatureFlags @ runtime-core.esm-bundler.js:4414
+baseCreateRenderer @ runtime-core.esm-bundler.js:4431
+createRenderer @ runtime-core.esm-bundler.js:4424
+ensureRenderer @ runtime-dom.esm-bundler.js:1657
+createApp @ runtime-dom.esm-bundler.js:1671
+init @ controller.ts:60
+init @ controller.ts:100
+init @ api.js:39
+(anonymous) @ index.js?version=0.61.0:1
+Promise.then
+onStartEnter @ index.js?version=0.61.0:1
+handler @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+playHandlers @ index.js?version=0.61.0:1
+play @ index.js?version=0.61.0:1
+enter @ index.js?version=0.61.0:1
+enterState @ index.js?version=0.61.0:1
+setCurrentState @ index.js?version=0.61.0:1
+start @ index.js?version=0.61.0:1
+startGame @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+s @ index.js?version=0.61.0:1
+load @ index.js?version=0.61.0:1
+loadResources @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+loadResources @ index.js?version=0.61.0:1
+loadGame @ index.js?version=0.61.0:1
+loadGameResources @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createComponents @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createFSM @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createLayers @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+dispatch @ index.js?version=0.61.0:24472
+(anonymous) @ index.js?version=0.61.0:26802
+next @ index.js?version=0.61.0:24593
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+ImageParser.use @ index.js?version=0.61.0:69694
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+use @ index.js?version=0.61.0:47252
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+SpritesheetLoader.use @ index.js?version=0.61.0:34805
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+BitmapFontLoader.use @ index.js?version=0.61.0:37642
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+TextureLoader.use @ index.js?version=0.61.0:26950
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+parsing @ index.js?version=0.61.0:26132
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+eachSeries @ index.js?version=0.61.0:24606
+_onLoad @ index.js?version=0.61.0:26799
+dispatch @ index.js?version=0.61.0:24472
+_finish @ index.js?version=0.61.0:25359
+complete @ index.js?version=0.61.0:25178
+_xhrOnLoad @ index.js?version=0.61.0:25670
+XMLHttpRequest.send
+_loadXhr @ index.js?version=0.61.0:25478
+load @ index.js?version=0.61.0:25281
+(anonymous) @ index.js?version=0.61.0:26753
+next @ index.js?version=0.61.0:24593
+(anonymous) @ index.js?version=0.61.0:26746
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+(anonymous) @ index.js?version=0.61.0:26743
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+eachSeries @ index.js?version=0.61.0:24606
+_loadResource @ index.js?version=0.61.0:26742
+Loader._boundLoadResource @ index.js?version=0.61.0:26252
+process @ index.js?version=0.61.0:24685
+resume @ index.js?version=0.61.0:24713
+load @ index.js?version=0.61.0:26677
+loadFSM @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createCanvas @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+series @ index.js?version=0.61.0:1
+run @ index.js?version=0.61.0:1
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+e @ preloadUtils.js?v=1.4.36:1
+onLoad @ preloadUtils.js?v=1.4.36:1
+i.onload @ preloadUtils.js?v=1.4.36:1
+script
+loadScript @ preloadUtils.js?v=1.4.36:1
+loadLogicSources @ preloadUtils.js?v=1.4.36:1
+loadSources @ preloadUtils.js?v=1.4.36:1
+load @ preloadUtils.js?v=1.4.36:1
+await in load
+_startBasePreloader @ preloadUtils.js?v=1.4.36:1
+_startLoad @ preloadUtils.js?v=1.4.36:1
+preloadHTML @ preloadUtils.js?v=1.4.36:1
+await in preloadHTML
+onload @ megagreatestcatchbb/?operator=12048&session=5735328868&window=1&demo=0&s=858f66ebd705f4d52cf7b80e9dcea5ed:77
+index.js?version=0.61.0:33140 Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently
+TextMetrics.measureFont @ index.js?version=0.61.0:33140
+TextMetrics.measureText @ index.js?version=0.61.0:32753
+BitmapFont.from @ index.js?version=0.61.0:36737
+(anonymous) @ index.js?version=0.61.0:1
+createFonts @ index.js?version=0.61.0:1
+onInitEnter @ index.js?version=0.61.0:1
+handler @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+playHandlers @ index.js?version=0.61.0:1
+play @ index.js?version=0.61.0:1
+enter @ index.js?version=0.61.0:1
+enterState @ index.js?version=0.61.0:1
+setCurrentState @ index.js?version=0.61.0:1
+goToNextState @ index.js?version=0.61.0:1
+goToNextState @ index.js?version=0.61.0:1
+await in goToNextState
+beginState @ index.js?version=0.61.0:1
+await in beginState
+enterState @ index.js?version=0.61.0:1
+await in enterState
+setCurrentState @ index.js?version=0.61.0:1
+start @ index.js?version=0.61.0:1
+startGame @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+Promise.then
+l @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+s @ index.js?version=0.61.0:1
+load @ index.js?version=0.61.0:1
+loadResources @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+loadResources @ index.js?version=0.61.0:1
+loadGame @ index.js?version=0.61.0:1
+loadGameResources @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createComponents @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createFSM @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createLayers @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+dispatch @ index.js?version=0.61.0:24472
+(anonymous) @ index.js?version=0.61.0:26802
+next @ index.js?version=0.61.0:24593
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+ImageParser.use @ index.js?version=0.61.0:69694
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+use @ index.js?version=0.61.0:47252
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+SpritesheetLoader.use @ index.js?version=0.61.0:34805
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+BitmapFontLoader.use @ index.js?version=0.61.0:37642
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+TextureLoader.use @ index.js?version=0.61.0:26950
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+parsing @ index.js?version=0.61.0:26132
+(anonymous) @ index.js?version=0.61.0:26800
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+eachSeries @ index.js?version=0.61.0:24606
+_onLoad @ index.js?version=0.61.0:26799
+dispatch @ index.js?version=0.61.0:24472
+_finish @ index.js?version=0.61.0:25359
+complete @ index.js?version=0.61.0:25178
+_xhrOnLoad @ index.js?version=0.61.0:25670
+XMLHttpRequest.send
+_loadXhr @ index.js?version=0.61.0:25478
+load @ index.js?version=0.61.0:25281
+(anonymous) @ index.js?version=0.61.0:26753
+next @ index.js?version=0.61.0:24593
+(anonymous) @ index.js?version=0.61.0:26746
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+(anonymous) @ index.js?version=0.61.0:26743
+(anonymous) @ index.js?version=0.61.0:24601
+setTimeout
+next @ index.js?version=0.61.0:24600
+eachSeries @ index.js?version=0.61.0:24606
+_loadResource @ index.js?version=0.61.0:26742
+Loader._boundLoadResource @ index.js?version=0.61.0:26252
+process @ index.js?version=0.61.0:24685
+resume @ index.js?version=0.61.0:24713
+load @ index.js?version=0.61.0:26677
+loadFSM @ index.js?version=0.61.0:1
+(anonymous) @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+createCanvas @ index.js?version=0.61.0:1
+r @ index.js?version=0.61.0:1
+series @ index.js?version=0.61.0:1
+run @ index.js?version=0.61.0:1
+(anonymous) @ preloadUtils.js?v=1.4.36:1
+e @ preloadUtils.js?v=1.4.36:1
+onLoad @ preloadUtils.js?v=1.4.36:1
+i.onload @ preloadUtils.js?v=1.4.36:1
+script
+loadScript @ preloadUtils.js?v=1.4.36:1
+loadLogicSources @ preloadUtils.js?v=1.4.36:1
+loadSources @ preloadUtils.js?v=1.4.36:1
+load @ preloadUtils.js?v=1.4.36:1
+await in load
+_startBasePreloader @ preloadUtils.js?v=1.4.36:1
+_startLoad @ preloadUtils.js?v=1.4.36:1
+preloadHTML @ preloadUtils.js?v=1.4.36:1
+await in preloadHTML
+onload @ megagreatestcatchbb/?operator=12048&session=5735328868&window=1&demo=0&s=858f66ebd705f4d52cf7b80e9dcea5ed:77
+controller.js:169 WRAPPER 12-06-25 02:48:34.305 [ModulesI18nController] vocabulary ready, language is "en", version: 28
+controller.js:169 WRAPPER 12-06-25 02:48:34.609 [ModulesTransportCommunicatorIo] READY 
+controller.js:169 WRAPPER 12-06-25 02:48:37.745 [ModulesI18nController] vocabulary ready, language is "tr", version: 28
+controller.js:169 WRAPPER 12-06-25 02:48:37.753 [ModulesLogicController v2] Logic READY

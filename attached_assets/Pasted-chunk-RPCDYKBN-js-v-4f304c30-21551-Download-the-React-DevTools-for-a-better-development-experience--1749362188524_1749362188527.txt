@@ -1,0 +1,296 @@
+chunk-RPCDYKBN.js?v=4f304c30:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+useDeviceDetection.ts:91 Cihaz algılandı: Tablet
+SlotPage.tsx:179 🎰 TÜM slot oyunları yükleniyor...
+SlotPage.tsx:195 ⚡ 534 TOPLAM slot oyunu HIZLA yüklendi
+api.ts:49 API İsteği: POST /api/auth/login {username: 'test', password: 'password'}
+api.ts:61 API Yanıtı: Status 200
+api.ts:93 API Yanıt Verileri: {user: {…}, token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksI…EwMX0.AGCq4vhULWaKnTNEOeG6La_D5WRCF26dmbPM_D2X3Jg'}
+api.ts:49 API İsteği: POST /api/auth/login {username: undefined, password: undefined}
+api.ts:59 
+            
+            
+           POST https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/api/auth/login 400 (Bad Request)
+apiRequest @ api.ts:59
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:61 API Yanıtı: Status 400
+api.ts:68 API Hata Yanıtı: {error: 'Kullanıcı adı ve şifre gerekli'}
+apiRequest @ api.ts:68
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:80 API JSON Parse Hatası: Error: Kullanıcı adı ve şifre gerekli
+    at apiRequest (api.ts:72:17)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+apiRequest @ api.ts:80
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:101 API İstek Hatası: Error: Sunucu hatası (400): Bad Request
+    at apiRequest (api.ts:81:15)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+apiRequest @ api.ts:101
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+LoginModalFixed.tsx:83 Login hatası: Error: Sunucu hatası (400): Bad Request
+    at apiRequest (api.ts:81:15)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+handleLoginSubmit @ LoginModalFixed.tsx:83
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+client:174 SyntaxError: The requested module '/src/utils/translations/authTranslations.ts?t=1749362101833' does not provide an export named 'authTranslations' (at i18n-master.ts:4:10)
+warnFailedUpdate @ client:174
+fetchUpdate @ client:213
+await in fetchUpdate
+queueUpdate @ client:186
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+client:176 [hmr] Failed to reload /src/contexts/LanguageContext.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+warnFailedUpdate @ client:176
+fetchUpdate @ client:213
+await in fetchUpdate
+queueUpdate @ client:186
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+api.ts:49 API İsteği: POST /api/auth/login {username: 'test', password: 'password'}
+api.ts:61 API Yanıtı: Status 200
+api.ts:93 API Yanıt Verileri: {user: {…}, token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksI…ExNn0.iztd8fIIo_rSA21xo4pRtQjy0FuOPgSbaf_wHyKnYMQ'}
+api.ts:49 API İsteği: POST /api/auth/login {username: undefined, password: undefined}
+api.ts:59 
+            
+            
+           POST https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/api/auth/login 400 (Bad Request)
+apiRequest @ api.ts:59
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:61 API Yanıtı: Status 400
+api.ts:68 API Hata Yanıtı: {error: 'Kullanıcı adı ve şifre gerekli'}
+apiRequest @ api.ts:68
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:80 API JSON Parse Hatası: Error: Kullanıcı adı ve şifre gerekli
+    at apiRequest (api.ts:72:17)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+apiRequest @ api.ts:80
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:101 API İstek Hatası: Error: Sunucu hatası (400): Bad Request
+    at apiRequest (api.ts:81:15)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+apiRequest @ api.ts:101
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+LoginModalFixed.tsx:83 Login hatası: Error: Sunucu hatası (400): Bad Request
+    at apiRequest (api.ts:81:15)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+handleLoginSubmit @ LoginModalFixed.tsx:83
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+client:174 SyntaxError: The requested module '/src/utils/translations/authTranslations.ts?t=1749362101833' does not provide an export named 'authTranslations' (at i18n-master.ts:4:10)
+warnFailedUpdate @ client:174
+fetchUpdate @ client:213
+await in fetchUpdate
+queueUpdate @ client:186
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+client:176 [hmr] Failed to reload /src/components/auth/LoginModal.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+warnFailedUpdate @ client:176
+fetchUpdate @ client:213
+await in fetchUpdate
+queueUpdate @ client:186
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+client:174 SyntaxError: The requested module '/src/utils/translations/authTranslations.ts?t=1749362101833' does not provide an export named 'authTranslations' (at i18n-master.ts:4:10)
+warnFailedUpdate @ client:174
+fetchUpdate @ client:213
+await in fetchUpdate
+queueUpdate @ client:186
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+client:176 [hmr] Failed to reload /src/components/auth/LoginModal.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+warnFailedUpdate @ client:176
+fetchUpdate @ client:213
+await in fetchUpdate
+queueUpdate @ client:186
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550

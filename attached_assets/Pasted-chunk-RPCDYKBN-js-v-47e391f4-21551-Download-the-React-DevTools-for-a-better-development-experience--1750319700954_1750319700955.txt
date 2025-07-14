@@ -1,0 +1,75 @@
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+ProfileModalFixed.tsx:123 İşlem geçmişi alındı: Array(0)
+ProfileModalFixed.tsx:128 İşlem geçmişi boş - gerçek veri yok
+errorHandler.ts:6 Global error: ReferenceError: handleTwoFactorToggle is not defined
+    at ProfileModal (ProfileModalFixed.tsx:1178:34)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=47e391f4:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=47e391f4:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=47e391f4:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=47e391f4:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=47e391f4:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=47e391f4:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=47e391f4:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=47e391f4:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=47e391f4:19137:13)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+ProfileModalFixed.tsx:1178 Uncaught ReferenceError: handleTwoFactorToggle is not defined
+    at ProfileModal (ProfileModalFixed.tsx:1178:34)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=47e391f4:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=47e391f4:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=47e391f4:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=47e391f4:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=47e391f4:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=47e391f4:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=47e391f4:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=47e391f4:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=47e391f4:19137:13)
+errorHandler.ts:6 Global error: ReferenceError: handleTwoFactorToggle is not defined
+    at ProfileModal (ProfileModalFixed.tsx:1178:34)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=47e391f4:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=47e391f4:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=47e391f4:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=47e391f4:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=47e391f4:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=47e391f4:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=47e391f4:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=47e391f4:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=47e391f4:19137:13)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+ProfileModalFixed.tsx:1178 Uncaught ReferenceError: handleTwoFactorToggle is not defined
+    at ProfileModal (ProfileModalFixed.tsx:1178:34)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=47e391f4:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=47e391f4:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=47e391f4:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=47e391f4:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=47e391f4:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=47e391f4:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=47e391f4:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=47e391f4:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=47e391f4:19137:13)
+chunk-RPCDYKBN.js?v=47e391f4:14032 The above error occurred in the <ProfileModal> component:
+
+    at ProfileModal (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/components/profile/ProfileModalFixed.tsx:23:25)
+    at Header (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/components/layout/Header.tsx:40:19)
+    at div
+    at div
+    at MainLayout (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/components/layout/MainLayout.tsx:29:23)
+    at Home (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/pages/Home.tsx:30:32)
+    at Route (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=47e391f4:323:16)
+    at Switch (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=47e391f4:379:17)
+    at Router
+    at Provider (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=47e391f4:38:15)
+    at TooltipProvider (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=47e391f4:63:5)
+    at WebSocketProvider (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/src/contexts/LanguageContext.tsx:22:36)
+    at QueryClientProvider (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=47e391f4:2805:3)
+    at App
+    at ErrorBoundary (https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=47e391f4:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=47e391f4:14032

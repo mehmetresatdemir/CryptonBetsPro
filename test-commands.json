@@ -1,0 +1,314 @@
+[
+  {
+    "provider": "NetGame",
+    "count": 917,
+    "uuid": "0e87edd4ce8c4f04017ced12a9df420519c6ecaa",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"0e87edd4ce8c4f04017ced12a9df420519c6ecaa\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"NetGame: TRY DESTEKLENIR\" || echo \"NetGame: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "TripleCherry",
+    "count": 904,
+    "uuid": "0241d439d26d537bdfb47651e8a35e87decc90ac",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"0241d439d26d537bdfb47651e8a35e87decc90ac\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"TripleCherry: TRY DESTEKLENIR\" || echo \"TripleCherry: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Blueprint",
+    "count": 324,
+    "uuid": "f5993665d2383a4b4305405d46c7a069f8a2e15e",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"f5993665d2383a4b4305405d46c7a069f8a2e15e\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Blueprint: TRY DESTEKLENIR\" || echo \"Blueprint: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "CTInteractive",
+    "count": 267,
+    "uuid": "d69b194af35441698548127e94ce3dc9",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"d69b194af35441698548127e94ce3dc9\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"CTInteractive: TRY DESTEKLENIR\" || echo \"CTInteractive: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Caleta",
+    "count": 260,
+    "uuid": "89d4b370c69a4f118db1293654cb4589",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"89d4b370c69a4f118db1293654cb4589\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Caleta: TRY DESTEKLENIR\" || echo \"Caleta: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "EurasianGamingSlots",
+    "count": 256,
+    "uuid": "4dcec2e4dc034cf8ad5014eb16c37873",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"4dcec2e4dc034cf8ad5014eb16c37873\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"EurasianGamingSlots: TRY DESTEKLENIR\" || echo \"EurasianGamingSlots: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Evoplay",
+    "count": 251,
+    "uuid": "2261f848b61e460baaddc9629d331093",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"2261f848b61e460baaddc9629d331093\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Evoplay: TRY DESTEKLENIR\" || echo \"Evoplay: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "No Limit City",
+    "count": 222,
+    "uuid": "4481a31a4b5b43c08712a84ff035bb0b",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"4481a31a4b5b43c08712a84ff035bb0b\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"No Limit City: TRY DESTEKLENIR\" || echo \"No Limit City: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Betsoft",
+    "count": 182,
+    "uuid": "6edbba0a86b2e12b8c67989d94231e1c74fc9d5c",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"6edbba0a86b2e12b8c67989d94231e1c74fc9d5c\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Betsoft: TRY DESTEKLENIR\" || echo \"Betsoft: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Dragoon Soft",
+    "count": 180,
+    "uuid": "50f517a50f8347bd8131821cc4a11445",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"50f517a50f8347bd8131821cc4a11445\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Dragoon Soft: TRY DESTEKLENIR\" || echo \"Dragoon Soft: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "OneTouch",
+    "count": 176,
+    "uuid": "2da31836e76d6a5bf8e73e10f150893f2d378226",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"2da31836e76d6a5bf8e73e10f150893f2d378226\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"OneTouch: TRY DESTEKLENIR\" || echo \"OneTouch: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Thunderkick",
+    "count": 165,
+    "uuid": "333ee1508c6cf41cbfc6fa2341702f24326638c6",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"333ee1508c6cf41cbfc6fa2341702f24326638c6\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Thunderkick: TRY DESTEKLENIR\" || echo \"Thunderkick: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "BoomingGames",
+    "count": 160,
+    "uuid": "2fbfd8f9695a501ec28182525466a22c4663deb3",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"2fbfd8f9695a501ec28182525466a22c4663deb3\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"BoomingGames: TRY DESTEKLENIR\" || echo \"BoomingGames: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "ZeusPlay",
+    "count": 148,
+    "uuid": "cde530005f684370a34d77696f1e2e77",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"cde530005f684370a34d77696f1e2e77\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"ZeusPlay: TRY DESTEKLENIR\" || echo \"ZeusPlay: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "PGSoft",
+    "count": 144,
+    "uuid": "c98344acc0364a598ebb1075182cafef",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"c98344acc0364a598ebb1075182cafef\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"PGSoft: TRY DESTEKLENIR\" || echo \"PGSoft: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "RubyPlay",
+    "count": 143,
+    "uuid": "e796e567166d462187dc660981eb5103",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"e796e567166d462187dc660981eb5103\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"RubyPlay: TRY DESTEKLENIR\" || echo \"RubyPlay: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Live88",
+    "count": 142,
+    "uuid": "54ad829d3ff548448d0a50b8531342fc",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"54ad829d3ff548448d0a50b8531342fc\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Live88: TRY DESTEKLENIR\" || echo \"Live88: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Platipus",
+    "count": 137,
+    "uuid": "2f038d78ad69831069548d73ba118849e4081d60",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"2f038d78ad69831069548d73ba118849e4081d60\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Platipus: TRY DESTEKLENIR\" || echo \"Platipus: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "RTG SLOTS",
+    "count": 112,
+    "uuid": "a759e6b0c6275ac5000d5bdb3706ac53",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"a759e6b0c6275ac5000d5bdb3706ac53\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"RTG SLOTS: TRY DESTEKLENIR\" || echo \"RTG SLOTS: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Dlv",
+    "count": 109,
+    "uuid": "413e10dcbf4b74b645db20fac8f2eff31de98cd4",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"413e10dcbf4b74b645db20fac8f2eff31de98cd4\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Dlv: TRY DESTEKLENIR\" || echo \"Dlv: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Mascot",
+    "count": 108,
+    "uuid": "062798a31dcf1ea19f26d356b8daa79041dadf62",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"062798a31dcf1ea19f26d356b8daa79041dadf62\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Mascot: TRY DESTEKLENIR\" || echo \"Mascot: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "BFGames",
+    "count": 108,
+    "uuid": "735bff2934104e76a79ef918b7a93a93",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"735bff2934104e76a79ef918b7a93a93\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"BFGames: TRY DESTEKLENIR\" || echo \"BFGames: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "AmigoGaming",
+    "count": 106,
+    "uuid": "b7d13b3edb1b4f4ebf4f97b26037b691",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"b7d13b3edb1b4f4ebf4f97b26037b691\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"AmigoGaming: TRY DESTEKLENIR\" || echo \"AmigoGaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "ConceptGaming",
+    "count": 106,
+    "uuid": "8e5fb7d2c7294e179edfa9b735c4b02f",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"8e5fb7d2c7294e179edfa9b735c4b02f\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"ConceptGaming: TRY DESTEKLENIR\" || echo \"ConceptGaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Espressogames",
+    "count": 105,
+    "uuid": "7339a6dbe71f449d9c6070b742056bc4",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"7339a6dbe71f449d9c6070b742056bc4\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Espressogames: TRY DESTEKLENIR\" || echo \"Espressogames: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Boldplay",
+    "count": 104,
+    "uuid": "d16f83f202404bea8d7e4e34d1d3c506",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"d16f83f202404bea8d7e4e34d1d3c506\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Boldplay: TRY DESTEKLENIR\" || echo \"Boldplay: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "FunkyGames",
+    "count": 103,
+    "uuid": "3c3421b323674cbe8a194b5083c83ff1",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"3c3421b323674cbe8a194b5083c83ff1\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"FunkyGames: TRY DESTEKLENIR\" || echo \"FunkyGames: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Tomhorn",
+    "count": 92,
+    "uuid": "5f3b832300ea91b7514a6b22e9cb143969c9baef",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"5f3b832300ea91b7514a6b22e9cb143969c9baef\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Tomhorn: TRY DESTEKLENIR\" || echo \"Tomhorn: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Rich88",
+    "count": 91,
+    "uuid": "a54c9a71d9384be5baccacd2e377bd00",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"a54c9a71d9384be5baccacd2e377bd00\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Rich88: TRY DESTEKLENIR\" || echo \"Rich88: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Fugaso",
+    "count": 87,
+    "uuid": "41186e35f9a34ec9a75286c5d66e3c96",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"41186e35f9a34ec9a75286c5d66e3c96\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Fugaso: TRY DESTEKLENIR\" || echo \"Fugaso: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Big Time Gaming",
+    "count": 64,
+    "uuid": "667888d70d1f4c1886b792e21790cdc0",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"667888d70d1f4c1886b792e21790cdc0\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Big Time Gaming: TRY DESTEKLENIR\" || echo \"Big Time Gaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Quickspin",
+    "count": 61,
+    "uuid": "d0354f6d8ea257e9c4cb75ff681b884f615c8c37",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"d0354f6d8ea257e9c4cb75ff681b884f615c8c37\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Quickspin: TRY DESTEKLENIR\" || echo \"Quickspin: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "PopiPlay",
+    "count": 59,
+    "uuid": "1432353131a44a888b78907e7a24aba3",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"1432353131a44a888b78907e7a24aba3\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"PopiPlay: TRY DESTEKLENIR\" || echo \"PopiPlay: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "VibraGaming",
+    "count": 57,
+    "uuid": "44dfba7ef66c4db396bb78907f46eba0",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"44dfba7ef66c4db396bb78907f46eba0\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"VibraGaming: TRY DESTEKLENIR\" || echo \"VibraGaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "SuperlottoFast",
+    "count": 57,
+    "uuid": "51dfd00c4d1c409a98a4e40056f4d790",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"51dfd00c4d1c409a98a4e40056f4d790\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"SuperlottoFast: TRY DESTEKLENIR\" || echo \"SuperlottoFast: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "AvatarUX",
+    "count": 55,
+    "uuid": "0c55c7d6b17004c38b48c00cdb1817c68e4059ef",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"0c55c7d6b17004c38b48c00cdb1817c68e4059ef\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"AvatarUX: TRY DESTEKLENIR\" || echo \"AvatarUX: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Apparat",
+    "count": 52,
+    "uuid": "0ee3ee5e109e4ad0bb89b6d5a37d59ec",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"0ee3ee5e109e4ad0bb89b6d5a37d59ec\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Apparat: TRY DESTEKLENIR\" || echo \"Apparat: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Slotopia",
+    "count": 48,
+    "uuid": "24326d2e5f7f4fc8b2b053fecfadec19",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"24326d2e5f7f4fc8b2b053fecfadec19\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Slotopia: TRY DESTEKLENIR\" || echo \"Slotopia: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "FaChai",
+    "count": 42,
+    "uuid": "3f204ec658b944e89da3f0cdc483284c",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"3f204ec658b944e89da3f0cdc483284c\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"FaChai: TRY DESTEKLENIR\" || echo \"FaChai: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Spearhead Studios",
+    "count": 35,
+    "uuid": "0e4e4142d011dfa04a7bc21557354a63",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"0e4e4142d011dfa04a7bc21557354a63\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Spearhead Studios: TRY DESTEKLENIR\" || echo \"Spearhead Studios: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "TopSpin",
+    "count": 34,
+    "uuid": "5cdca9cf051e4e77af9dffd67a041640",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"5cdca9cf051e4e77af9dffd67a041640\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"TopSpin: TRY DESTEKLENIR\" || echo \"TopSpin: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "FBastards",
+    "count": 30,
+    "uuid": "11b98582505044b182895b5cef035eda",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"11b98582505044b182895b5cef035eda\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"FBastards: TRY DESTEKLENIR\" || echo \"FBastards: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "MacawGaming",
+    "count": 28,
+    "uuid": "4ea6cf4600e34cdb9edef3a8dd54c2ab",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"4ea6cf4600e34cdb9edef3a8dd54c2ab\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"MacawGaming: TRY DESTEKLENIR\" || echo \"MacawGaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Lotto Instant Win",
+    "count": 27,
+    "uuid": "457842270b578f27b13bcfee2e0812954f421adb",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"457842270b578f27b13bcfee2e0812954f421adb\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Lotto Instant Win: TRY DESTEKLENIR\" || echo \"Lotto Instant Win: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "PoggiPlay",
+    "count": 25,
+    "uuid": "2f7130fab525497588fa5df241e67658",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"2f7130fab525497588fa5df241e67658\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"PoggiPlay: TRY DESTEKLENIR\" || echo \"PoggiPlay: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "SuperlottoSlots",
+    "count": 24,
+    "uuid": "25628cecf51d45d2898f2481a6dbe3ab",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"25628cecf51d45d2898f2481a6dbe3ab\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"SuperlottoSlots: TRY DESTEKLENIR\" || echo \"SuperlottoSlots: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "RevolverGaming",
+    "count": 23,
+    "uuid": "2267675c0331f2b9464032cbe3e85027f130c953",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"2267675c0331f2b9464032cbe3e85027f130c953\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"RevolverGaming: TRY DESTEKLENIR\" || echo \"RevolverGaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "HoGaming",
+    "count": 22,
+    "uuid": "24eaad8f641248ba95375d3459523290",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"24eaad8f641248ba95375d3459523290\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"HoGaming: TRY DESTEKLENIR\" || echo \"HoGaming: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Igrosoft",
+    "count": 21,
+    "uuid": "6e514731d448e9ce4bbec08ee14d054fa5570d54",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"6e514731d448e9ce4bbec08ee14d054fa5570d54\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Igrosoft: TRY DESTEKLENIR\" || echo \"Igrosoft: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Spribe",
+    "count": 18,
+    "uuid": "cd3380ed05f94f1da361bc705b4881dd",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"cd3380ed05f94f1da361bc705b4881dd\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Spribe: TRY DESTEKLENIR\" || echo \"Spribe: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "Elbet",
+    "count": 15,
+    "uuid": "99bcaaa8a1bc18f4fa9efdf81bad8c167c1adb7f",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"99bcaaa8a1bc18f4fa9efdf81bad8c167c1adb7f\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"Elbet: TRY DESTEKLENIR\" || echo \"Elbet: TRY DESTEKLENMİYOR\""
+  },
+  {
+    "provider": "EurasianGamingBingo",
+    "count": 14,
+    "uuid": "acc247ecbc014abcbb74fd1de1bee8e3",
+    "command": "curl -X POST http://localhost:5000/api/slotegrator/games/lobby -H \"Content-Type: application/json\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBjYXNpbm8uY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDk1ODU3NDcsImV4cCI6MTc1MjE3Nzc0N30.KP27A1ramMdW0lsBSbaMRpV2mtHFNc99-ZeVhjg1Yt8\" -d '{\"game_uuid\": \"acc247ecbc014abcbb74fd1de1bee8e3\", \"mode\": \"real\", \"device\": \"desktop\", \"language\": \"tr\", \"currency\": \"TRY\"}' 2>/dev/null | grep -q '\"currency\":\"TRY\"' && echo \"EurasianGamingBingo: TRY DESTEKLENIR\" || echo \"EurasianGamingBingo: TRY DESTEKLENMİYOR\""
+  }
+]

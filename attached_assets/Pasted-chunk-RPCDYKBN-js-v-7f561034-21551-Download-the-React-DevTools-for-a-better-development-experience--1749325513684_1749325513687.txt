@@ -1,0 +1,42 @@
+chunk-RPCDYKBN.js?v=7f561034:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+useDeviceDetection.ts:91 Cihaz algılandı: Masaüstü
+SlotPage.tsx:175 🎰 TÜM slot oyunları yükleniyor...
+api.ts:49 API İsteği: GET /api/auth/me undefined
+api.ts:61 API Yanıtı: Status 200
+api.ts:93 API Yanıt Verileri: Object
+SlotPage.tsx:191 ⚡ 9822 TOPLAM slot oyunu HIZLA yüklendi
+@radix-ui_react-dialog.js?v=7f561034:339 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+(anonymous) @ @radix-ui_react-dialog.js?v=7f561034:339
+api/slotegrator/init-game:1 
+            
+            
+           Failed to load resource: the server responded with a status of 403 (Forbidden)
+queryClient.ts:16 
+            
+            
+           POST https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/api/slotegrator/init-game 403 (Forbidden)
+apiRequest @ queryClient.ts:16
+mutationFn @ GameModal.tsx:50
+fn @ @tanstack_react-query.js?v=7f561034:1189
+run @ @tanstack_react-query.js?v=7f561034:494
+start @ @tanstack_react-query.js?v=7f561034:536
+execute @ @tanstack_react-query.js?v=7f561034:1225
+await in execute
+mutate @ @tanstack_react-query.js?v=7f561034:2630
+(anonymous) @ @tanstack_react-query.js?v=7f561034:3295
+handlePlayGame @ GameModal.tsx:70
+callCallback2 @ chunk-RPCDYKBN.js?v=7f561034:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=7f561034:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=7f561034:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=7f561034:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=7f561034:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=7f561034:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=7f561034:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=7f561034:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=7f561034:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=7f561034:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=7f561034:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=7f561034:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=7f561034:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=7f561034:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=7f561034:5449

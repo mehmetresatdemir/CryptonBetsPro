@@ -1,0 +1,64 @@
+Dashboard.tsx:235 JSON ayrıştırma hatası: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at getStats (Dashboard.tsx:185:27)
+getStats @ Dashboard.tsx:235
+await in getStats
+(anonymous) @ Dashboard.tsx:257
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=67c34e38:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=67c34e38:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=67c34e38:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=67c34e38:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=67c34e38:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=67c34e38:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=67c34e38:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=67c34e38:19328
+workLoop @ chunk-RPCDYKBN.js?v=67c34e38:197
+flushWork @ chunk-RPCDYKBN.js?v=67c34e38:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=67c34e38:384
+Dashboard.tsx:236 Alınan yanıt: <!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <script type="module">
+import { createHotContext } from "/@vite/client";
+const hot = createHotContext("/...
+Dashboard.tsx:240 Dashboard istatistikleri alınırken hata oluştu: Error: API yanıtı işlenirken hata oluştu
+    at getStats (Dashboard.tsx:237:15)
+getStats @ Dashboard.tsx:240
+await in getStats
+(anonymous) @ Dashboard.tsx:257
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=67c34e38:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=67c34e38:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=67c34e38:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=67c34e38:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=67c34e38:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=67c34e38:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=67c34e38:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=67c34e38:19328
+workLoop @ chunk-RPCDYKBN.js?v=67c34e38:197
+flushWork @ chunk-RPCDYKBN.js?v=67c34e38:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=67c34e38:384
+Dashboard.tsx:235 JSON ayrıştırma hatası: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at getStats (Dashboard.tsx:185:27)
+getStats @ Dashboard.tsx:235
+await in getStats
+(anonymous) @ Dashboard.tsx:125
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=67c34e38:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=67c34e38:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=67c34e38:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=67c34e38:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=67c34e38:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=67c34e38:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=67c34e38:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=67c34e38:19328
+workLoop @ chunk-RPCDYKBN.js?v=67c34e38:197
+flushWork @ chunk-RPCDYKBN.js?v=67c34e38:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=67c34e38:384
+Dashboard.tsx:236 Alınan yanıt: <!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <script type="module">
+import { createHotContext } from "/@vite/client";
+const hot = createHotContext("/...
+Dashboard.tsx:240 Dashboard istatistikleri alınırken hata oluştu: Error: API yanıtı işlenirken hata oluştu
+    at getStats (Dashboard.tsx:237:15)

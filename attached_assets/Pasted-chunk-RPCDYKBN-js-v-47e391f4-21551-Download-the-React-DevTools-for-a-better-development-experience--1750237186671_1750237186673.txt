@@ -1,0 +1,204 @@
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+queryClient.ts:64 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/games 500 (Internal Server Error)
+(anonymous) @ queryClient.ts:64
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:45 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners?type=slider&page=home&language=tr 500 (Internal Server Error)
+queryFn @ BannerDisplay.tsx:45
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:45 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners?type=header&page=home&language=tr 500 (Internal Server Error)
+queryFn @ BannerDisplay.tsx:45
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+queryClient.ts:64 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/casino-games 500 (Internal Server Error)
+(anonymous) @ queryClient.ts:64
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:45 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners?type=sidebar&page=home&language=tr 500 (Internal Server Error)
+queryFn @ BannerDisplay.tsx:45
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+queryClient.ts:64 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/news 500 (Internal Server Error)
+(anonymous) @ queryClient.ts:64
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+authService.ts:108 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/auth/me 500 (Internal Server Error)
+getCurrentUser @ authService.ts:108
+initializeAuth @ UserContext.tsx:71
+(anonymous) @ UserContext.tsx:85
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384

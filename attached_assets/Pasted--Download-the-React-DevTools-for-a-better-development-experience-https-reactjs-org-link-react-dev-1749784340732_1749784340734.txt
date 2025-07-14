@@ -1,0 +1,337 @@
+ Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.analytics
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_logs
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.financial_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.transactions
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.deposits
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.content_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.games
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.bonuses
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.news
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.banners
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.system_settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.themes
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.languages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.integrations
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.communication
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.messages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.email_templates
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.support
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.panel
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.logout
+t @ /src/contexts/UserContext.tsx:216
+ Warning: validateDOMNesting(...): <a> cannot appear as a descendant of <a>.
+    at a
+    at a
+    at https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:337:18
+    at div
+    at div
+    at div
+    at nav
+    at div
+    at div
+    at AdminLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/admin/AdminLayout.tsx:49:24)
+    at AnalyticsPage (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Analytics.tsx:69:17)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=XkC9jrEfufT9AnABWwOtN:101:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=3c623d55:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=3c623d55:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at App
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx?v=XkC9jrEfufT9AnABWwOtN:20:37)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=3c623d55:18:5)
+printWarning @ chunk-RPCDYKBN.js:521
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.analytics
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_logs
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.financial_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.transactions
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.deposits
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.content_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.games
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.bonuses
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.news
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.banners
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.system_settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.themes
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.languages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.integrations
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.communication
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.messages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.email_templates
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.support
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.panel
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.logout
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.analytics
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_logs
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.financial_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.transactions
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.deposits
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.content_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.games
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.bonuses
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.news
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.banners
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.system_settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.themes
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.languages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.integrations
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.communication
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.messages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.email_templates
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.support
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.panel
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.logout
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.users_by_country
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.user_retention
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.top_games
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: game.name
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.plays
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.revenue
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: game.rtp
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: game.provider
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.payment_methods
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.deposits_withdrawals
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.device_usage
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/utils/i18n-master.ts:440
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.analytics
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_logs
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.financial_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.transactions
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.deposits
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.content_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.games
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.bonuses
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.news
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.banners
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.system_settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.themes
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.languages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.integrations
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.communication
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.messages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.email_templates
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.support
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.panel
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.logout
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.dashboard
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.analytics
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.users
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.user_logs
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.financial_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.transactions
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.deposits
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.content_management
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.games
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.bonuses
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.news
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.banners
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.system_settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.settings
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.themes
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.languages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.integrations
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.communication
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.messages
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.email_templates
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.support
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.panel
+t @ /src/contexts/UserContext.tsx:216
+ Çeviri anahtarı bulunamadı: admin.logout
+t @ /src/contexts/UserContext.tsx:216

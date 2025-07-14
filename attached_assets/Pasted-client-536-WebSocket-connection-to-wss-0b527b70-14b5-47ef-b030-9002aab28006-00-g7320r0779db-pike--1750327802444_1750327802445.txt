@@ -1,0 +1,31 @@
+client:536 WebSocket connection to 'wss://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/?token=WxwxSdML1u0H' failed: 
+setupWebSocket @ client:536
+(anonymous) @ client:531
+client:536 Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=WxwxSdML1u0H' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+setupWebSocket @ client:536
+fallback @ client:509
+(anonymous) @ client:555
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+useNotifications.ts:103 WebSocket connection to 'wss://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/ws' failed: WebSocket is closed before the connection is established.
+(anonymous) @ useNotifications.ts:103
+safelyCallDestroy @ chunk-RPCDYKBN.js?v=47e391f4:16748
+commitHookEffectListUnmount @ chunk-RPCDYKBN.js?v=47e391f4:16875
+commitPassiveUnmountInsideDeletedTreeOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18283
+commitPassiveUnmountEffectsInsideOfDeletedTree_begin @ chunk-RPCDYKBN.js?v=47e391f4:18245
+commitPassiveUnmountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18181
+commitPassiveUnmountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18169
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19489
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:19328
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+useNotifications.ts:96 ❌ WebSocket hatası: Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+websocket.onerror @ useNotifications.ts:96
+useNotifications.ts:84 📡 Bildirim sistemi bağlantısı kesildi
+Dashboard.tsx:77 🔄 Dashboard WebSocket bağlandı - Anlık güncellemeler aktif
+Dashboard.tsx:57 📊 Anlık veriler güncellendi: 3:09:56 AM
+useNotifications.ts:42 📡 Bildirim sistemi bağlandı

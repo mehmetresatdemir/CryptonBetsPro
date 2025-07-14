@@ -1,0 +1,478 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "wouter";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { useUser } from "../../contexts/UserContext";
+import LanguageSelector from "./LanguageSelector";
+import LoginModal from "../auth/LoginModal";
+import RegisterModal from "../auth/RegisterModal";
+import ProfileModal from "../profile/ProfileModalFixed";
+import DepositButton from "../payment/DepositButton";
+import DepositModal from "../payment/DepositModal";
+
+// Lisans ve Sponsor logoları için import
+import licenseLogo from "../../assets/images/license-logo.png";
+import milanLogo from "../../assets/images/milan-logo.png";
+import telegramLogo from "../../assets/images/telegram-logo.webp";
+
+// Bayrak görselleri
+const FLAGS = {
+  TR: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png",
+  EN: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/800px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
+  KA: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/800px-Flag_of_Georgia.svg.png",
+  RU: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png"
+};
+
+const Header: React.FC = () => {
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+  const { user, isAuthenticated, logout } = useUser();
+  
+  const openLoginModal = () => {
+    setShowRegisterModal(false);
+    setShowLoginModal(true);
+  };
+  
+  const openRegisterModal = () => {
+    setShowLoginModal(false);
+    setShowRegisterModal(true);
+  };
+  
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showProfileModal, setShowProfileModal] = useState(false);
+  const [showDepositModal, setShowDepositModal] = useState(false);
+  
+  return (
+    <header className="md:h-16 h-[4.5rem] md:bg-[#121212] bg-[#232323] flex items-center justify-between px-2 sm:px-6 border-b border-yellow-500/20 sticky top-0 z-50 shadow-lg backdrop-blur-sm bg-opacity-95">
+      {/* Left Side - Logo and Mobile Menu Button */}
+      <div className="flex items-center">
+        {/* Mobile Menu Button */}
+        <button 
+          onClick={() => setShowMobileMenu(!showMobileMenu)}
+          className="lg:hidden mr-3 text-yellow-400 p-2 rounded-lg focus:outline-none hover:bg-yellow-500/20 transition-all duration-300 relative group"
+        >
+          <div className="absolute inset-0 bg-yellow-500/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+          <i className={`fas ${showMobileMenu ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+          <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-yellow-500 group-hover:w-full transition-all duration-300 transform -translate-x-1/2"></span>
+        </button>
+
+        {/* Logos Container (changes to horizontal scrollable on mobile) */}
+        <div className="flex items-center space-x-3 md:space-x-5 overflow-x-auto hide-scrollbar">
+          {/* Affiliate Button - Sadece masaüstünde gösteriliyor */}
+          <Link href="/affiliate" className="hidden md:block">
+            <div className="bg-gradient-to-b from-yellow-400 to-yellow-600 p-[1.5px] rounded-xl shadow-lg hover:shadow-yellow-500/30 transition-all duration-300 transform hover:scale-105 group">
+              <div className="bg-gradient-to-b from-[#222] to-[#121212] rounded-xl px-3 sm:px-4 py-2 flex items-center justify-center">
+                <i className="fas fa-handshake text-yellow-400 text-lg group-hover:text-yellow-300 transition-colors duration-300"></i>
+                <div className="flex flex-col ml-2">
+                  <span className="text-white font-bold text-xs uppercase tracking-wide">{t('header.affiliate')}</span>
+                  <span className="text-yellow-400 text-xs font-semibold group-hover:text-yellow-300 transition-colors duration-300">{t('header.commission')}</span>
+                </div>
+              </div>
+            </div>
+          </Link>
+          
+          {/* Lisans Logosu - Sadece masaüstünde görünür */}
+          <div className="relative group flex-shrink-0 hidden md:block">
+            <div className="bg-[#1D1D1D] p-1 rounded-xl overflow-hidden border border-yellow-500/20 group-hover:border-yellow-500/40 transition-all duration-300 shadow-md group-hover:shadow-yellow-500/20">
+              <img 
+                src={licenseLogo} 
+                alt="Lisans Logosu" 
+                className="h-9 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/5 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer"></div>
+            </div>
+            <div className="absolute opacity-0 group-hover:opacity-100 bottom-full left-1/2 transform -translate-x-1/2 bg-[#1A1A1A] text-white text-xs rounded-lg px-3 py-1.5 mb-1 whitespace-nowrap transition-all duration-300 shadow-lg border border-yellow-500/20 backdrop-blur-sm">
+              {t('header.licensed_site')}
+            </div>
+          </div>
+          
+          {/* Milan Sponsor Logosu - Hide on extra small screens */}
+          <div className="relative group hidden sm:block flex-shrink-0">
+            <div className="bg-[#1D1D1D] p-1 rounded-xl overflow-hidden border border-yellow-500/20 group-hover:border-yellow-500/40 transition-all duration-300 shadow-md group-hover:shadow-yellow-500/20">
+              <img 
+                src={milanLogo} 
+                alt="AC Milan" 
+                className="h-9 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/5 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer"></div>
+            </div>
+            <div className="absolute opacity-0 group-hover:opacity-100 bottom-full left-1/2 transform -translate-x-1/2 bg-[#1A1A1A] text-white text-xs rounded-lg px-3 py-1.5 mb-1 whitespace-nowrap transition-all duration-300 shadow-lg border border-yellow-500/20 backdrop-blur-sm">
+              {t('header.official_sponsor')}
+            </div>
+          </div>
+          
+          {/* Telegram Logo - Sadece masaüstünde gösteriliyor */}
+          <div className="relative group flex-shrink-0 hidden md:block">
+            <a href="https://t.me/cryptonbets" target="_blank" rel="noopener noreferrer">
+              <div className="bg-[#1D1D1D] p-1 rounded-xl overflow-hidden border border-yellow-500/20 group-hover:border-yellow-500/40 transition-all duration-300 shadow-md group-hover:shadow-yellow-500/20">
+                <img 
+                  src={telegramLogo} 
+                  alt="Telegram" 
+                  className="h-9 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/5 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer"></div>
+              </div>
+              <div className="absolute opacity-0 group-hover:opacity-100 bottom-full left-1/2 transform -translate-x-1/2 bg-[#1A1A1A] text-white text-xs rounded-lg px-3 py-1.5 mb-1 whitespace-nowrap transition-all duration-300 shadow-lg border border-yellow-500/20 backdrop-blur-sm">
+                {t('header.telegram_channel')}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      {/* Right Side - User Controls */}
+      <div className="flex items-center">
+        {/* Language Selector */}
+        <div className="relative mr-3 sm:mr-4">
+          <LanguageSelector />
+        </div>
+        
+        {!isAuthenticated ? (
+          /* Login/Register Buttons - Giriş yapmadan önce görünür */
+          <div className="hidden md:flex items-center space-x-3 sm:space-x-4">
+            {/* Login Button */}
+            <button 
+              onClick={openLoginModal}
+              className="relative group overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 text-[#121212] font-bold rounded-xl px-6 py-2 text-sm transition-all duration-300 shadow-lg hover:shadow-yellow-500/40 transform hover:scale-105"
+            >
+              <span className="relative z-10 flex items-center">
+                <i className="fas fa-sign-in-alt mr-1.5"></i>
+                <span>{t('header.login_button')}</span>
+              </span>
+              <div className="absolute top-0 left-0 w-full h-full bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="absolute top-0 -inset-full h-full w-1/2 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shimmer"></div>
+            </button>
+            
+            {/* Register Button */}
+            <button 
+              onClick={openRegisterModal}
+              className="relative group overflow-hidden bg-transparent border-2 border-yellow-500 text-yellow-400 font-bold rounded-xl px-6 py-1.5 text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-yellow-500/20 hover:shadow-lg"
+            >
+              <span className="relative z-10 flex items-center">
+                <i className="fas fa-user-plus mr-1.5"></i>
+                <span>{t('header.register_button')}</span>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+              <div className="absolute top-0 -inset-full h-full w-1/2 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-10 group-hover:animate-shimmer"></div>
+            </button>
+          </div>
+        ) : (
+          /* Kullanıcı Profil Alanı - Giriş yaptıktan sonra görünür */
+          <div className="hidden md:flex items-center space-x-3">
+            {/* Bakiye Gösterimi - Daha kompakt */}
+            <div className="bg-[#1A1A1A] rounded-lg border border-yellow-500/20 shadow-lg hover:shadow-yellow-500/30 px-2 py-1 transition-all duration-300 hover:border-yellow-500/50 hover:transform hover:scale-105 group overflow-hidden relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/5 to-yellow-400/0 opacity-0 group-hover:opacity-100 group-hover:animate-shimmer"></div>
+              <div className="flex items-center space-x-1.5 relative z-10">
+                <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 p-1 rounded-md shadow-md group-hover:shadow-yellow-500/50 transform transition-all duration-500 group-hover:scale-110">
+                  <i className="fas fa-coins text-[#121212] text-xs animate-pulse"></i>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-gray-400 text-[10px] font-medium tracking-wider">{t('header.balance')}</span>
+                  <span className="text-yellow-400 font-bold text-xs group-hover:text-yellow-300 transition-all duration-500 group-hover:translate-x-1">
+                    {user?.balance ? `${user.balance.toLocaleString()} ₺` : '0 ₺'}
+                  </span>
+                </div>
+                <DepositButton variant="icon" size="sm" className="ml-0.5" />
+              </div>
+            </div>
+            
+            {/* Kullanıcı Profil Menüsü */}
+            <div className="relative">
+              <button 
+                onClick={() => setShowUserMenu(!showUserMenu)}
+                className="flex items-center bg-[#1A1A1A] rounded-lg border border-yellow-500/20 shadow-lg hover:shadow-yellow-500/30 px-2 py-1 transition-all duration-300 hover:border-yellow-500/50 hover:transform hover:scale-105 relative overflow-hidden group"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/5 to-yellow-400/0 opacity-0 group-hover:opacity-100 group-hover:animate-shimmer"></div>
+                <div className="relative w-7 h-7 rounded-md bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-[#121212] font-bold shadow-md group-hover:shadow-yellow-500/50 transform transition-all duration-500 group-hover:scale-110 overflow-hidden">
+                  <div className="absolute inset-0 bg-yellow-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="relative z-10 text-xs">{user?.username?.charAt(0).toUpperCase() || 'U'}</span>
+                </div>
+                <span className="ml-1.5 text-white font-medium text-xs hidden sm:block group-hover:text-yellow-300 transition-all duration-500">{user?.username}</span>
+                <i className={`fas fa-caret-down text-gray-400 ml-1 text-xs transition-all duration-500 ${showUserMenu ? 'transform rotate-180 text-yellow-400' : 'group-hover:text-yellow-400'}`}></i>
+              </button>
+              
+              {/* Dropdown menü */}
+              {showUserMenu && (
+                <div className="absolute right-0 mt-2 w-56 rounded-xl bg-[#1A1A1A] shadow-xl border border-yellow-500/30 overflow-hidden z-20 animate-fadeIn backdrop-blur-sm">
+                  <div className="p-3">
+                    <div className="border-b border-gray-700/50 pb-3 mb-2">
+                      <div className="flex items-center px-3 py-2 bg-gradient-to-r from-[#232323] to-[#1A1A1A] rounded-lg">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-[#121212] font-bold shadow-lg text-lg relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/10 to-yellow-400/0 animate-shimmer"></div>
+                          <span className="relative z-10">{user?.username?.charAt(0).toUpperCase() || 'U'}</span>
+                        </div>
+                        <div className="ml-3">
+                          <div className="text-yellow-400 font-bold text-base transition-all duration-300">{user?.username}</div>
+                          <div className="text-gray-400 text-xs mt-0.5">{user?.email}</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <button 
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        setShowProfileModal(true);
+                      }}
+                      className="w-full text-left px-3 py-2.5 hover:bg-yellow-500/10 rounded-lg transition-all duration-300 flex items-center text-gray-300 hover:text-yellow-400 hover:pl-4 group"
+                    >
+                      <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#232323] group-hover:bg-[#2A2A2A] mr-2 transition-all duration-300">
+                        <i className="fas fa-user-circle text-yellow-400 text-sm group-hover:text-yellow-300"></i>
+                      </div>
+                      <span className="font-medium">{t('header.profile')}</span>
+                    </button>
+                    
+                    <div 
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        setShowDepositModal(true);
+                      }}
+                      className="px-3 py-2.5 hover:bg-yellow-500/10 rounded-lg transition-all duration-300 flex items-center text-gray-300 hover:text-yellow-400 hover:pl-4 group mt-1 cursor-pointer"
+                    >
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#232323] group-hover:bg-[#2A2A2A] mr-2 transition-all duration-300">
+                          <i className="fas fa-wallet text-yellow-400 text-sm group-hover:text-yellow-300"></i>
+                        </div>
+                        <span className="font-medium">{t('header.deposit')}</span>
+                    </div>
+                    
+                    <div 
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        setShowProfileModal(true);
+                        // Burada normalde profil modalında geçmiş sekmesine geçiş yapılmalı
+                      }}
+                      className="px-3 py-2.5 hover:bg-yellow-500/10 rounded-lg transition-all duration-300 flex items-center text-gray-300 hover:text-yellow-400 hover:pl-4 group mt-1 cursor-pointer"
+                    >
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#232323] group-hover:bg-[#2A2A2A] mr-2 transition-all duration-300">
+                          <i className="fas fa-history text-yellow-400 text-sm group-hover:text-yellow-300"></i>
+                        </div>
+                        <span className="font-medium">{t('header.history')}</span>
+                    </div>
+                    
+                    <div 
+                      onClick={() => {
+                        setShowUserMenu(false);
+                        setShowProfileModal(true);
+                        // Profil modalında ayarlar sekmesine geçiş yapılmalı
+                      }}
+                      className="px-3 py-2.5 hover:bg-yellow-500/10 rounded-lg transition-all duration-300 flex items-center text-gray-300 hover:text-yellow-400 hover:pl-4 group mt-1 cursor-pointer"
+                    >
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#232323] group-hover:bg-[#2A2A2A] mr-2 transition-all duration-300">
+                          <i className="fas fa-cog text-yellow-400 text-sm group-hover:text-yellow-300"></i>
+                        </div>
+                        <span className="font-medium">{t('header.settings')}</span>
+                      </div>
+                    
+                    <div className="border-t border-gray-700/50 mt-2 pt-3">
+                      <button 
+                        onClick={logout}
+                        className="w-full px-3 py-2.5 bg-gradient-to-r from-[#232323] to-[#1A1A1A] hover:bg-red-500/10 rounded-lg transition-all duration-300 flex items-center text-gray-300 hover:text-red-400 hover:pl-4 group"
+                      >
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#2A2A2A] group-hover:bg-[#332222] mr-2 transition-all duration-300">
+                          <i className="fas fa-sign-out-alt text-red-400 text-sm group-hover:text-red-300"></i>
+                        </div>
+                        <span className="font-medium">{t('header.logout')}</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+      
+      {/* Mobile Navigation Menu */}
+      {showMobileMenu && (
+        <div className="fixed top-[4.5rem] left-0 right-0 bg-gradient-to-b from-[#232323] to-[#121212]/95 backdrop-blur-md border-b border-yellow-500/20 shadow-2xl z-50 lg:hidden overflow-hidden">
+          <div className="p-4 space-y-3">
+            <Link href="/">
+              <div className="flex items-center p-4 mx-2 mb-1 text-white hover:bg-yellow-500/10 rounded-xl transition-all duration-300 group relative overflow-hidden">
+                <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-lg mr-4">
+                  <i className="fas fa-home text-[#121212] text-lg"></i>
+                </div>
+                <span className="group-hover:text-yellow-400 transition-colors duration-300 text-base font-medium">{t('sidebar.home')}</span>
+                <div className="ml-auto">
+                  <i className="fas fa-chevron-right text-yellow-500/70"></i>
+                </div>
+              </div>
+            </Link>
+            <Link href="/slot">
+              <div className="flex items-center p-4 mx-2 mb-1 text-white hover:bg-yellow-500/10 rounded-xl transition-all duration-300 group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/5 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-shimmer"></div>
+                <div className="w-11 h-11 rounded-lg bg-[#1D1D1D] group-hover:bg-yellow-500/20 flex items-center justify-center shadow-lg mr-4 transform group-hover:scale-110 transition-all duration-300 border border-yellow-500/20 group-hover:border-yellow-500/40">
+                  <i className="fas fa-gamepad text-yellow-400 text-lg"></i>
+                </div>
+                <span className="group-hover:text-yellow-400 transition-colors duration-300 text-base font-medium">{t('sidebar.slot')}</span>
+                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <i className="fas fa-chevron-right text-yellow-500/70"></i>
+                </div>
+              </div>
+            </Link>
+            <Link href="/casino">
+              <div className="flex items-center p-4 mx-2 mb-1 text-white hover:bg-yellow-500/10 rounded-xl transition-all duration-300 group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/5 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-shimmer"></div>
+                <div className="w-11 h-11 rounded-lg bg-[#1D1D1D] group-hover:bg-yellow-500/20 flex items-center justify-center shadow-lg mr-4 transform group-hover:scale-110 transition-all duration-300 border border-yellow-500/20 group-hover:border-yellow-500/40">
+                  <i className="fas fa-dice text-yellow-400 text-lg"></i>
+                </div>
+                <span className="group-hover:text-yellow-400 transition-colors duration-300 text-base font-medium">{t('sidebar.casino')}</span>
+                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <i className="fas fa-chevron-right text-yellow-500/70"></i>
+                </div>
+              </div>
+            </Link>
+            <Link href="/oyunlar">
+              <div className="flex items-center p-4 mx-2 mb-1 text-white hover:bg-yellow-500/10 rounded-xl transition-all duration-300 group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/5 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-shimmer"></div>
+                <div className="w-11 h-11 rounded-lg bg-[#1D1D1D] group-hover:bg-yellow-500/20 flex items-center justify-center shadow-lg mr-4 transform group-hover:scale-110 transition-all duration-300 border border-yellow-500/20 group-hover:border-yellow-500/40">
+                  <i className="fas fa-puzzle-piece text-yellow-400 text-lg"></i>
+                </div>
+                <span className="group-hover:text-yellow-400 transition-colors duration-300 text-base font-medium">{t('sidebar.games')}</span>
+                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <i className="fas fa-chevron-right text-yellow-500/70"></i>
+                </div>
+              </div>
+            </Link>
+            <Link href="/vip">
+              <div className="flex items-center p-3 text-white hover:bg-yellow-500/10 rounded-xl transition-all duration-300 group">
+                <div className="w-8 h-8 rounded-lg bg-[#1D1D1D] group-hover:bg-yellow-500/20 flex items-center justify-center shadow-md mr-3">
+                  <i className="fas fa-crown text-yellow-400"></i>
+                </div>
+                <span className="group-hover:text-yellow-400 transition-colors duration-300">{t('sidebar.vip')}</span>
+              </div>
+            </Link>
+            <Link href="/bonuslar">
+              <div className="flex items-center p-3 text-white hover:bg-yellow-500/10 rounded-xl transition-all duration-300 group">
+                <div className="w-8 h-8 rounded-lg bg-[#1D1D1D] group-hover:bg-yellow-500/20 flex items-center justify-center shadow-md mr-3">
+                  <i className="fas fa-gift text-yellow-400"></i>
+                </div>
+                <span className="group-hover:text-yellow-400 transition-colors duration-300">{t('sidebar.bonuses')}</span>
+              </div>
+            </Link>
+            <a href="https://wa.me/905000000000" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center p-3 text-white hover:bg-green-500/10 rounded-xl transition-all duration-300 group">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-md mr-3">
+                  <i className="fab fa-whatsapp text-white"></i>
+                </div>
+                <span className="group-hover:text-green-400 transition-colors duration-300">{t('sidebar.whatsapp')}</span>
+              </div>
+            </a>
+          </div>
+          
+          {/* Mobil için Giriş/Kayıt veya Kullanıcı Profil alanı */}
+          {!isAuthenticated ? (
+            <div className="flex items-center justify-between px-4 py-3 border-t border-yellow-500/10">
+              <button 
+                onClick={openLoginModal}
+                className="flex-1 mr-2 bg-gradient-to-br from-yellow-400 to-yellow-600 text-[#121212] font-bold rounded-lg py-2.5 text-sm transition-all duration-300 flex items-center justify-center"
+              >
+                <i className="fas fa-sign-in-alt mr-1.5"></i>
+                <span>{t('header.login_button')}</span>
+              </button>
+              
+              <button 
+                onClick={openRegisterModal}
+                className="flex-1 ml-2 bg-transparent border-2 border-yellow-500 text-yellow-400 font-bold rounded-lg py-2 text-sm transition-all duration-300"
+              >
+                <i className="fas fa-user-plus mr-1.5"></i>
+                <span>{t('header.register_button')}</span>
+              </button>
+            </div>
+          ) : (
+            <div className="flex flex-col px-4 py-3 border-t border-yellow-500/10">
+              {/* Kullanıcı Bilgisi ve Bakiye */}
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center">
+                  <div className="relative w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-[#121212] font-bold shadow-md text-lg">
+                    {user?.username?.charAt(0).toUpperCase() || 'U'}
+                  </div>
+                  <div className="ml-3">
+                    <div className="text-white font-bold">{user?.username}</div>
+                    <div className="text-gray-400 text-xs truncate max-w-[120px]">{user?.email}</div>
+                  </div>
+                </div>
+                
+                <div className="bg-[#1A1A1A] rounded-xl border border-yellow-500/20 shadow-md p-2">
+                  <div className="flex items-center">
+                    <i className="fas fa-coins text-yellow-400 mr-2"></i>
+                    <span className="text-yellow-400 font-bold">{user?.balance ? user.balance.toLocaleString() : '0'} ₺</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Hızlı Menü Butonları */}
+              <div className="grid grid-cols-2 gap-2">
+                <Link href="/profile">
+                  <div className="bg-[#1A1A1A] hover:bg-[#222] transition-colors duration-200 rounded-lg p-2 flex items-center">
+                    <i className="fas fa-user-circle text-yellow-400 mr-2"></i>
+                    <span className="text-white text-sm">{t('header.profile')}</span>
+                  </div>
+                </Link>
+                
+                <div 
+                  onClick={() => {
+                    setShowMobileMenu(false);
+                    setShowDepositModal(true);
+                  }}
+                  className="bg-[#1A1A1A] hover:bg-[#222] transition-colors duration-200 rounded-lg p-2 flex items-center cursor-pointer"
+                >
+                  <i className="fas fa-wallet text-yellow-400 mr-2"></i>
+                  <span className="text-white text-sm">{t('header.deposit')}</span>
+                </div>
+                
+                <div 
+                  onClick={() => {
+                    setShowMobileMenu(false);
+                    setShowProfileModal(true);
+                  }}
+                  className="bg-[#1A1A1A] hover:bg-[#222] transition-colors duration-200 rounded-lg p-2 flex items-center cursor-pointer"
+                >
+                  <i className="fas fa-history text-yellow-400 mr-2"></i>
+                  <span className="text-white text-sm">{t('header.history')}</span>
+                </div>
+                
+                <button 
+                  onClick={logout}
+                  className="bg-[#1A1A1A] hover:bg-red-900/20 transition-colors duration-200 rounded-lg p-2 flex items-center"
+                >
+                  <i className="fas fa-sign-out-alt text-red-400 mr-2"></i>
+                  <span className="text-white text-sm">{t('header.logout')}</span>
+                </button>
+              </div>
+            </div>
+          )}
+          
+        </div>
+      )}
+      
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        onSwitchToRegister={openRegisterModal}
+      />
+      
+      {/* Register Modal */}
+      <RegisterModal
+        isOpen={showRegisterModal}
+        onClose={() => setShowRegisterModal(false)}
+        onSwitchToLogin={openLoginModal}
+      />
+      
+      {/* Profil Modal */}
+      <ProfileModal 
+        isOpen={showProfileModal} 
+        onClose={() => setShowProfileModal(false)} 
+      />
+      
+      {/* Para Yatırma Modalı */}
+      <DepositModal
+        isOpen={showDepositModal}
+        onClose={() => setShowDepositModal(false)}
+      />
+    </header>
+  );
+};
+
+export default Header;

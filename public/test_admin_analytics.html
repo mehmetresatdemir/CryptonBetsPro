@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Analytics Test</title>
+</head>
+<body>
+    <h1>Admin Analytics Test</h1>
+    <button id="loginBtn">Admin Login</button>
+    <button id="analyticsBtn" disabled>Test Analytics</button>
+    <div id="result"></div>
+
+    <script>
+        const resultDiv = document.getElementById('result');
+        
+        document.getElementById('loginBtn').onclick = async () => {
+            resultDiv.innerHTML = 'Logging in...';
+            
+            try {
+                const response = await fetch('/api/admin/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: 'admin', password: 'admin123' })
+                });
+                
+                const data = await response.json();
+                if (data.token) {
+                    localStorage.setItem('authToken', data.token);
+                    localStorage.setItem('admin_token', data.token);
+                    document.getElementById('analyticsBtn').disabled = false;
+                    resultDiv.innerHTML = 'Login successful! Token stored.';
+                } else {
+                    resultDiv.innerHTML = 'Login failed: ' + JSON.stringify(data);
+                }
+            } catch (error) {
+                resultDiv.innerHTML = 'Login error: ' + error.message;
+            }
+        };
+        
+        document.getElementById('analyticsBtn').onclick = async () => {
+            resultDiv.innerHTML = 'Testing analytics...';
+            
+            const token = localStorage.getItem('authToken') || localStorage.getItem('admin_token');
+            
+            try {
+                const response = await fetch('/api/admin/analytics?period=7', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    },
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = 'Analytics test successful! Total users: ' + (data.data?.totalUsers || data.totalUsers);
+                } else {
+                    resultDiv.innerHTML = 'Analytics failed: ' + response.status + ' ' + response.statusText;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = 'Analytics error: ' + error.message;
+            }
+        };
+    </script>
+</body>
+</html>

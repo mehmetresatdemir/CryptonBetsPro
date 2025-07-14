@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+.npm
+.yarn
+
+# Build outputs
+dist/
+.next/
+.cache/
+
+# Development files
+*.log
+*.log.*
+logs/
+
+# Assets and media
+attached_assets/
+public/uploads/
+uploads/
+
+# Database backups
+database-backups/
+*.sql
+*.db
+*.sqlite
+
+# Environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Documentation
+*.md
+!README.md
+
+# Deployment packages
+deployment-package/
+*.tar.gz
+*.zip
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.expo/
+.replit
+replit.nix 

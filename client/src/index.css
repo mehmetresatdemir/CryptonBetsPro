@@ -1,0 +1,443 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kaydırma animasyonları */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-left {
+  animation: scroll-left 35s linear infinite;
+}
+
+/* Popüler Slot Oyunları için Animasyonlar */
+@keyframes slide-right-slow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-left-slow {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right-fast {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-right-slow {
+  animation: slide-right-slow 60s linear infinite;
+}
+
+.animate-slide-left-slow {
+  animation: slide-left-slow 65s linear infinite;
+}
+
+.animate-slide-right-fast {
+  animation: slide-right-fast 40s linear infinite;
+}
+
+/* Hover durumunda animasyonu durdur */
+.hover\:pause:hover {
+  animation-play-state: paused !important;
+}
+
+/* Force headers to stay behind modals */
+header {
+  z-index: 10 !important;
+}
+
+/* Portal modals always on top */
+body > div[style*="z-index: 999999"] {
+  z-index: 999999 !important;
+}
+
+/* Hide scrollbars for provider filters */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dialog Modal Desktop Fix - Radix UI Specific */
+[data-radix-dialog-overlay] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 50 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+[data-radix-dialog-content] {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 51 !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  width: 95% !important;
+  max-width: 28rem !important;
+}
+
+/* Sarı kaydırma çubukları için özel stiller */
+.custom-yellow-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-yellow-scrollbar::-webkit-scrollbar-track {
+  background: #1c1c1c;
+  border-radius: 5px;
+}
+
+.custom-yellow-scrollbar::-webkit-scrollbar-thumb {
+  background: #eab308;
+  border-radius: 5px;
+}
+
+/* Jackpot Ticker Animations */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-horizontal {
+  animation: scroll-horizontal 60s linear infinite;
+}
+
+.animate-scroll-horizontal:hover {
+  animation-play-state: paused;
+}
+
+/* Jackpot glow effect */
+@keyframes jackpot-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.6);
+  }
+}
+
+.jackpot-glow {
+  animation: jackpot-glow 3s ease-in-out infinite;
+}
+
+.custom-yellow-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* ScrollArea bileşeni için sarı kaydırma çubuğu */
+.custom-scrollbar [data-radix-scroll-area-scrollbar-thumb] {
+  background: #eab308 !important;
+}
+
+/* Z-index düzenleri için global stil */
+.language-dropdown {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Dropdown içeriği için stil */
+.language-dropdown-content {
+  position: absolute;
+  z-index: 10000 !important; /* En üstte görünmesi için yüksek z-index */
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  body {
+    @apply bg-[#121212] text-white;
+  }
+}
+
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer components {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #f5c518;
+    border-radius: 10px;
+    border: 2px solid #1a1a1a;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #e6b400;
+    box-shadow: 0 0 10px rgba(245, 197, 24, 0.5);
+  }
+  
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #f5c518 #1a1a1a;
+  }
+}
+
+@layer utilities {
+  /* Add custom animations here */
+  @keyframes progressbar {
+    0% {
+      width: 75%;
+    }
+    50% {
+      width: 85%;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  
+  .animate-progressbar {
+    animation: progressbar 3s ease-in-out infinite;
+  }
+  
+  /* Shine efekti için özel animasyon */
+  @keyframes shine {
+    from {
+      transform: translateX(-100%) skewX(12deg);
+    }
+    to {
+      transform: translateX(200%) skewX(12deg);
+    }
+  }
+  
+  /* Özel Kaydırma Çubuğu Stillemesi */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f5c518;
+    border-radius: 10px;
+    border: 2px solid #1a1a1a;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6b400;
+    box-shadow: 0 0 10px rgba(245, 197, 24, 0.5);
+  }
+
+  /* Firefox için kaydırma çubuğu stilleri */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #f5c518 #1a1a1a;
+  }
+
+  .animate-shine {
+    animation: shine 2s infinite;
+  }
+
+  /* Float animasyonu */
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(3deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(3deg);
+    }
+    100% {
+      transform: translateY(0) rotate(3deg);
+    }
+  }
+
+  .vip-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes cardShine {
+    0% {
+      transform: translateX(-150%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  
+  .animate-card-shine {
+    animation: cardShine 6s infinite;
+  }
+  
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  
+  .animate-shine {
+    animation: shine 2s infinite linear;
+  }
+
+  /* Oyun iframe'leri için gereksiz overlay elementlerini gizle */
+  iframe {
+    position: relative;
+  }
+
+  /* Slotegrator oyunlarındaki play butonlarını ve overlay elementlerini gizle */
+  .sound-loader,
+  .play-icon,
+  .game-overlay,
+  .loading-overlay,
+  .play-button,
+  .start-button,
+  .game-start,
+  .btn-play,
+  [class*="play-btn"],
+  [class*="start-btn"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Oyun iframe'lerinde otomatik başlatma için */
+  iframe[src*="slotegrator"] .sound-loader,
+  iframe[src*="slotegrator"] .play-icon,
+  iframe[src*="slotegrator"] [class*="play"],
+  iframe[src*="slotegrator"] [class*="start"] {
+    display: none !important;
+  }
+
+  /* Iframe içindeki gereksiz overlay elementleri */
+  iframe::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+}

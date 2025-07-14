@@ -1,0 +1,28 @@
+client:536 WebSocket connection to 'wss://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/?token=YYjjLEpC0ruc' failed: 
+setupWebSocket @ client:536
+(anonymous) @ client:531
+client:536 Uncaught (in promise) SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=YYjjLEpC0ruc' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+setupWebSocket @ client:536
+fallback @ client:509
+(anonymous) @ client:555
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+WebSocketContext.tsx:65 WebSocket Context: All connections disabled
+Dashboard.tsx:10 📊 Current Dashboard Stats State: null
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:10 📊 Current Dashboard Stats State: null
+Dashboard.tsx:58 📊 Dashboard verisi alındı: {users: 3, deposits: 60000, vip: 3}
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 3:48:17 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: {totalSettings: 25, activeCurrencies: 4, totalCurrencies: 4, activePaymentMethods: 2, totalPaymentMethods: 5, …}
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:58 📊 Dashboard verisi alındı: {users: 3, deposits: 60000, vip: 3}
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 3:48:20 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: {totalSettings: 25, activeCurrencies: 4, totalCurrencies: 4, activePaymentMethods: 2, totalPaymentMethods: 5, …}
+Dashboard.tsx:58 📊 Dashboard verisi alındı: {users: 3, deposits: 60000, vip: 3}
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 3:48:22 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: {totalSettings: 25, activeCurrencies: 4, totalCurrencies: 4, activePaymentMethods: 2, totalPaymentMethods: 5, …}
+Dashboard.tsx:58 📊 Dashboard verisi alındı: {users: 3, deposits: 60000, vip: 3}
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 3:48:24 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: {totalSettings: 25, activeCurrencies: 4, totalCurrencies: 4, activePaymentMethods: 2, totalPaymentMethods: 5, …}

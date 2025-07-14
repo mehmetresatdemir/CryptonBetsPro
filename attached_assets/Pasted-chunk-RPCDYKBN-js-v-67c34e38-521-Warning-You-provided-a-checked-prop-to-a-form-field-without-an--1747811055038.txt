@@ -1,0 +1,30 @@
+chunk-RPCDYKBN.js?v=67c34e38:521 Warning: You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.
+    at input
+    at label
+    at div
+    at div
+    at div
+    at div
+    at div
+    at div
+    at div
+    at div
+    at ProfileModal (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/profile/ProfileModalFixed.tsx?t=1747810877235:23:25)
+    at header
+    at Header (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/layout/Header.tsx?t=1747810877235:39:51)
+    at div
+    at div
+    at MainLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/layout/MainLayout.tsx?t=1747810877235:27:23)
+    at Home (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/Home.tsx?t=1747810877235:31:32)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit…/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=67c34e38:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit…/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=67c34e38:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit…unner/workspace/node_modules/.vite/deps/chunk-VFYO4PQK.js?v=67c34e38:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit…rkspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=67c34e38:61:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx?t=1747810877235:23:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx?t=1747810877235:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit…rkspace/node_modules/.vite/deps/@tanstack_react-query.js?v=67c34e38:2805:3)
+    at App
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx?v=wMStZ9V8AsdBdfWNZOwxs:20:37)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit…rkspace/node_modules/.vite/deps/@tanstack_react-query.js?v=67c34e38:2805:3)

@@ -1,0 +1,70 @@
+{
+  "name": "cryptonbets-production",
+  "version": "1.0.0",
+  "description": "CryptonBets - Professional Online Casino & Betting Platform",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/index.js",
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc --project tsconfig.server.json",
+    "db:migrate": "npm run db:push",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "deploy": "pm2 start ecosystem.config.js --env production",
+    "stop": "pm2 stop cryptonbets",
+    "restart": "pm2 restart cryptonbets",
+    "logs": "pm2 logs cryptonbets",
+    "backup": "node scripts/backup-database.js",
+    "restore": "node scripts/restore-database.js",
+    "ssl:renew": "certbot renew --nginx",
+    "monitor": "pm2 monit"
+  },
+  "keywords": [
+    "casino",
+    "betting",
+    "nodejs",
+    "react",
+    "typescript",
+    "postgresql",
+    "professional"
+  ],
+  "author": "CryptonBets Team",
+  "license": "COMMERCIAL",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@neondatabase/serverless": "^0.9.4",
+    "@stripe/stripe-js": "^4.1.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "drizzle-orm": "^0.32.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "express-session": "^1.18.0",
+    "framer-motion": "^11.3.8",
+    "jsonwebtoken": "^9.0.2",
+    "openai": "^4.52.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stripe": "^16.2.0",
+    "wouter": "^3.3.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "drizzle-kit": "^0.23.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  }
+}

@@ -1,0 +1,315 @@
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+WebSocketContext.tsx:65 WebSocket Context: All connections disabled
+WebSocketContext.tsx:65 WebSocket Context: All connections disabled
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Withdrawals.tsx:166 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals?page=1&search=&status=all&paymentMethod=all&dateFrom=&dateTo=&amountMin=&amountMax=&sortBy=created_at&sortOrder=desc 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx:166
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+Withdrawals.tsx:181 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals/stats/summary?dateFrom=&dateTo=&paymentMethod=all 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx:181
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+Withdrawals.tsx:181 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals/stats/summary?dateFrom=&dateTo=&paymentMethod=all 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx:181
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+flushSync @ chunk-RPCDYKBN.js?v=47e391f4:18959
+scheduleRefresh @ chunk-RPCDYKBN.js?v=47e391f4:20004
+(anonymous) @ @react-refresh:267
+performReactRefresh @ @react-refresh:256
+(anonymous) @ @react-refresh:677
+setTimeout
+(anonymous) @ @react-refresh:666
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:728
+(anonymous) @ Withdrawals.tsx:2712
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+Withdrawals.tsx:166 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals?page=1&search=&status=all&paymentMethod=all&dateFrom=&dateTo=&amountMin=&amountMax=&sortBy=created_at&sortOrder=desc 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx:166
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+flushSync @ chunk-RPCDYKBN.js?v=47e391f4:18959
+scheduleRefresh @ chunk-RPCDYKBN.js?v=47e391f4:20004
+(anonymous) @ @react-refresh:267
+performReactRefresh @ @react-refresh:256
+(anonymous) @ @react-refresh:677
+setTimeout
+(anonymous) @ @react-refresh:666
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:728
+(anonymous) @ Withdrawals.tsx:2712
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+Withdrawals.tsx?t=1750348121187:181 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals/stats/summary?dateFrom=&dateTo=&paymentMethod=all 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx?t=1750348121187:181
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+flushSync @ chunk-RPCDYKBN.js?v=47e391f4:18959
+scheduleRefresh @ chunk-RPCDYKBN.js?v=47e391f4:20004
+(anonymous) @ @react-refresh:267
+performReactRefresh @ @react-refresh:256
+(anonymous) @ @react-refresh:677
+setTimeout
+(anonymous) @ @react-refresh:666
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:728
+(anonymous) @ Withdrawals.tsx?t=1750348121187:2712
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+Withdrawals.tsx?t=1750348124771:181 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals/stats/summary?dateFrom=&dateTo=&paymentMethod=all 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx?t=1750348124771:181
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+flushSync @ chunk-RPCDYKBN.js?v=47e391f4:18959
+scheduleRefresh @ chunk-RPCDYKBN.js?v=47e391f4:20004
+(anonymous) @ @react-refresh:267
+performReactRefresh @ @react-refresh:256
+(anonymous) @ @react-refresh:677
+setTimeout
+(anonymous) @ @react-refresh:666
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:728
+(anonymous) @ Withdrawals.tsx?t=1750348124771:2712
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+Withdrawals.tsx?t=1750348138932:181 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals/stats/summary?dateFrom=&dateTo=&paymentMethod=all 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx?t=1750348138932:181
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+setOptions @ @tanstack_react-query.js?v=47e391f4:1955
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3032
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+flushSync @ chunk-RPCDYKBN.js?v=47e391f4:18959
+scheduleRefresh @ chunk-RPCDYKBN.js?v=47e391f4:20004
+(anonymous) @ @react-refresh:267
+performReactRefresh @ @react-refresh:256
+(anonymous) @ @react-refresh:677
+setTimeout
+(anonymous) @ @react-refresh:666
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:728
+(anonymous) @ Withdrawals.tsx?t=1750348124771:2712
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550
+Withdrawals.tsx?t=1750348138932:181 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/withdrawals/stats/summary?dateFrom=&dateTo=&paymentMethod=all 500 (Internal Server Error)
+queryFn @ Withdrawals.tsx?t=1750348138932:181
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+flushSync @ chunk-RPCDYKBN.js?v=47e391f4:18959
+scheduleRefresh @ chunk-RPCDYKBN.js?v=47e391f4:20004
+(anonymous) @ @react-refresh:267
+performReactRefresh @ @react-refresh:256
+(anonymous) @ @react-refresh:677
+setTimeout
+(anonymous) @ @react-refresh:666
+validateRefreshBoundaryAndEnqueueUpdate @ @react-refresh:728
+(anonymous) @ Withdrawals.tsx?t=1750348138932:2712
+(anonymous) @ client:34
+(anonymous) @ client:218
+(anonymous) @ client:193
+queueUpdate @ client:193
+await in queueUpdate
+(anonymous) @ client:642
+handleMessage @ client:640
+(anonymous) @ client:550

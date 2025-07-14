@@ -1,0 +1,135 @@
+ntegrasyonun Nihai Hedefi:
+Platformunda kullanıcıların:
+
+Casino & Slot oyunlarını listelerden seçebilmesi,
+
+Oyuna tek tıkla başlayabilmesi,
+
+Oyun sırasında kimliklerinin ve bakiyelerinin API tarafında doğrulanabilmesi,
+
+Güvenli ve hızlı şekilde oyun içi deneyim yaşaması.
+
+✅ 1. KULLANICI SİSTEMİ VE JWT MİMARİSİ
+Backend'de:
+Kullanıcılar platformuna giriş yapmalı.
+
+Her kullanıcı için benzersiz bir user_id, balance, currency, language, session_token vs. oluşturulmalı.
+
+Bu veriler, oyun başlatılırken API’ye iletilecek.
+
+Session’lar için JWT tabanlı doğrulama kullanılmalı.
+
+✅ 2. OYUN LİSTESİNİ ÇEKME (Get Game List)
+Endpoint: GET /v1/games
+
+Yapılacaklar:
+Casino & Slot filtrelenmiş olarak sadece aktif oyunlar çekilmeli.
+
+expand=provider ve expand=categories ile oyun bilgileri zenginleştirilmeli.
+
+Arama, filtreleme, kategoriye göre sıralama gibi özellikler eklenmeli.
+
+📌 Örnek istek:
+
+h
+Kopyala
+Düzenle
+GET /v1/games?expand=provider,categories&perPage=100&page=1
+Authorization: Bearer {access_token}
+X-Sign: {signature}
+✅ 3. OYUN BAŞLATMA (Launch Game)
+Endpoint: POST /v1/game-launch
+
+Gönderilecekler:
+player_id
+
+game_id
+
+currency
+
+language
+
+return_url
+
+mode: real / demo
+
+ip_address
+
+device
+
+session_id
+
+📌 Backend'de dikkat edilmesi gerekenler:
+
+X-Sign imzası doğru hesaplanmalı (sha256(secret_key + body)).
+
+Kullanıcının bakiyesi kontrol edilmeli.
+
+Geri dönüş URL’si (oyun kapatıldığında yönlendirilecek sayfa) belirlenmeli.
+
+✅ 4. OYUN SONUCU & CALLBACK İŞLEMLERİ
+Slotegrator tarafında:
+
+Bet placed (bahis yapıldı),
+
+Win (kazanıldı),
+
+Rollback (iade) gibi işlemler için senin platformuna callback gönderilir.
+
+Bu nedenle:
+/api/slotegrator/callback gibi bir endpoint oluşturulmalı.
+
+Gelen POST isteklerinin imzası (X-Sign) kontrol edilmeli.
+
+Kullanıcının bakiyesi backend’de güncellenmeli.
+
+✅ 5. GÜVENLİK VE İMZA (X-SIGN)
+Tüm giden ve gelen isteklere:
+
+X-Sign başlığı eklenmeli.
+
+Hesaplama: sha256(secret_key + request_body)
+
+Örnek Node.js hesaplama:
+ts
+Kopyala
+Düzenle
+import crypto from "crypto";
+
+function getSignature(secretKey: string, body: object): string {
+  const raw = secretKey + JSON.stringify(body);
+  return crypto.createHash("sha256").update(raw).digest("hex");
+}
+✅ 6. ÖN YÜZ (REACT)
+Oyun listesi kart/karo görünümünde listelenmeli.
+
+Kategorilere (Slot, Live Casino, vs.) göre filtreleme yapılmalı.
+
+"Oyna" butonuna basıldığında oyun yeni sekmede başlatılmalı.
+
+✅ 7. HATA YÖNETİMİ & LOG
+API'den dönen hatalar düzgün şekilde kullanıcıya gösterilmeli.
+
+Tüm istekler ve yanıtlar loglanmalı (özellikle para işlemleri ve callback'ler).
+
+✅ 8. DEMO / GERÇEK PARA MODLARI
+Demo modunda kullanıcıdan bakiye düşülmez.
+
+Gerçek para modunda callback ile işlem yapılır.
+
+✅ 9. DEVREYE ALMA / TEST
+Tüm işlemler öncelikle Slotegrator test ortamında test edilmelidir.
+
+Test senaryoları: bakiye düşüşü, rollback, kazanma, kaybetme, logout, internet kesilmesi gibi.
+
+İstersen…
+Bunlardan hangisini önce uygulamak istersen (örneğin: oyun listesini çekmek), sana örnek kodlar, endpoint handler’lar ve tam entegrasyon mantığı sağlayabilirim.
+
+Devam etmek için ilk olarak aşağıdakilerden birini seçebilirsin:
+
+🔘 Oyun listesini çekme
+🔘 Oyun başlatma entegrasyonu
+🔘 Callback endpoint yapısı
+🔘 X-Sign hesaplama modülü
+🔘 JWT kullanıcı oturum sistemi
+🔘 Ön yüz (React) oyun gösterimi

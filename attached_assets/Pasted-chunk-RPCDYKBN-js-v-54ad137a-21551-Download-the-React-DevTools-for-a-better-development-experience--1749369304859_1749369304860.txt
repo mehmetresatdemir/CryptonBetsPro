@@ -1,0 +1,162 @@
+chunk-RPCDYKBN.js?v=54ad137a:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+errorHandler.ts:6 Global error: ReferenceError: useDeviceDetection is not defined
+    at GameModal (GameModal.tsx:43:22)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=54ad137a:11548:26)
+    at mountIndeterminateComponent (chunk-RPCDYKBN.js?v=54ad137a:14926:21)
+    at beginWork (chunk-RPCDYKBN.js?v=54ad137a:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=54ad137a:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=54ad137a:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=54ad137a:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=54ad137a:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=54ad137a:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=54ad137a:19137:13)
+(anonymous) @ errorHandler.ts:6
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=54ad137a:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18678
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+errorHandler.ts:9 Error details: {message: 'useDeviceDetection is not defined', stack: 'ReferenceError: useDeviceDetection is not defined\n….vite/deps/chunk-RPCDYKBN.js?v=54ad137a:19137:13)', filename: 'https://7551f6c2-5380-48c1-942e-48e07ff45518-00-21…6k.picard.replit.dev/src/components/GameModal.tsx', lineno: 44, colno: 22}
+(anonymous) @ errorHandler.ts:9
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=54ad137a:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18678
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+GameModal.tsx:43 Uncaught ReferenceError: useDeviceDetection is not defined
+    at GameModal (GameModal.tsx:43:22)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=54ad137a:11548:26)
+    at mountIndeterminateComponent (chunk-RPCDYKBN.js?v=54ad137a:14926:21)
+    at beginWork (chunk-RPCDYKBN.js?v=54ad137a:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=54ad137a:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=54ad137a:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=54ad137a:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=54ad137a:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=54ad137a:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=54ad137a:19137:13)
+GameModal @ GameModal.tsx:43
+renderWithHooks @ chunk-RPCDYKBN.js?v=54ad137a:11548
+mountIndeterminateComponent @ chunk-RPCDYKBN.js?v=54ad137a:14926
+beginWork @ chunk-RPCDYKBN.js?v=54ad137a:15914
+callCallback2 @ chunk-RPCDYKBN.js?v=54ad137a:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=54ad137a:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18678
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+errorHandler.ts:6 Global error: ReferenceError: useDeviceDetection is not defined
+    at GameModal (GameModal.tsx:43:22)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=54ad137a:11548:26)
+    at mountIndeterminateComponent (chunk-RPCDYKBN.js?v=54ad137a:14926:21)
+    at beginWork (chunk-RPCDYKBN.js?v=54ad137a:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=54ad137a:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=54ad137a:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=54ad137a:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=54ad137a:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=54ad137a:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=54ad137a:19137:13)
+(anonymous) @ errorHandler.ts:6
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=54ad137a:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=54ad137a:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18684
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+errorHandler.ts:9 Error details: {message: 'useDeviceDetection is not defined', stack: 'ReferenceError: useDeviceDetection is not defined\n….vite/deps/chunk-RPCDYKBN.js?v=54ad137a:19137:13)', filename: 'https://7551f6c2-5380-48c1-942e-48e07ff45518-00-21…6k.picard.replit.dev/src/components/GameModal.tsx', lineno: 44, colno: 22}
+(anonymous) @ errorHandler.ts:9
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=54ad137a:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=54ad137a:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18684
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+GameModal.tsx:43 Uncaught ReferenceError: useDeviceDetection is not defined
+    at GameModal (GameModal.tsx:43:22)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=54ad137a:11548:26)
+    at mountIndeterminateComponent (chunk-RPCDYKBN.js?v=54ad137a:14926:21)
+    at beginWork (chunk-RPCDYKBN.js?v=54ad137a:15914:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=54ad137a:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=54ad137a:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=54ad137a:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=54ad137a:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=54ad137a:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=54ad137a:19137:13)
+GameModal @ GameModal.tsx:43
+renderWithHooks @ chunk-RPCDYKBN.js?v=54ad137a:11548
+mountIndeterminateComponent @ chunk-RPCDYKBN.js?v=54ad137a:14926
+beginWork @ chunk-RPCDYKBN.js?v=54ad137a:15914
+callCallback2 @ chunk-RPCDYKBN.js?v=54ad137a:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=54ad137a:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=54ad137a:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18684
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+chunk-RPCDYKBN.js?v=54ad137a:14032 The above error occurred in the <GameModal> component:
+
+    at GameModal (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/GameModal.tsx:38:37)
+    at main
+    at div
+    at div
+    at MainLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/layout/MainLayout.tsx:27:23)
+    at SlotPage (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/SlotPage.tsx:231:27)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=54ad137a:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=54ad137a:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-VFYO4PQK.js?v=54ad137a:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=54ad137a:61:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:23:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=54ad137a:2805:3)
+    at App
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx?v=2Txck_YUMfOFk9sNmK38w:20:37)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=54ad137a:2805:3)
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=54ad137a:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=54ad137a:14032
+callback @ chunk-RPCDYKBN.js?v=54ad137a:14078
+callCallback @ chunk-RPCDYKBN.js?v=54ad137a:11248
+commitUpdateQueue @ chunk-RPCDYKBN.js?v=54ad137a:11265
+commitLayoutEffectOnFiber @ chunk-RPCDYKBN.js?v=54ad137a:17075
+commitLayoutMountEffects_complete @ chunk-RPCDYKBN.js?v=54ad137a:17980
+commitLayoutEffects_begin @ chunk-RPCDYKBN.js?v=54ad137a:17969
+commitLayoutEffects @ chunk-RPCDYKBN.js?v=54ad137a:17920
+commitRootImpl @ chunk-RPCDYKBN.js?v=54ad137a:19353
+commitRoot @ chunk-RPCDYKBN.js?v=54ad137a:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=54ad137a:18760
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18718
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384

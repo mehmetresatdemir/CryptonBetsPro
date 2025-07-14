@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Cryptonbets - Ana Sayfa</title>
+    <meta name="description" content="Cryptonbets ile heyecan dolu bahis deneyimini yaşayın. Slot oyunları, casino, canlı dealer ve daha fazlası!" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Completely disable error overlays -->
+    <script>
+      // Disable all error overlays and modals
+      window.__vite_plugin_runtime_error_modal_disable__ = true;
+      window.sendError = function() { /* disabled */ };
+      
+      // Remove any error overlays that might appear
+      const removeOverlays = function() {
+        const overlays = document.querySelectorAll('vite-error-overlay, [data-vite-error], .vite-dev-error-overlay');
+        overlays.forEach(el => el.remove());
+      };
+      
+      // Run overlay removal periodically
+      setInterval(removeOverlays, 100);
+      document.addEventListener('DOMContentLoaded', removeOverlays);
+    </script>
+    
+    <!-- Anjouan Gaming License Script -->
+    <script type="text/javascript" src="https://60568e5b-87d7-42a6-902f-6eec9c7db75f.snippet.anjouangaming.org/anj-seal.js"></script>
+  </head>
+  <body class="dark">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+    
+    <!-- Anjouan License Seal Initialization -->
+    <script>
+      // Global Anjouan license initialization function
+      window.initAnjouanLicense = function() {
+        const sealElement = document.getElementById('anj-60568e5b-87d7-42a6-902f-6eec9c7db75f');
+        
+        if (sealElement && window.anj_60568e5b_87d7_42a6_902f_6eec9c7db75f) {
+          try {
+            window.anj_60568e5b_87d7_42a6_902f_6eec9c7db75f.init();
+          } catch (error) {
+            // Lisans yüklenmesi isteğe bağlı - hataları gizle
+          }
+        }
+      };
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', window.initAnjouanLicense);
+      } else {
+        window.initAnjouanLicense();
+      }
+      
+      // Backup initialization
+      setTimeout(window.initAnjouanLicense, 3000);
+    </script>
+  </body>
+</html>

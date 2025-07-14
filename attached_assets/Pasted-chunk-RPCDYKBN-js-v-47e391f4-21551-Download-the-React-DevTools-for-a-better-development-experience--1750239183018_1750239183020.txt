@@ -1,0 +1,447 @@
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+queryClient.ts:64 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/casino-games 500 (Internal Server Error)
+(anonymous) @ queryClient.ts:64
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/3/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/1/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/3/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/1/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/2/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/3/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/1/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerDisplay.tsx:57 
+            
+            
+           POST https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/banners/2/track 500 (Internal Server Error)
+trackImpression @ BannerDisplay.tsx:57
+(anonymous) @ BannerDisplay.tsx:119
+(anonymous) @ BannerDisplay.tsx:118
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19416
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=47e391f4:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=47e391f4:555
+flush @ @tanstack_react-query.js?v=47e391f4:569
+batch @ @tanstack_react-query.js?v=47e391f4:587
+dispatch_fn @ @tanstack_react-query.js?v=47e391f4:996
+setData @ @tanstack_react-query.js?v=47e391f4:696
+onSuccess @ @tanstack_react-query.js?v=47e391f4:897
+resolve @ @tanstack_react-query.js?v=47e391f4:456
+Promise.then
+run @ @tanstack_react-query.js?v=47e391f4:498
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384

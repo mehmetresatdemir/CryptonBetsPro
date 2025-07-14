@@ -1,0 +1,36 @@
+chunk-RPCDYKBN.js?v=05a23e00:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+Login.tsx?t=1747735183535:47 JSON ayrıştırma hatası: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+handleLogin @ Login.tsx?t=1747735183535:47
+await in handleLogin
+callCallback2 @ chunk-RPCDYKBN.js?v=05a23e00:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=05a23e00:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=05a23e00:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=05a23e00:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=05a23e00:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=05a23e00:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=05a23e00:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=05a23e00:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=05a23e00:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=05a23e00:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=05a23e00:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=05a23e00:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=05a23e00:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=05a23e00:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=05a23e00:5449
+Login.tsx:22 GELIŞTIRME MODU: Admin giriş işlemi bypass ediliyor
+Login.tsx:29 Admin giriş başarılı, token saklandı: eyJhbGciOiJIUzI1NiIs...
+Dashboard.tsx:76 Error fetching dashboard stats: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+fetchStats @ Dashboard.tsx:76
+await in fetchStats
+(anonymous) @ Dashboard.tsx:87
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=05a23e00:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=05a23e00:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=05a23e00:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=05a23e00:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=05a23e00:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=05a23e00:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=05a23e00:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=05a23e00:19328
+workLoop @ chunk-RPCDYKBN.js?v=05a23e00:197
+flushWork @ chunk-RPCDYKBN.js?v=05a23e00:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=05a23e00:384

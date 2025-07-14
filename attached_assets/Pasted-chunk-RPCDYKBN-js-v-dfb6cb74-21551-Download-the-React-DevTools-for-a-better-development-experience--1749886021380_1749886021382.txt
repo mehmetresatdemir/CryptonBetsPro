@@ -1,0 +1,72 @@
+chunk-RPCDYKBN.js?v=dfb6cb74:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+queryClient.ts:61 🔑 Admin API request: /api/admin/email-templates Headers: Object
+queryClient.ts:61 🔑 Admin API request: /api/admin/email-templates/stats Headers: Object
+errorHandler.ts:6 Global error: TypeError: templates.map is not a function
+    at EmailTemplates (EmailTemplates.tsx:381:49)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=dfb6cb74:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=dfb6cb74:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=dfb6cb74:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=dfb6cb74:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=dfb6cb74:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=dfb6cb74:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=dfb6cb74:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=dfb6cb74:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=dfb6cb74:19137:13)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+EmailTemplates.tsx:381 Uncaught TypeError: templates.map is not a function
+    at EmailTemplates (EmailTemplates.tsx:381:49)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=dfb6cb74:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=dfb6cb74:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=dfb6cb74:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=dfb6cb74:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=dfb6cb74:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=dfb6cb74:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=dfb6cb74:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=dfb6cb74:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=dfb6cb74:19137:13)
+errorHandler.ts:6 Global error: TypeError: templates.map is not a function
+    at EmailTemplates (EmailTemplates.tsx:381:49)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=dfb6cb74:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=dfb6cb74:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=dfb6cb74:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=dfb6cb74:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=dfb6cb74:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=dfb6cb74:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=dfb6cb74:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=dfb6cb74:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=dfb6cb74:19137:13)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+EmailTemplates.tsx:381 Uncaught TypeError: templates.map is not a function
+    at EmailTemplates (EmailTemplates.tsx:381:49)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=dfb6cb74:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=dfb6cb74:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=dfb6cb74:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=dfb6cb74:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=dfb6cb74:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=dfb6cb74:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=dfb6cb74:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=dfb6cb74:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=dfb6cb74:19137:13)
+chunk-RPCDYKBN.js?v=dfb6cb74:14032 The above error occurred in the <EmailTemplates> component:
+
+    at EmailTemplates (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/EmailTemplates.tsx:46:39)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=VZ77ihL-idgdwJhM7yHFO:129:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=dfb6cb74:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=dfb6cb74:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=dfb6cb74:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=dfb6cb74:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=dfb6cb74:2805:3)
+    at App
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=dfb6cb74:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=dfb6cb74:14032

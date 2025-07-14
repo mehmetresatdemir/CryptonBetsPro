@@ -1,0 +1,221 @@
+chunk-RPCDYKBN.js?v=2b6db754:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+/api/admin/bonuses/stats:1 
+            
+            
+           Failed to load resource: the server responded with a status of 401 (Unauthorized)
+/api/admin/bonuses:1 
+            
+            
+           Failed to load resource: the server responded with a status of 401 (Unauthorized)
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+client:536 WebSocket connection to 'wss://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/?token=NrCrYy0hJ7Dj' failed: 
+setupWebSocket @ client:536
+errorHandler.ts:21 Unhandled promise rejection: SyntaxError: Failed to construct 'WebSocket': The URL 'wss://localhost:undefined/?token=NrCrYy0hJ7Dj' is invalid.
+    at setupWebSocket (client:536:19)
+    at fallback (client:509:16)
+    at WebSocket.<anonymous> (client:555:7)
+(anonymous) @ errorHandler.ts:21
+useNotifications.ts:39 WebSocket connection to 'wss://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/ws' failed: 
+(anonymous) @ useNotifications.ts:39
+useNotifications.ts:96 ❌ WebSocket hatası: Event
+websocket.onerror @ useNotifications.ts:96
+useNotifications.ts:84 📡 Bildirim sistemi bağlantısı kesildi
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+errorHandler.ts:6 Global error: ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Bonuses.tsx:487 Uncaught ReferenceError: setShowBonusModal is not defined
+    at onClick (Bonuses.tsx:487:30)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at invokeGuardedCallbackAndCatchFirstError (chunk-RPCDYKBN.js?v=2b6db754:3736:33)
+    at executeDispatch (chunk-RPCDYKBN.js?v=2b6db754:7014:11)
+    at processDispatchQueueItemsInOrder (chunk-RPCDYKBN.js?v=2b6db754:7034:15)
+    at processDispatchQueue (chunk-RPCDYKBN.js?v=2b6db754:7043:13)
+    at dispatchEventsForPlugins (chunk-RPCDYKBN.js?v=2b6db754:7051:11)
+    at chunk-RPCDYKBN.js?v=2b6db754:7174:20

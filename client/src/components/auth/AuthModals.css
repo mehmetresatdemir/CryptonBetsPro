@@ -1,0 +1,23 @@
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 100000;
+}
+
+.auth-modal-content {
+  position: relative;
+  border-radius: 0.75rem;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin: 2rem;
+  max-height: 85vh;
+}

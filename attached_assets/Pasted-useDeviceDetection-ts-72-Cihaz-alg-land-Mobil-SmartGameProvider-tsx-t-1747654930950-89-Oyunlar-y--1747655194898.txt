@@ -1,0 +1,90 @@
+useDeviceDetection.ts:72 Cihaz algılandı: Mobil
+SmartGameProvider.tsx?t=1747654930950:89 Oyunlar yükleniyor: /api/slotegrator/games/casino?maxGames=true, cihaz: desktop
+SmartGameProvider.tsx?t=1747654930950:98 API isteği gönderiliyor: /api/slotegrator/games/casino?maxGames=true?perPage=1000&page=1&useCache=true
+useDeviceDetection.ts:72 Cihaz algılandı: Mobil
+SmartGameProvider.tsx?t=1747654930950:89 Oyunlar yükleniyor: /api/slotegrator/games/casino?maxGames=true, cihaz: mobile
+SmartGameProvider.tsx?t=1747654930950:98 API isteği gönderiliyor: /api/slotegrator/games/casino?maxGames=true?perPage=1000&page=1&useCache=true
+SmartGameProvider.tsx?t=1747654930950:101 API yanıtı alındı. Status: 200
+SmartGameProvider.tsx?t=1747654930950:108 Oyunlar 799ms içinde yüklendi. Toplam: 2 oyun.
+SmartGameProvider.tsx?t=1747654930950:113 İlk oyun örneği: {name: 'Live Streaming Star Mobile', tags: Array(0), type: 'slots', uuid: '9d60ecab28a54c82b66fd67647c90458', image: 'https://gis-static.com/games/KAGaming/9d60ecab28a54c82b66fd67647c90458.png', …}
+SmartGameProvider.tsx?t=1747654930950:136 Oyunlar yüklenirken hata: ReferenceError: data is not defined
+    at loadAllGames (SmartGameProvider.tsx?t=1747654930950:118:24)
+loadAllGames @ SmartGameProvider.tsx?t=1747654930950:136
+await in loadAllGames
+(anonymous) @ SmartGameProvider.tsx?t=1747654930950:143
+commitHookEffectListMount @ chunk-WERSD76P.js?v=73e5add3:16915
+commitPassiveMountOnFiber @ chunk-WERSD76P.js?v=73e5add3:18156
+commitPassiveMountEffects_complete @ chunk-WERSD76P.js?v=73e5add3:18129
+commitPassiveMountEffects_begin @ chunk-WERSD76P.js?v=73e5add3:18119
+commitPassiveMountEffects @ chunk-WERSD76P.js?v=73e5add3:18109
+flushPassiveEffectsImpl @ chunk-WERSD76P.js?v=73e5add3:19490
+flushPassiveEffects @ chunk-WERSD76P.js?v=73e5add3:19447
+commitRootImpl @ chunk-WERSD76P.js?v=73e5add3:19416
+commitRoot @ chunk-WERSD76P.js?v=73e5add3:19277
+performSyncWorkOnRoot @ chunk-WERSD76P.js?v=73e5add3:18895
+flushSyncCallbacks @ chunk-WERSD76P.js?v=73e5add3:9119
+(anonymous) @ chunk-WERSD76P.js?v=73e5add3:18627
+useDeviceDetection.ts:72 Cihaz algılandı: Mobil
+SmartGameProvider.tsx?t=1747654930950:89 Oyunlar yükleniyor: /api/slotegrator/games/slots?maxGames=true, cihaz: desktop
+SmartGameProvider.tsx?t=1747654930950:98 API isteği gönderiliyor: /api/slotegrator/games/slots?maxGames=true?perPage=1000&page=1&useCache=true
+useDeviceDetection.ts:72 Cihaz algılandı: Mobil
+SmartGameProvider.tsx?t=1747654930950:89 Oyunlar yükleniyor: /api/slotegrator/games/slots?maxGames=true, cihaz: mobile
+SmartGameProvider.tsx?t=1747654930950:98 API isteği gönderiliyor: /api/slotegrator/games/slots?maxGames=true?perPage=1000&page=1&useCache=true
+SmartGameProvider.tsx?t=1747654930950:101 API yanıtı alındı. Status: 200
+SmartGameProvider.tsx?t=1747654930950:108 Oyunlar 992ms içinde yüklendi. Toplam: 2 oyun.
+SmartGameProvider.tsx?t=1747654930950:113 İlk oyun örneği: {name: 'Live Streaming Star Mobile', tags: Array(0), type: 'slots', uuid: '9d60ecab28a54c82b66fd67647c90458', image: 'https://gis-static.com/games/KAGaming/9d60ecab28a54c82b66fd67647c90458.png', …}
+SmartGameProvider.tsx?t=1747654930950:136 Oyunlar yüklenirken hata: ReferenceError: data is not defined
+    at loadAllGames (SmartGameProvider.tsx?t=1747654930950:118:24)
+loadAllGames @ SmartGameProvider.tsx?t=1747654930950:136
+await in loadAllGames
+(anonymous) @ SmartGameProvider.tsx?t=1747654930950:143
+commitHookEffectListMount @ chunk-WERSD76P.js?v=73e5add3:16915
+commitPassiveMountOnFiber @ chunk-WERSD76P.js?v=73e5add3:18156
+commitPassiveMountEffects_complete @ chunk-WERSD76P.js?v=73e5add3:18129
+commitPassiveMountEffects_begin @ chunk-WERSD76P.js?v=73e5add3:18119
+commitPassiveMountEffects @ chunk-WERSD76P.js?v=73e5add3:18109
+flushPassiveEffectsImpl @ chunk-WERSD76P.js?v=73e5add3:19490
+flushPassiveEffects @ chunk-WERSD76P.js?v=73e5add3:19447
+(anonymous) @ chunk-WERSD76P.js?v=73e5add3:19328
+workLoop @ chunk-WERSD76P.js?v=73e5add3:197
+flushWork @ chunk-WERSD76P.js?v=73e5add3:176
+performWorkUntilDeadline @ chunk-WERSD76P.js?v=73e5add3:384
+SmartGameProvider.tsx?t=1747654930950:101 API yanıtı alındı. Status: 200
+SmartGameProvider.tsx?t=1747654930950:108 Oyunlar 237ms içinde yüklendi. Toplam: 50 oyun.
+SmartGameProvider.tsx?t=1747654930950:113 İlk oyun örneği: {name: '2016 Gladiators', tags: Array(5), type: 'slots', uuid: '7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15', image: 'https://gis-static.com/games/7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15.png', …}
+SmartGameProvider.tsx?t=1747654930950:136 Oyunlar yüklenirken hata: ReferenceError: data is not defined
+    at loadAllGames (SmartGameProvider.tsx?t=1747654930950:118:24)
+loadAllGames @ SmartGameProvider.tsx?t=1747654930950:136
+await in loadAllGames
+(anonymous) @ SmartGameProvider.tsx?t=1747654930950:143
+commitHookEffectListMount @ chunk-WERSD76P.js?v=73e5add3:16915
+commitPassiveMountOnFiber @ chunk-WERSD76P.js?v=73e5add3:18156
+commitPassiveMountEffects_complete @ chunk-WERSD76P.js?v=73e5add3:18129
+commitPassiveMountEffects_begin @ chunk-WERSD76P.js?v=73e5add3:18119
+commitPassiveMountEffects @ chunk-WERSD76P.js?v=73e5add3:18109
+flushPassiveEffectsImpl @ chunk-WERSD76P.js?v=73e5add3:19490
+flushPassiveEffects @ chunk-WERSD76P.js?v=73e5add3:19447
+commitRootImpl @ chunk-WERSD76P.js?v=73e5add3:19416
+commitRoot @ chunk-WERSD76P.js?v=73e5add3:19277
+performSyncWorkOnRoot @ chunk-WERSD76P.js?v=73e5add3:18895
+flushSyncCallbacks @ chunk-WERSD76P.js?v=73e5add3:9119
+(anonymous) @ chunk-WERSD76P.js?v=73e5add3:18627
+SmartGameProvider.tsx?t=1747654930950:101 API yanıtı alındı. Status: 200
+SmartGameProvider.tsx?t=1747654930950:108 Oyunlar 403ms içinde yüklendi. Toplam: 50 oyun.
+SmartGameProvider.tsx?t=1747654930950:113 İlk oyun örneği: {name: '2016 Gladiators', tags: Array(5), type: 'slots', uuid: '7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15', image: 'https://gis-static.com/games/7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15.png', …}
+SmartGameProvider.tsx?t=1747654930950:136 Oyunlar yüklenirken hata: ReferenceError: data is not defined
+    at loadAllGames (SmartGameProvider.tsx?t=1747654930950:118:24)
+loadAllGames @ SmartGameProvider.tsx?t=1747654930950:136
+await in loadAllGames
+(anonymous) @ SmartGameProvider.tsx?t=1747654930950:143
+commitHookEffectListMount @ chunk-WERSD76P.js?v=73e5add3:16915
+commitPassiveMountOnFiber @ chunk-WERSD76P.js?v=73e5add3:18156
+commitPassiveMountEffects_complete @ chunk-WERSD76P.js?v=73e5add3:18129
+commitPassiveMountEffects_begin @ chunk-WERSD76P.js?v=73e5add3:18119
+commitPassiveMountEffects @ chunk-WERSD76P.js?v=73e5add3:18109
+flushPassiveEffectsImpl @ chunk-WERSD76P.js?v=73e5add3:19490
+flushPassiveEffects @ chunk-WERSD76P.js?v=73e5add3:19447
+(anonymous) @ chunk-WERSD76P.js?v=73e5add3:19328
+workLoop @ chunk-WERSD76P.js?v=73e5add3:197
+flushWork @ chunk-WERSD76P.js?v=73e5add3:176
+performWorkUntilDeadline @ chunk-WERSD76P.js?v=73e5add3:384

@@ -1,0 +1,126 @@
+chunk-RPCDYKBN.js?v=4f304c30:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+api.ts:49 API İsteği: GET /api/auth/me undefined
+api.ts:61 API Yanıtı: Status 200
+api.ts:93 API Yanıt Verileri: {id: 3, username: 'admin', email: 'admin@example.com', firstName: 'trial', lastName: 'name', …}
+api.ts:49 API İsteği: POST /api/auth/login {username: 'test', password: 'password'}
+api.ts:61 API Yanıtı: Status 200
+api.ts:93 API Yanıt Verileri: {user: {…}, token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksI…kxOH0.n4a2vcPnFpq4jQDMbgieWQjS8Kr7_7lk46MmOSq4Nu8'}
+api.ts:49 API İsteği: POST /api/auth/login {username: undefined, password: undefined, language: 'tr'}
+api.ts:59 
+            
+            
+           POST https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/api/auth/login 400 (Bad Request)
+apiRequest @ api.ts:59
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:61 API Yanıtı: Status 400
+api.ts:68 API Hata Yanıtı: {error: 'Kullanıcı adı ve şifre gerekli'}
+apiRequest @ api.ts:68
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:80 API JSON Parse Hatası: Error: Kullanıcı adı ve şifre gerekli
+    at apiRequest (api.ts:72:17)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+apiRequest @ api.ts:80
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+api.ts:101 API İstek Hatası: Error: Sunucu hatası (400): Bad Request
+    at apiRequest (api.ts:81:15)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+apiRequest @ api.ts:101
+await in apiRequest
+login @ api.ts:114
+login @ UserContext.tsx:75
+handleLoginSubmit @ LoginModalFixed.tsx:75
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449
+LoginModalFixed.tsx:83 Login hatası: Error: Sunucu hatası (400): Bad Request
+    at apiRequest (api.ts:81:15)
+    at async login (UserContext.tsx:75:24)
+    at async handleLoginSubmit (LoginModalFixed.tsx:75:9)
+handleLoginSubmit @ LoginModalFixed.tsx:83
+await in handleLoginSubmit
+callCallback2 @ chunk-RPCDYKBN.js?v=4f304c30:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=4f304c30:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=4f304c30:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=4f304c30:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=4f304c30:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=4f304c30:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=4f304c30:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=4f304c30:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=4f304c30:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=4f304c30:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=4f304c30:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=4f304c30:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=4f304c30:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=4f304c30:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=4f304c30:5449

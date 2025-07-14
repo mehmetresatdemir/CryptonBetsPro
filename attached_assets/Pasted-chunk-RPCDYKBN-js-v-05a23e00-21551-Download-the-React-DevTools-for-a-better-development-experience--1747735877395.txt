@@ -1,0 +1,41 @@
+chunk-RPCDYKBN.js?v=05a23e00:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+Dashboard.tsx:75 İstatistikler API'den alınıyor...
+Dashboard.tsx:107 JSON ayrıştırma hatası: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at fetchStats (Dashboard.tsx:103:23)
+fetchStats @ Dashboard.tsx:107
+await in fetchStats
+(anonymous) @ Dashboard.tsx:123
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=05a23e00:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=05a23e00:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=05a23e00:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=05a23e00:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=05a23e00:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=05a23e00:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=05a23e00:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=05a23e00:19328
+workLoop @ chunk-RPCDYKBN.js?v=05a23e00:197
+flushWork @ chunk-RPCDYKBN.js?v=05a23e00:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=05a23e00:384
+Dashboard.tsx:108 Alınan yanıt: <!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <script type="module">
+import { createHotContext } from "/@vite/client";
+const hot = createHotContext("/...
+Dashboard.tsx:112 Dashboard istatistikleri alınırken hata oluştu: Error: API yanıtı işlenirken hata oluştu
+    at fetchStats (Dashboard.tsx:109:17)
+fetchStats @ Dashboard.tsx:112
+await in fetchStats
+(anonymous) @ Dashboard.tsx:123
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=05a23e00:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=05a23e00:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=05a23e00:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=05a23e00:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=05a23e00:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=05a23e00:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=05a23e00:19447
+(anonymous) @ chunk-RPCDYKBN.js?v=05a23e00:19328
+workLoop @ chunk-RPCDYKBN.js?v=05a23e00:197
+flushWork @ chunk-RPCDYKBN.js?v=05a23e00:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=05a23e00:384

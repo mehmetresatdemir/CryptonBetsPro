@@ -1,0 +1,232 @@
+CasinoCrypton Admin Paneli Detaylı Geliştirme Spesifikasyonu
+Mevcut CasinoCrypton casino platformumuz için profesyonel, fonksiyonel ve kapsamlı bir admin paneli oluşturmanızı istiyorum. Admin paneli, aşağıdaki sayfa yapısı ve fonksiyonları içermelidir.
+
+Genel Tasarım ve Kullanıcı Arayüzü
+Tema: Koyu arka plan (#0f1925) üzerine altın/sarı aksanlar (#ffd700) ve beyaz metin
+Responsive: Masaüstü, tablet ve mobil cihazlarda tam uyumluluk
+Font: Roboto veya Inter
+Navigasyon: Sol tarafta sabit menü (masaüstü), üstte yatay menu çubuğu (mobil)
+Üst Bar: Bildirimler, profil menüsü, dil seçimi, gerçek zamanlı aktif kullanıcı sayacı
+Dil Desteği: Türkçe (varsayılan), İngilizce, Almanca, Rusça, Gürcüce
+Sayfa Yapısı ve Detayları
+1. Giriş ve Kimlik Doğrulama
+/admin-login - Admin Giriş Sayfası
+Kullanıcı adı/Şifre girişi
+İki faktörlü kimlik doğrulama (2FA) seçeneği
+Şifremi unuttum özelliği
+Güvenlik kodu veya CAPTCHA doğrulaması
+Başarısız giriş denemeleri izleme
+2. Dashboard
+/admin - Ana Dashboard
+Özet istatistik kartları (toplam kullanıcılar, günlük gelir, aktif oyuncular, bekleyen çekimler)
+Son 7/30 gün finansal grafiği
+Son işlemler tablosu (son 10 depozito/çekim)
+Anlık aktif kullanıcı grafiği
+Sistem durumu (API bağlantıları)
+Bildirim ve uyarılar paneli
+3. Kullanıcı Yönetimi
+/admin/users - Kullanıcı Listesi
+
+Filtreler: kayıt tarihi, ülke, para birimi, son giriş, bakiye aralığı, doğrulama durumu
+Toplu işlem araçları: e-posta gönderme, kullanıcı durumu değiştirme
+Her kullanıcı için hızlı eylemler (profil görüntüleme, düzenleme, askıya alma)
+Sayfalama ve Excel/CSV dışa aktarma
+/admin/users/:userId - Kullanıcı Detayı
+
+Profil bilgileri (kişisel bilgiler, iletişim, IP adresleri)
+Bakiye yönetimi (manuel bakiye ekleme/çıkarma, bahis limitleri)
+İşlem geçmişi (depozito, çekim, bahisler)
+Giriş geçmişi ve cihaz bilgileri
+Notlar ve uyarılar ekleme
+Hesap işlemleri (kilitleme, silme, doğrulama)
+/admin/kyc - KYC Yönetimi
+
+Bekleyen KYC onayları listesi
+Doküman görüntüleyici (kimlik, adres, banka belgeleri)
+Onaylama/reddetme işlemleri
+Kullanıcıya mesaj gönderme
+Doküman geçmişi
+4. Finansal Yönetim
+/admin/finance - Finans Dashboard
+
+Günlük/haftalık/aylık gelir-gider grafikleri
+Para birimi dağılımı
+Ödeme yöntemi kullanım oranları
+Risk analizi ve fraud göstergeleri
+/admin/deposits - Depozito İstekleri
+
+Bekleyen/tamamlanan/reddedilen depozitolar
+Filtreleme (tarih, miktar, ödeme yöntemi, kullanıcı)
+Manuel onaylama/reddetme
+İşlem detayları görüntüleme
+Ödeme kanıtı inceleme
+/admin/withdrawals - Çekim İstekleri
+
+Bekleyen çekim istekleri listesi
+Çekim onaylama/reddetme/askıya alma
+Kullanıcı bakiye ve bahis kontrolü
+Çekim limitlerini ayarlama
+Ödeme yöntemi bazında işlem geçmişi
+/admin/payment-methods - Ödeme Yöntemleri
+
+Aktif/pasif ödeme yöntemleri yönetimi
+Depozito/çekim limitleri ayarlama
+İşlem ücretleri yapılandırması
+Papara, Havale, Astropay, Kripto entegrasyonları
+Ödeme yöntemi önceliklendirme
+/admin/reports/financial - Finansal Raporlar
+
+Günlük/haftalık/aylık gelir raporları
+Ödeme yöntemi bazında raporlar
+GGR (Gross Gaming Revenue) analizleri
+Excel/PDF dışa aktarma
+5. Oyun Yönetimi
+/admin/games - Oyun Listesi
+
+Tüm oyunların listesi (arama, filtreleme)
+Oyun durumu değiştirme (aktif/pasif)
+Kategorilere göre gruplama
+Özellik ayarları (popüler, yeni, öne çıkan)
+/admin/games-categories - Oyun Kategorileri
+
+Kategori oluşturma/düzenleme/silme
+Sıralama ve görünürlük ayarları
+Her kategori için özel banner ayarları
+Çoklu dil desteği ile kategori isimleri
+/admin/slotegrator - Slotegrator Entegrasyonu
+
+API durum kontrolü ve bağlantı ayarları
+Merchant ID ve API Key yapılandırması
+Oyun sağlayıcıları yönetimi (aktif/pasif)
+Oyun senkronizasyonu başlatma
+Callback URL yapılandırması
+/admin/game-providers - Oyun Sağlayıcıları
+
+Sağlayıcı logoları ve bilgileri yönetimi
+Sağlayıcı bazında oyun listesi
+Sağlayıcı API bağlantı ayarları
+RTP ve volatilite ayarları
+/admin/reports/games - Oyun Raporları
+
+En çok oynanan oyunlar
+Sağlayıcı bazında performans
+Kullanıcı oyun tercihleri analizi
+Zaman bazlı oyun istatistikleri
+6. Bonus ve Promosyon Yönetimi
+/admin/bonuses - Bonus Yönetimi
+
+Aktif bonuslar listesi
+Bonus oluşturma/düzenleme/silme
+Bonus kuralları ve şartları ayarlama
+Çevrim şartları yapılandırması
+Kullanıcı grubu hedefleme
+/admin/promotions - Promosyon Kampanyaları
+
+Turnuva ve etkinlik oluşturma
+Zamanlı promosyonlar
+Otomatik bonus dağıtım ayarları
+Free spin ve hediye promosyonları
+Promosyon istatistikleri
+/admin/vip - VIP Program Yönetimi
+
+VIP seviye yapılandırması
+Seviye şartları ve ödülleri ayarlama
+VIP kullanıcı listesi ve yönetimi
+Özel bonus ve promosyonlar oluşturma
+7. İçerik Yönetimi
+/admin/content - İçerik Yönetimi Dashboard
+
+Site duyuruları
+Banner ve slider yönetimi
+Kampanya görselleri
+Sayfa içerikleri düzenleme
+/admin/banners - Banner Yönetimi
+
+Ana sayfa slider görselleri
+Promosyon bannerları
+Özel görünürlük ayarları (ülke, dil, kullanıcı grubu)
+Zamanlanmış bannerlar
+/admin/notifications - Bildirim Yönetimi
+
+Site çapında duyurular
+Hedefli kullanıcı bildirimleri
+Push notification ayarları
+Bildirim şablonları oluşturma
+/admin/cms - Sayfa Düzenleyici
+
+Sabit sayfa içerikleri (Hakkımızda, SSS, Yardım)
+WYSIWYG içerik editörü
+SEO meta ayarları
+Çoklu dil desteği
+8. Sistem Yönetimi
+/admin/settings - Sistem Ayarları
+
+Genel site ayarları
+API anahtarları yönetimi
+Oturum ve güvenlik ayarları
+Bakım modu yapılandırması
+/admin/admins - Admin Kullanıcıları
+
+Admin kullanıcıları listesi
+Rol ve yetki yönetimi
+Admin eylem logları
+IP kısıtlamaları
+/admin/logs - Sistem Logları
+
+Hata logları
+API istekleri logları
+Admin eylemleri denetim izi
+Güvenlik uyarıları ve ihlaller
+/admin/security - Güvenlik Ayarları
+
+IP kısıtlama kuralları
+Şüpheli aktivite algılama
+Brute force koruma ayarları
+2FA zorunluluğu yapılandırması
+Teknik Gereksinimler
+Frontend
+Framework: React 18+ ve TypeScript
+State Management: TanStack Query (React Query)
+Routing: wouter
+Form Handling: React Hook Form + Zod validasyon
+UI Bileşenleri: shadcn/ui ve Tailwind CSS
+Grafik ve Tablolar: ApexCharts, TanStack Table
+Kimlik Doğrulama: JWT token tabanlı auth
+Backend
+Framework: Express.js
+ORM: Drizzle ile PostgreSQL
+Güvenlik: Helmet.js, rate limiting
+Dosya Yükleme: Multer
+API Entegrasyonu: Axios ile Slotegrator API
+Veri Modelleri
+Admin Kullanıcıları:
+ID, username, email, password, role, lastLogin, status, twoFactorEnabled
+Admin Roller:
+ID, name, permissions, createdAt, updatedAt
+Admin İşlem Logları:
+ID, adminId, action, details, timestamp, ip
+Sistem Ayarları:
+key, value, lastUpdatedBy, lastUpdatedAt
+Bildirimler:
+ID, title, content, type, targetUsers, createdAt, expiresAt, status
+Güvenlik Özellikleri
+CSRF token koruması
+Rate limiting
+IP-based güvenlik kontrolleri
+Hassas verilerin şifrelenmesi
+Detaylı yetkilendirme sistemi (role-based access control)
+Güçlü şifre politikası zorunluluğu
+Oturum zaman aşımı ve zorunlu yeniden giriş
+Performans Gereksinimleri
+Sayfaların 2 saniyeden kısa sürede yüklenmesi
+Veritabanı sorgularında optimizasyon
+Büyük veri setleri için sayfalama ve lazy loading
+Önbellek stratejileri (caching)
+Asenkron veri yükleme ve işleme
+Entegrasyon Gereksinimleri
+Slotegrator API: Oyun listesi, sağlayıcılar, istatistikler, oyun başlatma
+Ödeme API'leri: Papara, Havale, Kripto para, AstroPay
+Analitik Araçları: Google Analytics veya özel analitik çözümü
+İletişim Araçları: Email gönderimi (SendGrid), SMS entegrasyonu
+Bu spesifikasyonlar doğrultusunda, hem görsel tasarımıyla hem de fonksiyonelliğiyle profesyonel standartları karşılayan, güvenli ve etkili bir admin paneli geliştirilmesini bekliyorum. Panel, mevcut casino platformumuzun yönetimi için gereken tüm araçları sağlamalı ve kullanıcı deneyimini optimize etmelidir.
+

@@ -1,0 +1,96 @@
+chunk-RPCDYKBN.js?v=47e391f4:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+WebSocketContext.tsx:65 WebSocket Context: All connections disabled
+WebSocketContext.tsx:65 WebSocket Context: All connections disabled
+Dashboard.tsx:10 📊 Current Dashboard Stats State: null
+Dashboard.tsx:10 📊 Current Dashboard Stats State: null
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:10 📊 Current Dashboard Stats State: null
+Dashboard.tsx:10 📊 Current Dashboard Stats State: null
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:09:49 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:09:51 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:09:53 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:09:55 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:09:57 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:09:59 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:10:01 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:10:03 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:10:05 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:10:07 AM
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:10 📊 Current Dashboard Stats State: Object
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:10:09 AM
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+queryClient.ts:61 🔑 Admin API request: /api/admin/bonuses Headers: Object
+queryClient.ts:61 🔑 Admin API request: /api/admin/bonuses/stats Headers: Object
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+Dashboard.tsx:58 📊 Dashboard verisi alındı: Object
+Dashboard.tsx:64 📊 Anlık veriler güncellendi: 7:10:11 AM
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+BannerManagement.tsx:129 ✅ Token mevcut: eyJhbGciOiJIUzI1NiIs...
+BannerManagement.tsx:192 🔍 Banner API Token kontrolü: Token mevcut
+BannerManagement.tsx:197 📤 Authorization header eklendi
+useNotifications.ts:38 📡 Bildirim sistemi - WebSocket devre dışı (HTTP polling aktif)
+BannerManagement.tsx:129 ✅ Token mevcut: eyJhbGciOiJIUzI1NiIs...
+BannerManagement.tsx:202 
+            
+            
+           GET https://0b527b70-14b5-47ef-b030-9002aab28006-00-g7320r0779db.pike.replit.dev/api/admin/banners?page=1&limit=20&search=&type=all&status=all&language=all&pageLocation=all 500 (Internal Server Error)
+queryFn @ BannerManagement.tsx:202
+fetchFn @ @tanstack_react-query.js?v=47e391f4:840
+run @ @tanstack_react-query.js?v=47e391f4:494
+start @ @tanstack_react-query.js?v=47e391f4:536
+fetch @ @tanstack_react-query.js?v=47e391f4:926
+executeFetch_fn @ @tanstack_react-query.js?v=47e391f4:2211
+onSubscribe @ @tanstack_react-query.js?v=47e391f4:1898
+subscribe @ @tanstack_react-query.js?v=47e391f4:24
+(anonymous) @ @tanstack_react-query.js?v=47e391f4:3022
+subscribeToStore @ chunk-RPCDYKBN.js?v=47e391f4:11984
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=47e391f4:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=47e391f4:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=47e391f4:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=47e391f4:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=47e391f4:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=47e391f4:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=47e391f4:19447
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18868
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=47e391f4:9119
+commitRootImpl @ chunk-RPCDYKBN.js?v=47e391f4:19432
+commitRoot @ chunk-RPCDYKBN.js?v=47e391f4:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=47e391f4:18805
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=47e391f4:18718
+workLoop @ chunk-RPCDYKBN.js?v=47e391f4:197
+flushWork @ chunk-RPCDYKBN.js?v=47e391f4:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=47e391f4:384
+BannerManagement.tsx:207 📥 Banner API yanıtı: 500 Internal Server Error

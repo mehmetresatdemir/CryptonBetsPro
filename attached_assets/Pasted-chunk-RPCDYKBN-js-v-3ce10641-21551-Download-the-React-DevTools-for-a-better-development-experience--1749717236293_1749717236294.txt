@@ -1,0 +1,50 @@
+chunk-RPCDYKBN.js?v=3ce10641:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+SlotPage.tsx:182 🚀 INSTANT slot loading - TÜM oyunlar tek istekte...
+SlotPage.tsx:197 ⚡ INSTANT SUCCESS: 22515 slot oyunu yüklendi
+SlotPage.tsx:198 📊 Sağlayıcılar: 70
+GameDetailModal.tsx:238 Oyun başlatma hatası: Error: Demo games ready - IP whitelisting in progress with Slotegrator.
+    at Object.mutationFn (GameDetailModal.tsx:228:15)
+onError @ GameDetailModal.tsx:238
+execute @ @tanstack_react-query.js?v=3ce10641:1254
+await in execute
+mutate @ @tanstack_react-query.js?v=3ce10641:2630
+(anonymous) @ @tanstack_react-query.js?v=3ce10641:3295
+handlePlayGame @ GameDetailModal.tsx:272
+callCallback2 @ chunk-RPCDYKBN.js?v=3ce10641:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3ce10641:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3ce10641:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=3ce10641:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=3ce10641:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=3ce10641:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=3ce10641:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=3ce10641:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=3ce10641:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=3ce10641:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=3ce10641:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=3ce10641:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=3ce10641:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=3ce10641:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=3ce10641:5449
+GameDetailModal.tsx:238 Oyun başlatma hatası: Error: Demo games ready - IP whitelisting in progress with Slotegrator.
+    at Object.mutationFn (GameDetailModal.tsx:228:15)
+onError @ GameDetailModal.tsx:238
+execute @ @tanstack_react-query.js?v=3ce10641:1254
+await in execute
+mutate @ @tanstack_react-query.js?v=3ce10641:2630
+(anonymous) @ @tanstack_react-query.js?v=3ce10641:3295
+handlePlayGame @ GameDetailModal.tsx:272
+callCallback2 @ chunk-RPCDYKBN.js?v=3ce10641:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3ce10641:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3ce10641:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=3ce10641:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=3ce10641:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=3ce10641:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=3ce10641:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=3ce10641:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=3ce10641:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=3ce10641:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=3ce10641:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=3ce10641:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=3ce10641:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=3ce10641:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=3ce10641:5449

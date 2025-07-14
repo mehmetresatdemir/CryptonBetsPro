@@ -1,0 +1,57 @@
+chunk-RPCDYKBN.js?v=ffa0008e:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+AISupportChat.tsx:53 Chat opened. Token exists: true Token value: eyJhbGciOiJIUzI1NiIs... GuestName: 
+AISupportChat.tsx:61 Token payload: Object
+AISupportChat.tsx:62 Token exp: 1752170031 Current time: 1749581996.389 Is expired: false
+AISupportChat.tsx:69 Token is valid
+AISupportChat.tsx:98 Authenticated user, hiding form
+AISupportChat.tsx:153 
+            
+            
+           POST https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/api/chat/send 400 (Bad Request)
+mutationFn @ AISupportChat.tsx:153
+fn @ @tanstack_react-query.js?v=ffa0008e:1189
+run @ @tanstack_react-query.js?v=ffa0008e:494
+start @ @tanstack_react-query.js?v=ffa0008e:536
+execute @ @tanstack_react-query.js?v=ffa0008e:1225
+await in execute
+mutate @ @tanstack_react-query.js?v=ffa0008e:2630
+(anonymous) @ @tanstack_react-query.js?v=ffa0008e:3295
+handleSendMessage @ AISupportChat.tsx:238
+callCallback2 @ chunk-RPCDYKBN.js?v=ffa0008e:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=ffa0008e:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=ffa0008e:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=ffa0008e:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=ffa0008e:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=ffa0008e:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=ffa0008e:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=ffa0008e:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=ffa0008e:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=ffa0008e:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=ffa0008e:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=ffa0008e:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=ffa0008e:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=ffa0008e:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=ffa0008e:5449
+AISupportChat.tsx:208 Send message error: Error: HTTP error! status: 400
+    at Object.mutationFn (AISupportChat.tsx:166:15)
+onError @ AISupportChat.tsx:208
+execute @ @tanstack_react-query.js?v=ffa0008e:1254
+await in execute
+mutate @ @tanstack_react-query.js?v=ffa0008e:2630
+(anonymous) @ @tanstack_react-query.js?v=ffa0008e:3295
+handleSendMessage @ AISupportChat.tsx:238
+callCallback2 @ chunk-RPCDYKBN.js?v=ffa0008e:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=ffa0008e:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=ffa0008e:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=ffa0008e:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=ffa0008e:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=ffa0008e:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=ffa0008e:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=ffa0008e:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=ffa0008e:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=ffa0008e:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=ffa0008e:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=ffa0008e:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=ffa0008e:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=ffa0008e:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=ffa0008e:5449

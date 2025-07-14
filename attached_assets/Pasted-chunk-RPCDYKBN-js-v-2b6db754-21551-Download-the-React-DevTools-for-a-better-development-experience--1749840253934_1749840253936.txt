@@ -1,0 +1,168 @@
+chunk-RPCDYKBN.js?v=2b6db754:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:208:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=2b6db754:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=2b6db754:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=2b6db754:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=2b6db754:19198
+workLoopConcurrent @ chunk-RPCDYKBN.js?v=2b6db754:19189
+renderRootConcurrent @ chunk-RPCDYKBN.js?v=2b6db754:19164
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18678
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384
+errorHandler.ts:9 Error details: {message: 't is not defined', stack: 'ReferenceError: t is not defined\n    at _c5 (https….vite/deps/chunk-RPCDYKBN.js?v=2b6db754:19765:15)', filename: 'https://7551f6c2-5380-48c1-942e-48e07ff45518-00-21…wmg6k.picard.replit.dev/src/pages/admin/Games.tsx', lineno: 247, colno: 47}
+(anonymous) @ errorHandler.ts:9
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=2b6db754:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=2b6db754:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=2b6db754:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=2b6db754:19198
+workLoopConcurrent @ chunk-RPCDYKBN.js?v=2b6db754:19189
+renderRootConcurrent @ chunk-RPCDYKBN.js?v=2b6db754:19164
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18678
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384
+Games.tsx:208 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:208:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+_c5 @ Games.tsx:208
+renderWithHooks @ chunk-RPCDYKBN.js?v=2b6db754:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=2b6db754:14582
+updateSimpleMemoComponent @ chunk-RPCDYKBN.js?v=2b6db754:14463
+updateMemoComponent @ chunk-RPCDYKBN.js?v=2b6db754:14366
+beginWork @ chunk-RPCDYKBN.js?v=2b6db754:15977
+callCallback2 @ chunk-RPCDYKBN.js?v=2b6db754:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=2b6db754:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=2b6db754:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=2b6db754:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=2b6db754:19198
+workLoopConcurrent @ chunk-RPCDYKBN.js?v=2b6db754:19189
+renderRootConcurrent @ chunk-RPCDYKBN.js?v=2b6db754:19164
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18678
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384
+errorHandler.ts:6 Global error: ReferenceError: t is not defined
+    at _c5 (Games.tsx:208:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+(anonymous) @ errorHandler.ts:6
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=2b6db754:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=2b6db754:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=2b6db754:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=2b6db754:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=2b6db754:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=2b6db754:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=2b6db754:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18684
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384
+errorHandler.ts:9 Error details: {message: 't is not defined', stack: 'ReferenceError: t is not defined\n    at _c5 (https….vite/deps/chunk-RPCDYKBN.js?v=2b6db754:19765:15)', filename: 'https://7551f6c2-5380-48c1-942e-48e07ff45518-00-21…wmg6k.picard.replit.dev/src/pages/admin/Games.tsx', lineno: 247, colno: 47}
+(anonymous) @ errorHandler.ts:9
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=2b6db754:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=2b6db754:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=2b6db754:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=2b6db754:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=2b6db754:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=2b6db754:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=2b6db754:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18684
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384
+Games.tsx:208 Uncaught ReferenceError: t is not defined
+    at _c5 (Games.tsx:208:36)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=2b6db754:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=2b6db754:14582:28)
+    at updateSimpleMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14463:18)
+    at updateMemoComponent (chunk-RPCDYKBN.js?v=2b6db754:14366:22)
+    at beginWork (chunk-RPCDYKBN.js?v=2b6db754:15977:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=2b6db754:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=2b6db754:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=2b6db754:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=2b6db754:19765:15)
+_c5 @ Games.tsx:208
+renderWithHooks @ chunk-RPCDYKBN.js?v=2b6db754:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=2b6db754:14582
+updateSimpleMemoComponent @ chunk-RPCDYKBN.js?v=2b6db754:14463
+updateMemoComponent @ chunk-RPCDYKBN.js?v=2b6db754:14366
+beginWork @ chunk-RPCDYKBN.js?v=2b6db754:15977
+callCallback2 @ chunk-RPCDYKBN.js?v=2b6db754:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=2b6db754:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=2b6db754:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=2b6db754:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=2b6db754:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=2b6db754:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=2b6db754:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=2b6db754:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18684
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384
+chunk-RPCDYKBN.js?v=2b6db754:14032 The above error occurred in the <_c5> component:
+
+    at _c5 (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:183:3)
+    at div
+    at div
+    at main
+    at div
+    at div
+    at AdminLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/admin/AdminLayout.tsx:53:24)
+    at Games (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Games.tsx:315:27)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=WH776WsQvSPSC7VruPE3h:112:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=2b6db754:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=2b6db754:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=2b6db754:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=2b6db754:2805:3)
+    at App
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=2b6db754:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=2b6db754:14032
+callback @ chunk-RPCDYKBN.js?v=2b6db754:14078
+callCallback @ chunk-RPCDYKBN.js?v=2b6db754:11248
+commitUpdateQueue @ chunk-RPCDYKBN.js?v=2b6db754:11265
+commitLayoutEffectOnFiber @ chunk-RPCDYKBN.js?v=2b6db754:17075
+commitLayoutMountEffects_complete @ chunk-RPCDYKBN.js?v=2b6db754:17980
+commitLayoutEffects_begin @ chunk-RPCDYKBN.js?v=2b6db754:17969
+commitLayoutEffects @ chunk-RPCDYKBN.js?v=2b6db754:17920
+commitRootImpl @ chunk-RPCDYKBN.js?v=2b6db754:19353
+commitRoot @ chunk-RPCDYKBN.js?v=2b6db754:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=2b6db754:18760
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=2b6db754:18718
+workLoop @ chunk-RPCDYKBN.js?v=2b6db754:197
+flushWork @ chunk-RPCDYKBN.js?v=2b6db754:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=2b6db754:384

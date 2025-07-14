@@ -1,0 +1,372 @@
+chunk-RPCDYKBN.js?v=3c623d55:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.dashboard
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.dashboard
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.analytics
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.user_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.users
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.user_logs
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.financial_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.transactions
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.deposits
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.content_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.games
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.bonuses
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.news
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.banners
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.system_settings
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.settings
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.themes
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.languages
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.integrations
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.communication
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.messages
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.email_templates
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.support
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.panel
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.logout
+t @ UserContext.tsx:275
+chunk-RPCDYKBN.js?v=3c623d55:521 Warning: validateDOMNesting(...): <a> cannot appear as a descendant of <a>.
+    at a
+    at a
+    at https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:337:18
+    at div
+    at div
+    at div
+    at nav
+    at div
+    at div
+    at AdminLayout (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/components/admin/AdminLayout.tsx:49:24)
+    at AnalyticsPage (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Analytics.tsx:69:17)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=fSnzHqvqwscYvx4VJKbIG:101:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=3c623d55:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=3c623d55:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at App
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx?v=fSnzHqvqwscYvx4VJKbIG:20:37)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=3c623d55:18:5)
+printWarning @ chunk-RPCDYKBN.js?v=3c623d55:521
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.dashboard
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.dashboard
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.analytics
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.sidebar_reports
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.user_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.users
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.kyc_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.user_logs
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.financial_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.transactions
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.deposits
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.withdrawals
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.content_management
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.games
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.bonuses
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.news
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.banners
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.system_settings
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.settings
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.themes
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.languages
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.integrations
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.communication
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.messages
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.email_templates
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.support
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.panel
+t @ UserContext.tsx:275
+UserContext.tsx:275 Çeviri anahtarı bulunamadı: admin.logout
+t @ UserContext.tsx:275
+errorHandler.ts:6 Global error: ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=3c623d55:19137:13)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Analytics.tsx:243 Uncaught ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=3c623d55:19137:13)
+errorHandler.ts:6 Global error: ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=3c623d55:19137:13)
+(anonymous) @ errorHandler.ts:6
+errorHandler.ts:9 Error details: Object
+(anonymous) @ errorHandler.ts:9
+Analytics.tsx:243 Uncaught ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15924:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+    at workLoopSync (chunk-RPCDYKBN.js?v=3c623d55:19137:13)
+chunk-RPCDYKBN.js?v=3c623d55:14032 The above error occurred in the <AnalyticsPage> component:
+
+    at AnalyticsPage (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Analytics.tsx:69:17)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=fSnzHqvqwscYvx4VJKbIG:101:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=3c623d55:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=3c623d55:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at App
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx?v=fSnzHqvqwscYvx4VJKbIG:20:37)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=3c623d55:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=3c623d55:14032
+errorHandler.ts:6 Global error: ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at mountLazyComponent (chunk-RPCDYKBN.js?v=3c623d55:14833:23)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15918:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+(anonymous) @ errorHandler.ts:6
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3c623d55:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3c623d55:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=3c623d55:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=3c623d55:19198
+workLoopConcurrent @ chunk-RPCDYKBN.js?v=3c623d55:19189
+renderRootConcurrent @ chunk-RPCDYKBN.js?v=3c623d55:19164
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18678
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384
+errorHandler.ts:9 Error details: {message: 'realTimeEnabled is not defined', stack: 'ReferenceError: realTimeEnabled is not defined\n   ….vite/deps/chunk-RPCDYKBN.js?v=3c623d55:19198:20)', filename: 'https://7551f6c2-5380-48c1-942e-48e07ff45518-00-21…k.picard.replit.dev/src/pages/admin/Analytics.tsx', lineno: 251, colno: 96}
+(anonymous) @ errorHandler.ts:9
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3c623d55:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3c623d55:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=3c623d55:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=3c623d55:19198
+workLoopConcurrent @ chunk-RPCDYKBN.js?v=3c623d55:19189
+renderRootConcurrent @ chunk-RPCDYKBN.js?v=3c623d55:19164
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18678
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384
+Analytics.tsx:243 Uncaught ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at mountLazyComponent (chunk-RPCDYKBN.js?v=3c623d55:14833:23)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15918:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+AnalyticsPage @ Analytics.tsx:243
+renderWithHooks @ chunk-RPCDYKBN.js?v=3c623d55:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=3c623d55:14582
+mountLazyComponent @ chunk-RPCDYKBN.js?v=3c623d55:14833
+beginWork @ chunk-RPCDYKBN.js?v=3c623d55:15918
+callCallback2 @ chunk-RPCDYKBN.js?v=3c623d55:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3c623d55:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3c623d55:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=3c623d55:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=3c623d55:19198
+workLoopConcurrent @ chunk-RPCDYKBN.js?v=3c623d55:19189
+renderRootConcurrent @ chunk-RPCDYKBN.js?v=3c623d55:19164
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18678
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384
+errorHandler.ts:6 Global error: ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at mountLazyComponent (chunk-RPCDYKBN.js?v=3c623d55:14833:23)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15918:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+(anonymous) @ errorHandler.ts:6
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3c623d55:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3c623d55:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=3c623d55:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=3c623d55:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=3c623d55:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=3c623d55:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=3c623d55:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18684
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384
+errorHandler.ts:9 Error details: {message: 'realTimeEnabled is not defined', stack: 'ReferenceError: realTimeEnabled is not defined\n   ….vite/deps/chunk-RPCDYKBN.js?v=3c623d55:19198:20)', filename: 'https://7551f6c2-5380-48c1-942e-48e07ff45518-00-21…k.picard.replit.dev/src/pages/admin/Analytics.tsx', lineno: 251, colno: 96}
+(anonymous) @ errorHandler.ts:9
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3c623d55:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3c623d55:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=3c623d55:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=3c623d55:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=3c623d55:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=3c623d55:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=3c623d55:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18684
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384
+Analytics.tsx:243 Uncaught ReferenceError: realTimeEnabled is not defined
+    at AnalyticsPage (Analytics.tsx:243:21)
+    at renderWithHooks (chunk-RPCDYKBN.js?v=3c623d55:11548:26)
+    at updateFunctionComponent (chunk-RPCDYKBN.js?v=3c623d55:14582:28)
+    at mountLazyComponent (chunk-RPCDYKBN.js?v=3c623d55:14833:23)
+    at beginWork (chunk-RPCDYKBN.js?v=3c623d55:15918:22)
+    at HTMLUnknownElement.callCallback2 (chunk-RPCDYKBN.js?v=3c623d55:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-RPCDYKBN.js?v=3c623d55:3699:24)
+    at invokeGuardedCallback (chunk-RPCDYKBN.js?v=3c623d55:3733:39)
+    at beginWork$1 (chunk-RPCDYKBN.js?v=3c623d55:19765:15)
+    at performUnitOfWork (chunk-RPCDYKBN.js?v=3c623d55:19198:20)
+AnalyticsPage @ Analytics.tsx:243
+renderWithHooks @ chunk-RPCDYKBN.js?v=3c623d55:11548
+updateFunctionComponent @ chunk-RPCDYKBN.js?v=3c623d55:14582
+mountLazyComponent @ chunk-RPCDYKBN.js?v=3c623d55:14833
+beginWork @ chunk-RPCDYKBN.js?v=3c623d55:15918
+callCallback2 @ chunk-RPCDYKBN.js?v=3c623d55:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=3c623d55:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=3c623d55:3733
+beginWork$1 @ chunk-RPCDYKBN.js?v=3c623d55:19765
+performUnitOfWork @ chunk-RPCDYKBN.js?v=3c623d55:19198
+workLoopSync @ chunk-RPCDYKBN.js?v=3c623d55:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=3c623d55:19116
+recoverFromConcurrentError @ chunk-RPCDYKBN.js?v=3c623d55:18736
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18684
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384
+chunk-RPCDYKBN.js?v=3c623d55:14032 The above error occurred in the <AnalyticsPage> component:
+
+    at AnalyticsPage (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/pages/admin/Analytics.tsx:69:17)
+    at Suspense
+    at AdminRoute (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/App.tsx?v=fSnzHqvqwscYvx4VJKbIG:101:34)
+    at Route (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:323:16)
+    at Switch (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=3c623d55:379:17)
+    at Router
+    at Provider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OXZDJRWN.js?v=3c623d55:38:15)
+    at TooltipProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=3c623d55:63:5)
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx:20:37)
+    at UserProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/UserContext.tsx:24:32)
+    at LanguageProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/LanguageContext.tsx:21:36)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at App
+    at WebSocketProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/src/contexts/WebSocketContext.tsx?v=fSnzHqvqwscYvx4VJKbIG:20:37)
+    at QueryClientProvider (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=3c623d55:2805:3)
+    at ErrorBoundary (https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-error-boundary.js?v=3c623d55:18:5)
+
+React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.
+logCapturedError @ chunk-RPCDYKBN.js?v=3c623d55:14032
+callback @ chunk-RPCDYKBN.js?v=3c623d55:14078
+callCallback @ chunk-RPCDYKBN.js?v=3c623d55:11248
+commitUpdateQueue @ chunk-RPCDYKBN.js?v=3c623d55:11265
+commitLayoutEffectOnFiber @ chunk-RPCDYKBN.js?v=3c623d55:17075
+commitLayoutMountEffects_complete @ chunk-RPCDYKBN.js?v=3c623d55:17980
+commitLayoutEffects_begin @ chunk-RPCDYKBN.js?v=3c623d55:17969
+commitLayoutEffects @ chunk-RPCDYKBN.js?v=3c623d55:17920
+commitRootImpl @ chunk-RPCDYKBN.js?v=3c623d55:19353
+commitRoot @ chunk-RPCDYKBN.js?v=3c623d55:19277
+finishConcurrentRender @ chunk-RPCDYKBN.js?v=3c623d55:18760
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=3c623d55:18718
+workLoop @ chunk-RPCDYKBN.js?v=3c623d55:197
+flushWork @ chunk-RPCDYKBN.js?v=3c623d55:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=3c623d55:384

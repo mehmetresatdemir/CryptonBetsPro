@@ -1,0 +1,77 @@
+chunk-RPCDYKBN.js?v=54ad137a:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+SlotPage.tsx:179 🚀 INSTANT slot loading - TÜM oyunlar tek istekte...
+api.ts:50 API İsteği: GET /api/auth/me undefined
+api.ts:62 API Yanıtı: Status 200
+SlotPage.tsx:194 ⚡ INSTANT SUCCESS: 2756 slot oyunu yüklendi
+SlotPage.tsx:195 📊 Sağlayıcılar: 0
+api.ts:94 API Yanıt Verileri: {id: 3, username: 'admin', email: 'admin@example.com', firstName: 'trial', lastName: 'name', …}
+@radix-ui_react-dialog.js?v=54ad137a:339 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+(anonymous) @ @radix-ui_react-dialog.js?v=54ad137a:339
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=54ad137a:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=54ad137a:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=54ad137a:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=54ad137a:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=54ad137a:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=54ad137a:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=54ad137a:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=54ad137a:19416
+commitRoot @ chunk-RPCDYKBN.js?v=54ad137a:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=54ad137a:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=54ad137a:18627
+GameModal.tsx:122 🎮 Oyun başlatılıyor: {uuid: 'c8ec93ebbb0ea1269cb7046149d68217e76b93c1', mode: 'demo', device: 'desktop', name: 'Diamond Mine Megaways', isAuthenticated: true, …}
+GameModal.tsx:55 📤 API isteği gönderiliyor: {game_uuid: 'c8ec93ebbb0ea1269cb7046149d68217e76b93c1', mode: 'demo', currency: 'TRY', language: 'tr', device: 'desktop'}
+GameModal.tsx:98 ✅ API Yanıtı: {success: true, url: 'https://gis.slotegrator.com/api/index.php/v1/games…EWm5QbncxWHdMYm1ZcUNPcDlJUEtiblhyV0lRU1c4Z09YS0k9', mode: 'demo', currency: 'TRY', message: 'Oyun başarıyla başlatıldı'}
+GameModal.tsx:102 Oyun başlatma başarılı: {success: true, url: 'https://gis.slotegrator.com/api/index.php/v1/games…EWm5QbncxWHdMYm1ZcUNPcDlJUEtiblhyV0lRU1c4Z09YS0k9', mode: 'demo', currency: 'TRY', message: 'Oyun başarıyla başlatıldı'}
+chunk-RPCDYKBN.js?v=54ad137a:1232 Allow attribute will take precedence over 'allowfullscreen'.
+setValueForProperty @ chunk-RPCDYKBN.js?v=54ad137a:1232
+setInitialDOMProperties @ chunk-RPCDYKBN.js?v=54ad137a:7462
+setInitialProperties @ chunk-RPCDYKBN.js?v=54ad137a:7595
+finalizeInitialChildren @ chunk-RPCDYKBN.js?v=54ad137a:8345
+completeWork @ chunk-RPCDYKBN.js?v=54ad137a:16293
+completeUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19224
+performUnitOfWork @ chunk-RPCDYKBN.js?v=54ad137a:19206
+workLoopSync @ chunk-RPCDYKBN.js?v=54ad137a:19137
+renderRootSync @ chunk-RPCDYKBN.js?v=54ad137a:19116
+performConcurrentWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18678
+workLoop @ chunk-RPCDYKBN.js?v=54ad137a:197
+flushWork @ chunk-RPCDYKBN.js?v=54ad137a:176
+performWorkUntilDeadline @ chunk-RPCDYKBN.js?v=54ad137a:384
+@radix-ui_react-dialog.js?v=54ad137a:339 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+(anonymous) @ @radix-ui_react-dialog.js?v=54ad137a:339
+commitHookEffectListMount @ chunk-RPCDYKBN.js?v=54ad137a:16915
+commitPassiveMountOnFiber @ chunk-RPCDYKBN.js?v=54ad137a:18156
+commitPassiveMountEffects_complete @ chunk-RPCDYKBN.js?v=54ad137a:18129
+commitPassiveMountEffects_begin @ chunk-RPCDYKBN.js?v=54ad137a:18119
+commitPassiveMountEffects @ chunk-RPCDYKBN.js?v=54ad137a:18109
+flushPassiveEffectsImpl @ chunk-RPCDYKBN.js?v=54ad137a:19490
+flushPassiveEffects @ chunk-RPCDYKBN.js?v=54ad137a:19447
+commitRootImpl @ chunk-RPCDYKBN.js?v=54ad137a:19416
+commitRoot @ chunk-RPCDYKBN.js?v=54ad137a:19277
+performSyncWorkOnRoot @ chunk-RPCDYKBN.js?v=54ad137a:18895
+flushSyncCallbacks @ chunk-RPCDYKBN.js?v=54ad137a:9119
+(anonymous) @ chunk-RPCDYKBN.js?v=54ad137a:18627
+GameModal.tsx:122 🎮 Oyun başlatılıyor: {uuid: 'c8ec93ebbb0ea1269cb7046149d68217e76b93c1', mode: 'real', device: 'desktop', name: 'Diamond Mine Megaways', isAuthenticated: true, …}
+GameModal.tsx:55 📤 API isteği gönderiliyor: {game_uuid: 'c8ec93ebbb0ea1269cb7046149d68217e76b93c1', mode: 'real', currency: 'TRY', language: 'tr', device: 'desktop'}
+GameModal.tsx:111 Oyun başlatma hatası: 
+onError @ GameModal.tsx:111
+execute @ @tanstack_react-query.js?v=54ad137a:1254
+await in execute
+mutate @ @tanstack_react-query.js?v=54ad137a:2630
+(anonymous) @ @tanstack_react-query.js?v=54ad137a:3295
+handlePlayGame @ GameModal.tsx:139
+callCallback2 @ chunk-RPCDYKBN.js?v=54ad137a:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=54ad137a:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=54ad137a:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=54ad137a:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=54ad137a:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=54ad137a:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=54ad137a:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=54ad137a:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=54ad137a:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=54ad137a:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=54ad137a:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=54ad137a:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=54ad137a:5449

@@ -1,0 +1,18 @@
+{
+  "status": "processing",
+  "currentPage": 1,
+  "totalPages": 200,
+  "progress": "1/200",
+  "gamesCount": 0,
+  "timestamp": "2025-06-08T15:15:42.513Z",
+  "pid": 23766,
+  "uptime": 0,
+  "stats": {
+    "totalRequests": 0,
+    "successfulRequests": 0,
+    "failedRequests": 0,
+    "gamesAdded": 0,
+    "providersFound": 0,
+    "startTime": 1749395742500
+  }
+}

@@ -1,0 +1,50 @@
+queryClient.ts:16 
+            
+            
+           POST https://7551f6c2-5380-48c1-942e-48e07ff45518-00-215zxzbdwmg6k.picard.replit.dev/api/user/deposit 401 (Unauthorized)
+apiRequest @ queryClient.ts:16
+createDeposit @ financeService.ts:50
+handleDeposit @ DepositModal.tsx:307
+callCallback2 @ chunk-RPCDYKBN.js?v=15a9aba0:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=15a9aba0:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=15a9aba0:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=15a9aba0:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=15a9aba0:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=15a9aba0:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=15a9aba0:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=15a9aba0:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=15a9aba0:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=15a9aba0:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=15a9aba0:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=15a9aba0:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=15a9aba0:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=15a9aba0:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=15a9aba0:5449
+financeService.ts:103 Para yatırma hatası: Error: 401: {"error":"Bu işlem için giriş yapmanız gerekiyor"}
+    at throwIfResNotOk (queryClient.ts:6:11)
+    at async apiRequest (queryClient.ts:23:3)
+    at async createDeposit (financeService.ts:50:22)
+    at async handleDeposit (DepositModal.tsx:307:24)
+createDeposit @ financeService.ts:103
+await in createDeposit
+handleDeposit @ DepositModal.tsx:307
+callCallback2 @ chunk-RPCDYKBN.js?v=15a9aba0:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=15a9aba0:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=15a9aba0:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=15a9aba0:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=15a9aba0:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=15a9aba0:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=15a9aba0:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=15a9aba0:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=15a9aba0:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=15a9aba0:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=15a9aba0:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=15a9aba0:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=15a9aba0:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=15a9aba0:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=15a9aba0:5449
+DepositModal.tsx:318 Para yatırma işlemi başarısız: Error: 401: {"error":"Bu işlem için giriş yapmanız gerekiyor"}
+    at throwIfResNotOk (queryClient.ts:6:11)
+    at async apiRequest (queryClient.ts:23:3)
+    at async createDeposit (financeService.ts:50:22)
+    at async handleDeposit (DepositModal.tsx:307:24)

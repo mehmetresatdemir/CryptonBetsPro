@@ -1,0 +1,47 @@
+chunk-RPCDYKBN.js?v=54ad137a:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+api.ts:50 API İsteği: GET /api/auth/me undefined
+api.ts:62 API Yanıtı: Status 200
+api.ts:94 API Yanıt Verileri: Object
+SlotPage.tsx:179 🚀 INSTANT slot loading - TÜM oyunlar tek istekte...
+SlotPage.tsx:194 ⚡ INSTANT SUCCESS: 2756 slot oyunu yüklendi
+SlotPage.tsx:195 📊 Sağlayıcılar: 0
+@radix-ui_react-dialog.js?v=54ad137a:339 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+(anonymous) @ @radix-ui_react-dialog.js?v=54ad137a:339
+GameModal.tsx:106 🎮 Oyun başlatılıyor: Object
+GameModal.tsx:52 📤 API isteği gönderiliyor: Object
+GameModal.tsx:82 ✅ API Yanıtı: Object
+GameModal.tsx:86 Oyun başlatma başarılı: Object
+GameModal.tsx:91 Oyun URL'i alınamadı: Object
+onSuccess @ GameModal.tsx:91
+GameModal.tsx:106 🎮 Oyun başlatılıyor: Object
+GameModal.tsx:52 📤 API isteği gönderiliyor: Object
+GameModal.tsx:82 ✅ API Yanıtı: Object
+GameModal.tsx:86 Oyun başlatma başarılı: Object
+GameModal.tsx:91 Oyun URL'i alınamadı: Object
+onSuccess @ GameModal.tsx:91
+GameModal.tsx:106 🎮 Oyun başlatılıyor: {uuid: 'c8ec93ebbb0ea1269cb7046149d68217e76b93c1', mode: 'real', device: 'desktop', deviceType: 'desktop', name: 'Diamond Mine Megaways'}
+GameModal.tsx:52 📤 API isteği gönderiliyor: {game_uuid: 'c8ec93ebbb0ea1269cb7046149d68217e76b93c1', mode: 'real', currency: 'TRY', language: 'tr', device: 'desktop'}
+GameModal.tsx:82 ✅ API Yanıtı: {success: false, mode: '172.31.128.24', currency: 'tr', message: 'Geçersiz oyun parametreleri'}
+GameModal.tsx:86 Oyun başlatma başarılı: {success: false, mode: '172.31.128.24', currency: 'tr', message: 'Geçersiz oyun parametreleri'}
+GameModal.tsx:91 Oyun URL'i alınamadı: {success: false, mode: '172.31.128.24', currency: 'tr', message: 'Geçersiz oyun parametreleri'}
+onSuccess @ GameModal.tsx:91
+execute @ @tanstack_react-query.js?v=54ad137a:1233
+await in execute
+mutate @ @tanstack_react-query.js?v=54ad137a:2630
+(anonymous) @ @tanstack_react-query.js?v=54ad137a:3295
+handlePlayGame @ GameModal.tsx:114
+callCallback2 @ chunk-RPCDYKBN.js?v=54ad137a:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=54ad137a:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=54ad137a:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=54ad137a:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=54ad137a:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=54ad137a:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=54ad137a:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=54ad137a:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=54ad137a:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=54ad137a:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=54ad137a:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=54ad137a:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=54ad137a:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=54ad137a:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=54ad137a:5449

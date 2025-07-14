@@ -1,0 +1,1836 @@
+import React, { useState, useEffect } from 'react';
+import { useUser } from '@/contexts/UserContext';
+import { useLanguage } from '@/contexts/LanguageContext';
+import DepositButton from '@/components/payment/DepositButton';
+
+interface ProfileModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose }) => {
+  const { user, logout } = useUser();
+  const { t } = useLanguage();
+  const [activeTab, setActiveTab] = useState('info');
+  
+  // Kullanıcı değerlerini formlarda tutmak için stateler
+  const [formData, setFormData] = useState({
+    fullName: user?.fullName || '',
+    email: user?.email || '',
+    phone: '', // Telefon alanını boş başlat
+    oldPassword: '',
+    newPassword: '',
+    confirmPassword: ''
+  });
+
+  // Modal açıldığında kullanıcı verilerini güncelle
+  useEffect(() => {
+    if (isOpen && user) {
+      setFormData({
+        ...formData,
+        fullName: user.fullName || '',
+        email: user.email || '',
+        phone: formData.phone // Mevcut telefon değerini koru
+      });
+    }
+  }, [isOpen, user]);
+
+  // Form değişikliklerini yönet
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  // Profil bilgilerini güncelle
+  const handleProfileUpdate = (e: React.FormEvent) => {
+    e.preventDefault();
+    // API çağrısı yapılacak
+    console.log('Profil güncelleme:', formData);
+  };
+
+  // Şifre değiştirme
+  const handlePasswordChange = (e: React.FormEvent) => {
+    e.preventDefault();
+    // API çağrısı yapılacak
+    console.log('Şifre değiştirme:', {
+      oldPassword: formData.oldPassword,
+      newPassword: formData.newPassword
+    });
+  };
+  
+  // Çıkış yap
+  const handleLogout = () => {
+    if (logout) logout();
+    onClose();
+  };
+
+  // Modal arka planına tıklandığında kapatma
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  // Modal açık değilse render etme
+  if (!isOpen) return null;
+
+  return (
+    <div 
+      className="fixed inset-0 flex items-start justify-center pt-24 z-50 bg-black/50 backdrop-blur-sm"
+      onClick={handleBackdropClick}
+    >
+      <div className="relative bg-[#1A1A1A] w-[95%] max-w-7xl rounded-xl overflow-hidden shadow-2xl border border-yellow-500/30 animate-fadeIn">
+        {/* Kapatma Düğmesi - Sağ Üst Köşede */}
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 z-20 w-8 h-8 bg-[#232323] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors duration-300"
+        >
+          <i className="fas fa-times"></i>
+        </button>
+
+        {/* Modal İçeriği - Yatay Düzen */}
+        <div className="flex h-[80vh]">
+          {/* Sol Taraf - Kullanıcı Bilgileri ve Menü */}
+          <div className="w-80 bg-[#151515] border-r border-yellow-500/10 flex flex-col">
+            {/* Kullanıcı Profil Kısmı - Kompakt Tasarım */}
+            <div className="p-3 bg-gradient-to-b from-[#1A1A1A] to-[#151515] border-b border-yellow-500/10">
+              {/* Kullanıcı Avatar ve Temel Bilgiler - Daha Kompakt */}
+              <div className="flex items-center mb-3">
+                <div className="relative mr-2">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center text-sm font-bold text-[#121212] overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-black opacity-20"></div>
+                    <span className="relative z-10">{user?.username?.charAt(0).toUpperCase() || 'U'}</span>
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border border-[#151515] flex items-center justify-center">
+                    <i className="fas fa-check text-[8px] text-white"></i>
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <div className="flex items-center">
+                    <h3 className="text-sm font-bold text-white">
+                      {user?.username}
+                    </h3>
+                    <div className="ml-1.5 bg-yellow-500/20 rounded-md px-1.5 py-0.5">
+                      <span className="text-[10px] text-yellow-400 font-medium">Silver</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center text-[10px] text-gray-400 mt-0.5">
+                    <i className="fas fa-id-card mr-1 text-yellow-500/70"></i>
+                    <span>CB{user?.id || '1'}87425</span>
+                    <div className="h-2 w-px bg-gray-700 mx-1.5"></div>
+                    <span className="flex items-center text-green-400">
+                      <span className="w-1 h-1 rounded-full bg-green-500 mr-1"></span>
+                      <span>{t('profile.status.online')}</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Bakiye Bilgileri - Daha Kompakt */}
+              <div className="grid grid-cols-2 gap-2 mb-3">
+                <div className="bg-[#1D1D1D] rounded-lg p-2 border border-yellow-500/10 hover:border-yellow-500/20 transition-all duration-300">
+                  <div className="text-[10px] text-gray-400">{t('profile.balance')}</div>
+                  <div className="text-sm font-bold text-yellow-400">₺{user?.balance || '0'}</div>
+                </div>
+                <div className="bg-[#1D1D1D] rounded-lg p-2 border border-yellow-500/10 hover:border-yellow-500/20 transition-all duration-300">
+                  <div className="text-[10px] text-gray-400">Bonus Bakiye</div>
+                  <div className="text-sm font-bold text-white">₺500</div>
+                </div>
+              </div>
+              
+              {/* VIP İlerleme - Daha Kompakt */}
+              <div className="mb-2">
+                <div className="flex justify-between items-center mb-1">
+                  <div className="text-[10px] text-gray-400">{t('profile.level')}</div>
+                  <div className="text-[10px] text-yellow-400">2/5</div>
+                </div>
+                <div className="w-full h-1.5 bg-[#232323] rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-yellow-500 to-yellow-300 rounded-full" style={{ width: '40%' }}></div>
+                </div>
+              </div>
+              
+              {/* Sadakat Puanları - Daha Kompakt */}
+              <div>
+                <div className="flex justify-between items-center mb-1">
+                  <div className="text-[10px] text-gray-400">{t('profile.loyalty_points')}</div>
+                  <div className="text-[10px] text-gray-300">1,250 / 3,000</div>
+                </div>
+                <div className="w-full h-1.5 bg-[#232323] rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-green-500 to-green-300 rounded-full" style={{ width: '42%' }}></div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Menü */}
+            <div className="flex-1 p-2">
+              <nav className="space-y-1">
+                <button 
+                  onClick={() => setActiveTab('info')}
+                  className={`w-full flex items-center p-2 rounded-lg transition-all duration-300 ${
+                    activeTab === 'info' 
+                      ? 'bg-yellow-500/20 text-yellow-400' 
+                      : 'hover:bg-[#1a1a1a] text-gray-300 hover:text-yellow-400'
+                  }`}
+                >
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center mr-2 ${
+                    activeTab === 'info' ? 'bg-yellow-500/30' : 'bg-[#232323]'
+                  }`}>
+                    <i className="fas fa-user text-xs"></i>
+                  </div>
+                  <span className="text-xs font-medium">{t('profile.personal_info')}</span>
+                </button>
+                
+                <button 
+                  onClick={() => setActiveTab('finance')}
+                  className={`w-full flex items-center p-2 rounded-lg transition-all duration-300 ${
+                    activeTab === 'finance' 
+                      ? 'bg-yellow-500/20 text-yellow-400' 
+                      : 'hover:bg-[#1a1a1a] text-gray-300 hover:text-yellow-400'
+                  }`}
+                >
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center mr-2 ${
+                    activeTab === 'finance' ? 'bg-yellow-500/30' : 'bg-[#232323]'
+                  }`}>
+                    <i className="fas fa-wallet text-xs"></i>
+                  </div>
+                  <span className="text-xs font-medium">{t('profile.finance')}</span>
+                </button>
+                
+                <button 
+                  onClick={() => setActiveTab('history')}
+                  className={`w-full flex items-center p-2 rounded-lg transition-all duration-300 ${
+                    activeTab === 'history' 
+                      ? 'bg-yellow-500/20 text-yellow-400' 
+                      : 'hover:bg-[#1a1a1a] text-gray-300 hover:text-yellow-400'
+                  }`}
+                >
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center mr-2 ${
+                    activeTab === 'history' ? 'bg-yellow-500/30' : 'bg-[#232323]'
+                  }`}>
+                    <i className="fas fa-history text-xs"></i>
+                  </div>
+                  <span className="text-xs font-medium">{t('profile.bet_history')}</span>
+                </button>
+                
+                <button 
+                  onClick={() => setActiveTab('bonuses')}
+                  className={`w-full flex items-center p-2 rounded-lg transition-all duration-300 ${
+                    activeTab === 'bonuses' 
+                      ? 'bg-yellow-500/20 text-yellow-400' 
+                      : 'hover:bg-[#1a1a1a] text-gray-300 hover:text-yellow-400'
+                  }`}
+                >
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center mr-2 ${
+                    activeTab === 'bonuses' ? 'bg-yellow-500/30' : 'bg-[#232323]'
+                  }`}>
+                    <i className="fas fa-gift text-xs"></i>
+                  </div>
+                  <span className="text-xs font-medium">{t('profile.my_bonuses')}</span>
+                </button>
+                
+                <button 
+                  onClick={() => setActiveTab('security')}
+                  className={`w-full flex items-center p-2 rounded-lg transition-all duration-300 ${
+                    activeTab === 'security' 
+                      ? 'bg-yellow-500/20 text-yellow-400' 
+                      : 'hover:bg-[#1a1a1a] text-gray-300 hover:text-yellow-400'
+                  }`}
+                >
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center mr-2 ${
+                    activeTab === 'security' ? 'bg-yellow-500/30' : 'bg-[#232323]'
+                  }`}>
+                    <i className="fas fa-lock text-xs"></i>
+                  </div>
+                  <span className="text-xs font-medium">{t('profile.security')}</span>
+                </button>
+                
+                <button 
+                  onClick={() => setActiveTab('preferences')}
+                  className={`w-full flex items-center p-2 rounded-lg transition-all duration-300 ${
+                    activeTab === 'preferences' 
+                      ? 'bg-yellow-500/20 text-yellow-400' 
+                      : 'hover:bg-[#1a1a1a] text-gray-300 hover:text-yellow-400'
+                  }`}
+                >
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center mr-2 ${
+                    activeTab === 'preferences' ? 'bg-yellow-500/30' : 'bg-[#232323]'
+                  }`}>
+                    <i className="fas fa-cog text-xs"></i>
+                  </div>
+                  <span className="text-xs font-medium">{t('profile.preferences')}</span>
+                </button>
+              </nav>
+            </div>
+            
+            {/* Çıkış Butonu */}
+            <div className="p-3 border-t border-yellow-500/10">
+              <button 
+                onClick={handleLogout}
+                className="w-full flex items-center justify-center px-3 py-2 bg-red-500/10 text-red-400 hover:bg-red-500/20 rounded-xl transition-all duration-300"
+              >
+                <i className="fas fa-sign-out-alt mr-2"></i>
+                <span className="text-sm font-medium">{t('profile.logout')}</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Sağ Taraf - İçerik Kısmı */}
+          <div className="flex-1 overflow-y-auto py-6 px-8 bg-[#1A1A1A]">
+            {/* Kişisel Bilgiler Sekmesi */}
+            {activeTab === 'info' && (
+              <div className="animate-fadeIn">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {t('profile.personal_info')}
+                  </h3>
+                  <p className="text-gray-400 mb-6">
+                    {t('profile.personal_info_desc')}
+                  </p>
+                </div>
+
+                <form onSubmit={handleProfileUpdate}>
+                  <div className="space-y-8">
+                    {/* Temel Bilgiler */}
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-4 flex items-center border-b border-gray-800 pb-2">
+                        <i className="fas fa-user-circle text-yellow-500 mr-2"></i> Temel Bilgiler
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            {t('profile.full_name')}
+                          </label>
+                          <input
+                            type="text"
+                            name="fullName"
+                            value={formData.fullName}
+                            onChange={handleInputChange}
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder={t('profile.full_name_placeholder')}
+                          />
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            {t('profile.email')}
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder={t('profile.email_placeholder')}
+                          />
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            {t('profile.username')}
+                          </label>
+                          <input
+                            type="text"
+                            disabled
+                            value={user?.username || ''}
+                            className="w-full bg-[#1D1D1D] border border-gray-700 rounded-lg px-4 py-3 text-gray-400 cursor-not-allowed"
+                          />
+                          <p className="text-xs text-gray-500">{t('profile.username_note')}</p>
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            {t('profile.phone')}
+                          </label>
+                          <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder={t('profile.phone_placeholder')}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Adres Bilgileri */}
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-4 flex items-center border-b border-gray-800 pb-2">
+                        <i className="fas fa-map-marker-alt text-yellow-500 mr-2"></i> Adres Bilgileri
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            Adres
+                          </label>
+                          <input
+                            type="text"
+                            name="address"
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder="Adres bilgileriniz"
+                          />
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            Şehir
+                          </label>
+                          <input
+                            type="text"
+                            name="city"
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder="Şehir"
+                          />
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            İlçe
+                          </label>
+                          <input
+                            type="text"
+                            name="district"
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder="İlçe"
+                          />
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <label className="block text-sm font-medium text-gray-300">
+                            Posta Kodu
+                          </label>
+                          <input
+                            type="text"
+                            name="zipCode"
+                            className="w-full bg-[#232323] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300 placeholder:text-gray-500"
+                            placeholder="Posta Kodu"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* KYC Doğrulama */}
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-4 flex items-center border-b border-gray-800 pb-2">
+                        <i className="fas fa-id-card text-yellow-500 mr-2"></i> KYC Doğrulama
+                      </h4>
+                      
+                      <div className="bg-[#1D1D1D] p-5 rounded-xl border border-gray-800 mb-5">
+                        <div className="flex items-start">
+                          <div className="bg-yellow-500/20 p-3 rounded-lg mr-4">
+                            <i className="fas fa-shield-alt text-xl text-yellow-500"></i>
+                          </div>
+                          <div>
+                            <h5 className="text-white font-medium">Kimlik Doğrulama Durumu</h5>
+                            <p className="text-gray-400 text-sm mt-1">Hesabınızın güvenliğini artırmak ve daha yüksek limitlerden faydalanmak için kimlik doğrulamasını tamamlayın.</p>
+                            
+                            <div className="flex items-center mt-3">
+                              <div className="w-full bg-[#252525] h-2 rounded-full overflow-hidden">
+                                <div className="bg-yellow-500 h-full" style={{ width: '33%' }}></div>
+                              </div>
+                              <span className="text-xs text-yellow-500 font-medium ml-3">1/3</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="bg-[#1D1D1D] p-4 rounded-xl border border-green-500/30 relative overflow-hidden group hover:bg-[#1E1E1E] transition-all duration-300">
+                          <div className="flex justify-between items-start mb-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center mr-3">
+                                <i className="fas fa-check text-green-500"></i>
+                              </div>
+                              <h5 className="text-white">E-posta</h5>
+                            </div>
+                            <span className="text-xs bg-green-500/20 text-green-400 py-1 px-2 rounded">Doğrulandı</span>
+                          </div>
+                          <p className="text-gray-400 text-xs">E-posta adresi doğrulandı</p>
+                        </div>
+                        
+                        <div className="bg-[#1D1D1D] p-4 rounded-xl border border-yellow-500/30 relative overflow-hidden group hover:bg-[#1E1E1E] transition-all duration-300">
+                          <div className="flex justify-between items-start mb-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3">
+                                <i className="fas fa-user text-yellow-500"></i>
+                              </div>
+                              <h5 className="text-white">Kimlik</h5>
+                            </div>
+                            <span className="text-xs bg-yellow-500/20 text-yellow-400 py-1 px-2 rounded">Bekliyor</span>
+                          </div>
+                          <p className="text-gray-400 text-xs">Kimlik doğrulaması bekleyen</p>
+                          <button className="w-full mt-3 bg-[#232323] hover:bg-[#2a2a2a] text-yellow-400 text-sm py-2 rounded transition-colors duration-300">
+                            Doğrulama Başlat
+                          </button>
+                        </div>
+                        
+                        <div className="bg-[#1D1D1D] p-4 rounded-xl border border-gray-700 relative overflow-hidden group hover:bg-[#1E1E1E] transition-all duration-300">
+                          <div className="flex justify-between items-start mb-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center mr-3">
+                                <i className="fas fa-map-marker-alt text-gray-400"></i>
+                              </div>
+                              <h5 className="text-white">Adres</h5>
+                            </div>
+                            <span className="text-xs bg-gray-700 text-gray-400 py-1 px-2 rounded">Gerekli</span>
+                          </div>
+                          <p className="text-gray-400 text-xs">Adres doğrulaması gerekli</p>
+                          <button className="w-full mt-3 bg-[#232323] hover:bg-[#2a2a2a] text-gray-300 text-sm py-2 rounded transition-colors duration-300" disabled>
+                            Önce Kimlik Doğrulayın
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8">
+                    <button
+                      type="submit"
+                      className="px-6 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-[#121212] font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 group relative overflow-hidden"
+                    >
+                      <span className="relative z-10 flex items-center">
+                        <i className="fas fa-save mr-2"></i>
+                        <span>{t('profile.save_changes')}</span>
+                      </span>
+                      <div className="absolute top-0 left-0 w-full h-full bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                      <div className="absolute top-0 -inset-full h-full w-1/2 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shimmer"></div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
+            
+            {/* Finans İşlemleri Sekmesi */}
+            {activeTab === 'finance' && (
+              <div className="animate-fadeIn">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {t('profile.finance')}
+                  </h3>
+                  <p className="text-gray-400 mb-6">
+                    Para yatırma ve çekme işlemlerinizi gerçekleştirin.
+                  </p>
+                </div>
+
+                {/* Bakiye Kartları */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  <div className="bg-gradient-to-br from-[#1A1A1A] to-[#151515] rounded-xl p-5 border border-yellow-500/20 relative overflow-hidden group hover:shadow-yellow-500/20 hover:shadow-md transition-all duration-300">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-500/5 rounded-bl-full"></div>
+                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-yellow-500/10 rounded-full"></div>
+                    
+                    <div className="flex justify-between items-center mb-3">
+                      <h4 className="text-lg font-medium text-white flex items-center">
+                        <i className="fas fa-coins text-yellow-500 mr-2"></i> Ana Bakiye
+                      </h4>
+                      <span className="text-xs bg-yellow-500/20 text-yellow-400 py-1 px-2 rounded-md">Aktif</span>
+                    </div>
+                    
+                    <div className="text-2xl font-bold text-yellow-400 mb-2 group-hover:scale-105 transition-transform duration-300">
+                      {user?.balance || 0}₺
+                    </div>
+                    
+                    <div className="flex space-x-2 mt-4">
+                      <DepositButton 
+                        size="md" 
+                        variant="default" 
+                        className="flex-1" 
+                        onClick={() => onClose()} 
+                      />
+                      <button className="bg-[#232323] hover:bg-[#2a2a2a] text-white font-medium rounded-lg px-4 py-2 transition-colors duration-300 flex-1 flex items-center justify-center">
+                        <i className="fas fa-money-bill-wave mr-2"></i> Para Çek
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-[#1A1A1A] to-[#151515] rounded-xl p-5 border border-yellow-500/20 relative overflow-hidden group hover:shadow-yellow-500/20 hover:shadow-md transition-all duration-300">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-500/5 rounded-bl-full"></div>
+                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-yellow-500/10 rounded-full"></div>
+                    
+                    <div className="flex justify-between items-center mb-3">
+                      <h4 className="text-lg font-medium text-white flex items-center">
+                        <i className="fas fa-gift text-yellow-500 mr-2"></i> Bonus Bakiye
+                      </h4>
+                      <span className="text-xs bg-green-500/20 text-green-400 py-1 px-2 rounded-md">Aktif</span>
+                    </div>
+                    
+                    <div className="text-2xl font-bold text-green-400 mb-2 group-hover:scale-105 transition-transform duration-300">
+                      500₺
+                    </div>
+                    
+                    <div className="text-xs text-gray-400 mt-2 mb-3">
+                      <span className="flex items-center">
+                        <i className="fas fa-clock text-xs mr-1.5"></i> 
+                        Son kullanma: 12.06.2023
+                      </span>
+                    </div>
+                    
+                    <div className="w-full bg-gray-700 h-1.5 rounded-full overflow-hidden">
+                      <div className="bg-green-500 h-full rounded-full" style={{ width: '35%' }}></div>
+                    </div>
+                    <div className="flex justify-between text-xs text-gray-400 mt-1">
+                      <span>Çevrim şartı: 35%</span>
+                      <span>1,750₺/5,000₺</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* İşlem Geçmişi */}
+                <div>
+                  <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                    <i className="fas fa-exchange-alt text-yellow-500 mr-2"></i> Son İşlemler
+                  </h4>
+                  
+                  <div className="bg-[#1D1D1D] rounded-xl overflow-hidden border border-gray-800">
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full">
+                        <thead>
+                          <tr className="bg-[#232323] text-gray-400 text-sm">
+                            <th className="px-4 py-3 text-left">Tarih</th>
+                            <th className="px-4 py-3 text-left">İşlem</th>
+                            <th className="px-4 py-3 text-left">Miktar</th>
+                            <th className="px-4 py-3 text-left">Durum</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-800">
+                          <tr className="hover:bg-[#1A1A1A] text-sm">
+                            <td className="px-4 py-3 text-gray-300">10.05.2023 15:42</td>
+                            <td className="px-4 py-3">
+                              <div className="flex items-center">
+                                <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center mr-2">
+                                  <i className="fas fa-arrow-down text-green-400 text-xs"></i>
+                                </div>
+                                <div>
+                                  <div className="text-gray-200">Para Yatırma</div>
+                                  <div className="text-xs text-gray-500">Papara</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-green-400 font-medium">+1,000₺</td>
+                            <td className="px-4 py-3">
+                              <span className="px-2 py-1 text-xs rounded-md bg-green-900/30 text-green-400 border border-green-900/30">
+                                Tamamlandı
+                              </span>
+                            </td>
+                          </tr>
+                          
+                          <tr className="hover:bg-[#1A1A1A] text-sm">
+                            <td className="px-4 py-3 text-gray-300">05.05.2023 18:15</td>
+                            <td className="px-4 py-3">
+                              <div className="flex items-center">
+                                <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center mr-2">
+                                  <i className="fas fa-arrow-up text-red-400 text-xs"></i>
+                                </div>
+                                <div>
+                                  <div className="text-gray-200">Para Çekme</div>
+                                  <div className="text-xs text-gray-500">Banka Havalesi</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-red-400 font-medium">-500₺</td>
+                            <td className="px-4 py-3">
+                              <span className="px-2 py-1 text-xs rounded-md bg-green-900/30 text-green-400 border border-green-900/30">
+                                Tamamlandı
+                              </span>
+                            </td>
+                          </tr>
+                          
+                          <tr className="hover:bg-[#1A1A1A] text-sm">
+                            <td className="px-4 py-3 text-gray-300">01.05.2023 10:24</td>
+                            <td className="px-4 py-3">
+                              <div className="flex items-center">
+                                <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-2">
+                                  <i className="fas fa-gift text-yellow-400 text-xs"></i>
+                                </div>
+                                <div>
+                                  <div className="text-gray-200">Bonus</div>
+                                  <div className="text-xs text-gray-500">Hoşgeldin Bonusu</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-yellow-400 font-medium">+500₺</td>
+                            <td className="px-4 py-3">
+                              <span className="px-2 py-1 text-xs rounded-md bg-green-900/30 text-green-400 border border-green-900/30">
+                                Tamamlandı
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {/* Bahis Geçmişi Sekmesi - Geliştirilmiş Casino Odaklı */}
+            {activeTab === 'history' && (
+              <div className="animate-fadeIn">
+                <div className="mb-5">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    {t('profile.bet_history')}
+                  </h3>
+                  <p className="text-gray-400 mb-4">
+                    {t('profile.history_desc')}
+                  </p>
+                  
+                  {/* Özet İstatistikler */}
+                  <div className="bg-gradient-to-r from-[#1A1A1A] to-[#262626] p-5 rounded-xl border border-yellow-500/20 mb-5">
+                    <h4 className="text-white font-bold mb-3 text-lg flex items-center">
+                      <i className="fas fa-chart-bar text-yellow-500 mr-2"></i>
+                      {t('profile.statistics') || "İstatistikler"}
+                    </h4>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <div className="bg-[#1D1D1D] p-4 rounded-lg border border-yellow-500/10 relative overflow-hidden group">
+                        {/* Background pattern */}
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzYgMThjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTZjLTMuMzE0IDAtNiAyLjY4Ni02IDZzMi42ODYgNiA2IDZ6TTI0IDQ4YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02Yy0zLjMxNCAwLTYgMi42ODYtNiA2czIuNjg2IDYgNiA2eiIgZmlsbD0iI0ZGRDcwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9zdmc+')] opacity-30"></div>
+                        
+                        <div className="flex justify-between items-start relative z-10 mb-1">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-yellow-500/10 rounded-lg flex items-center justify-center mr-2">
+                              <i className="fas fa-dice text-yellow-500 text-sm"></i>
+                            </div>
+                            <span className="text-gray-300 text-sm">{t('profile.total_bets') || "Toplam Bahis"}</span>
+                          </div>
+                          <span className="text-white font-bold">28</span>
+                        </div>
+                        
+                        <div className="h-2 w-full bg-[#2A2A2A] rounded-full overflow-hidden mb-2">
+                          <div className="h-full bg-gradient-to-r from-yellow-500 to-yellow-600" style={{ width: '70%' }}></div>
+                        </div>
+                        
+                        <div className="text-xs text-gray-500">
+                          {t('profile.last_30_days') || "Son 30 gün"}
+                        </div>
+                      </div>
+                      
+                      <div className="bg-[#1D1D1D] p-4 rounded-lg border border-green-500/10 relative overflow-hidden group">
+                        {/* Background pattern */}
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzYgMThjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTZjLTMuMzE0IDAtNiAyLjY4Ni02IDZzMi42ODYgNiA2IDZ6TTI0IDQ4YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02Yy0zLjMxNCAwLTYgMi42ODYtNiA2czIuNjg2IDYgNiA2eiIgZmlsbD0iIzIyYzU1ZSIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9zdmc+')] opacity-30"></div>
+                        
+                        <div className="flex justify-between items-start relative z-10 mb-1">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-green-500/10 rounded-lg flex items-center justify-center mr-2">
+                              <i className="fas fa-arrow-up text-green-500 text-sm"></i>
+                            </div>
+                            <span className="text-gray-300 text-sm">{t('profile.total_wins') || "Toplam Kazanç"}</span>
+                          </div>
+                          <span className="text-green-400 font-bold">+2,486₺</span>
+                        </div>
+                        
+                        <div className="h-2 w-full bg-[#2A2A2A] rounded-full overflow-hidden mb-2">
+                          <div className="h-full bg-gradient-to-r from-green-500 to-green-600" style={{ width: '65%' }}></div>
+                        </div>
+                        
+                        <div className="text-xs text-gray-500">
+                          {t('profile.win_rate') || "Kazanç oranı"}: <span className="text-green-400">65%</span>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-[#1D1D1D] p-4 rounded-lg border border-red-500/10 relative overflow-hidden group">
+                        {/* Background pattern */}
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzYgMThjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTZjLTMuMzE0IDAtNiAyLjY4Ni02IDZzMi42ODYgNiA2IDZ6TTI0IDQ4YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02Yy0zLjMxNCAwLTYgMi42ODYtNiA2czIuNjg2IDYgNiA2eiIgZmlsbD0iI2U1MzQzYSIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9zdmc+')] opacity-30"></div>
+                        
+                        <div className="flex justify-between items-start relative z-10 mb-1">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center mr-2">
+                              <i className="fas fa-arrow-down text-red-500 text-sm"></i>
+                            </div>
+                            <span className="text-gray-300 text-sm">{t('profile.total_losses') || "Toplam Kayıp"}</span>
+                          </div>
+                          <span className="text-red-400 font-bold">-1,320₺</span>
+                        </div>
+                        
+                        <div className="h-2 w-full bg-[#2A2A2A] rounded-full overflow-hidden mb-2">
+                          <div className="h-full bg-gradient-to-r from-red-500 to-red-600" style={{ width: '35%' }}></div>
+                        </div>
+                        
+                        <div className="text-xs text-gray-500">
+                          {t('profile.loss_rate') || "Kayıp oranı"}: <span className="text-red-400">35%</span>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-[#1D1D1D] p-4 rounded-lg border border-blue-500/10 relative overflow-hidden group">
+                        {/* Background pattern */}
+                        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBkPSJNMzYgMThjMy4zMTQgMCA2LTIuNjg2IDYtNnMtMi42ODYtNi02LTZjLTMuMzE0IDAtNiAyLjY4Ni02IDZzMi42ODYgNiA2IDZ6TTI0IDQ4YzMuMzE0IDAgNi0yLjY4NiA2LTZzLTIuNjg2LTYtNi02Yy0zLjMxNCAwLTYgMi42ODYtNiA2czIuNjg2IDYgNiA2eiIgZmlsbD0iIzNiODJmNiIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9zdmc+')] opacity-30"></div>
+                        
+                        <div className="flex justify-between items-start relative z-10 mb-1">
+                          <div className="flex items-center">
+                            <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-2">
+                              <i className="fas fa-trophy text-blue-500 text-sm"></i>
+                            </div>
+                            <span className="text-gray-300 text-sm">{t('profile.biggest_win') || "En Büyük Kazanç"}</span>
+                          </div>
+                          <span className="text-blue-400 font-bold">+720₺</span>
+                        </div>
+                        
+                        <div className="h-2 w-full bg-[#2A2A2A] rounded-full overflow-hidden mb-2">
+                          <div className="h-full bg-gradient-to-r from-blue-500 to-blue-600" style={{ width: '85%' }}></div>
+                        </div>
+                        
+                        <div className="text-xs text-gray-500">
+                          Sweet Bonanza <span className="text-xs text-blue-400">x720</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Oyunlara Göre Dağılım */}
+                <div className="bg-[#1A1A1A] p-5 rounded-xl border border-gray-800 mb-5">
+                  <h4 className="text-white font-bold mb-3 text-lg flex items-center">
+                    <i className="fas fa-chart-pie text-yellow-500 mr-2"></i>
+                    {t('profile.bet_distribution') || "Bahis Dağılımı"}
+                  </h4>
+                  
+                  <div className="flex flex-wrap items-center gap-2">
+                    <div className="flex items-center bg-[#232323] py-1 px-3 rounded-full">
+                      <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                      <span className="text-sm text-gray-300">Slot: 65%</span>
+                    </div>
+                    <div className="flex items-center bg-[#232323] py-1 px-3 rounded-full">
+                      <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                      <span className="text-sm text-gray-300">Canlı Casino: 20%</span>
+                    </div>
+                    <div className="flex items-center bg-[#232323] py-1 px-3 rounded-full">
+                      <div className="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                      <span className="text-sm text-gray-300">Spor: 10%</span>
+                    </div>
+                    <div className="flex items-center bg-[#232323] py-1 px-3 rounded-full">
+                      <div className="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                      <span className="text-sm text-gray-300">Masa Oyunları: 5%</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Filtreleme ve Arama */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-4">
+                  <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-2 w-full">
+                    <select className="bg-[#232323] text-gray-300 text-sm px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500/50">
+                      <option>Tüm Oyunlar</option>
+                      <option>Slot</option>
+                      <option>Canlı Casino</option>
+                      <option>Masa Oyunları</option>
+                      <option>Spor Bahisleri</option>
+                    </select>
+                    <select className="bg-[#232323] text-gray-300 text-sm px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500/50">
+                      <option>Son 30 Gün</option>
+                      <option>Son 7 Gün</option>
+                      <option>Bugün</option>
+                      <option>Bu Ay</option>
+                      <option>Tüm Zamanlar</option>
+                    </select>
+                    <select className="bg-[#232323] text-gray-300 text-sm px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500/50">
+                      <option>Durum: Tümü</option>
+                      <option>Kazanç</option>
+                      <option>Kayıp</option>
+                    </select>
+                    <input 
+                      type="text" 
+                      placeholder="Oyun Ara..." 
+                      className="bg-[#232323] text-gray-300 text-sm px-3 py-2 rounded-lg border border-gray-700 focus:outline-none focus:border-yellow-500/50"
+                    />
+                  </div>
+                  
+                  <button className="bg-yellow-500 hover:bg-yellow-600 text-[#121212] font-bold text-sm px-4 py-2 rounded-lg w-full md:w-auto flex items-center justify-center">
+                    <i className="fas fa-filter mr-2"></i>
+                    {t('profile.filter') || "Filtrele"}
+                  </button>
+                </div>
+                
+                {/* Bahisler Tablosu */}
+                <div className="bg-[#1D1D1D] border border-gray-800 rounded-xl overflow-hidden">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-gradient-to-r from-[#181818] to-[#202020] text-gray-400 text-xs uppercase border-b border-gray-800">
+                        <th className="px-4 py-3 text-left">{t('profile.date') || "Tarih"}</th>
+                        <th className="px-4 py-3 text-left">{t('profile.game') || "Oyun"}</th>
+                        <th className="px-4 py-3 text-left">{t('profile.bet_amount') || "Bahis"}</th>
+                        <th className="px-4 py-3 text-left">{t('profile.multiplier') || "Çarpan"}</th>
+                        <th className="px-4 py-3 text-left">{t('profile.win_amount') || "Kazanç"}</th>
+                        <th className="px-4 py-3 text-center">{t('profile.actions') || "İşlemler"}</th>
+                      </tr>
+                    </thead>
+                      <tbody className="divide-y divide-gray-800">
+                        <tr className="hover:bg-[#1A1A1A] text-sm">
+                          <td className="px-4 py-3 text-gray-300">
+                            <div className="flex flex-col">
+                              <span>10.05.2023</span>
+                              <span className="text-xs text-gray-500">18:45</span>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden mr-2 bg-yellow-500/10 flex items-center justify-center">
+                                <img src="https://pragmaticplay.sfo3.cdn.digitaloceanspaces.com/games-latam/slots/GateofOlympus.png" alt="Gates of Olympus" className="w-6 h-6 object-contain" />
+                              </div>
+                              <div>
+                                <div className="text-gray-200">Gates of Olympus</div>
+                                <div className="text-xs text-gray-500">Slot</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3 text-gray-300 font-medium">100₺</td>
+                          <td className="px-4 py-3 text-yellow-400 font-medium">5.2x</td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-0.5 rounded text-xs font-medium bg-green-900/20 text-green-400">
+                              +520₺
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            <button className="bg-[#232323] hover:bg-[#2a2a2a] text-xs px-2 py-1 rounded text-gray-300 hover:text-white transition-colors">
+                              <i className="fas fa-eye mr-1"></i> Göster
+                            </button>
+                          </td>
+                        </tr>
+                        
+                        <tr className="hover:bg-[#1A1A1A] text-sm">
+                          <td className="px-4 py-3 text-gray-300">
+                            <div className="flex flex-col">
+                              <span>09.05.2023</span>
+                              <span className="text-xs text-gray-500">21:32</span>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden mr-2 bg-yellow-500/10 flex items-center justify-center">
+                                <img src="https://pragmaticplay.sfo3.cdn.digitaloceanspaces.com/games-latam/slots/SweetBonanza.png" alt="Sweet Bonanza" className="w-6 h-6 object-contain" />
+                              </div>
+                              <div>
+                                <div className="text-gray-200">Sweet Bonanza</div>
+                                <div className="text-xs text-gray-500">Slot</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3 text-gray-300 font-medium">50₺</td>
+                          <td className="px-4 py-3 text-gray-500 font-medium">0x</td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-0.5 rounded text-xs font-medium bg-red-900/20 text-red-400">
+                              0₺
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            <button className="bg-[#232323] hover:bg-[#2a2a2a] text-xs px-2 py-1 rounded text-gray-300 hover:text-white transition-colors">
+                              <i className="fas fa-eye mr-1"></i> Göster
+                            </button>
+                          </td>
+                        </tr>
+                        
+                        <tr className="hover:bg-[#1A1A1A] text-sm">
+                          <td className="px-4 py-3 text-gray-300">
+                            <div className="flex flex-col">
+                              <span>08.05.2023</span>
+                              <span className="text-xs text-gray-500">14:15</span>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden mr-2 bg-yellow-500/10 flex items-center justify-center">
+                                <img src="https://pragmaticplay.sfo3.cdn.digitaloceanspaces.com/games-latam/casino/baccarat.png" alt="Baccarat" className="w-6 h-6 object-contain" />
+                              </div>
+                              <div>
+                                <div className="text-gray-200">Speed Baccarat</div>
+                                <div className="text-xs text-gray-500">Canlı Casino</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3 text-gray-300 font-medium">200₺</td>
+                          <td className="px-4 py-3 text-yellow-400 font-medium">1.95x</td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-0.5 rounded text-xs font-medium bg-green-900/20 text-green-400">
+                              +390₺
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            <button className="bg-[#232323] hover:bg-[#2a2a2a] text-xs px-2 py-1 rounded text-gray-300 hover:text-white transition-colors">
+                              <i className="fas fa-eye mr-1"></i> Göster
+                            </button>
+                          </td>
+                        </tr>
+                        
+                        <tr className="hover:bg-[#1A1A1A] text-sm">
+                          <td className="px-4 py-3 text-gray-300">
+                            <div className="flex flex-col">
+                              <span>07.05.2023</span>
+                              <span className="text-xs text-gray-500">19:22</span>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden mr-2 bg-yellow-500/10 flex items-center justify-center">
+                                <img src="https://pragmaticplay.sfo3.cdn.digitaloceanspaces.com/games-latam/slots/dh_megaways.png" alt="Dog House Megaways" className="w-6 h-6 object-contain" />
+                              </div>
+                              <div>
+                                <div className="text-gray-200">Dog House Megaways</div>
+                                <div className="text-xs text-gray-500">Slot</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3 text-gray-300 font-medium">75₺</td>
+                          <td className="px-4 py-3 text-gray-500 font-medium">0x</td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-0.5 rounded text-xs font-medium bg-red-900/20 text-red-400">
+                              0₺
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            <button className="bg-[#232323] hover:bg-[#2a2a2a] text-xs px-2 py-1 rounded text-gray-300 hover:text-white transition-colors">
+                              <i className="fas fa-eye mr-1"></i> Göster
+                            </button>
+                          </td>
+                        </tr>
+                        
+                        <tr className="hover:bg-[#1A1A1A] text-sm">
+                          <td className="px-4 py-3 text-gray-300">
+                            <div className="flex flex-col">
+                              <span>06.05.2023</span>
+                              <span className="text-xs text-gray-500">12:10</span>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <div className="flex items-center">
+                              <div className="w-8 h-8 rounded-lg overflow-hidden mr-2 bg-yellow-500/10 flex items-center justify-center">
+                                <img src="https://pragmaticplay.sfo3.cdn.digitaloceanspaces.com/games-latam/slots/WolfGold.png" alt="Wolf Gold" className="w-6 h-6 object-contain" />
+                              </div>
+                              <div>
+                                <div className="text-gray-200">Wolf Gold</div>
+                                <div className="text-xs text-gray-500">Slot</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-4 py-3 text-gray-300 font-medium">25₺</td>
+                          <td className="px-4 py-3 text-yellow-400 font-medium">4.2x</td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-0.5 rounded text-xs font-medium bg-green-900/20 text-green-400">
+                              +105₺
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-center">
+                            <button className="bg-[#232323] hover:bg-[#2a2a2a] text-xs px-2 py-1 rounded text-gray-300 hover:text-white transition-colors">
+                              <i className="fas fa-eye mr-1"></i> Göster
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div className="flex justify-between items-center mt-6">
+                    <div className="text-sm text-gray-400">
+                      {t('profile.showing_records') || "5/28 kayıt gösteriliyor"}
+                    </div>
+                    
+                    <div className="flex items-center space-x-2">
+                      <button className="px-3 py-2 bg-[#232323] hover:bg-[#2A2A2A] text-gray-300 rounded-lg transition-colors duration-300 flex items-center text-sm">
+                        <i className="fas fa-chevron-left mr-1 text-xs"></i>
+                        {t('profile.previous') || "Önceki"}
+                      </button>
+                      
+                      <button className="px-3 py-2 bg-yellow-500 hover:bg-yellow-600 text-[#121212] font-medium rounded-lg transition-colors duration-300 flex items-center text-sm">
+                        1
+                      </button>
+                      
+                      <button className="px-3 py-2 bg-[#232323] hover:bg-[#2A2A2A] text-gray-300 rounded-lg transition-colors duration-300 flex items-center text-sm">
+                        2
+                      </button>
+                      
+                      <button className="px-3 py-2 bg-[#232323] hover:bg-[#2A2A2A] text-gray-300 rounded-lg transition-colors duration-300 flex items-center text-sm">
+                        {t('profile.next') || "Sonraki"}
+                        <i className="fas fa-chevron-right ml-1 text-xs"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {/* Bonuslarım Sekmesi - Geliştirilmiş */}
+            {activeTab === 'bonuses' && (
+              <div className="animate-fadeIn">
+                <div className="mb-5">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    {t('profile.my_bonuses')}
+                  </h3>
+                  <p className="text-gray-400 mb-4">
+                    Aktif ve kullanılabilir bonuslarınızı görüntüleyin.
+                  </p>
+                </div>
+                
+                {/* Bonus İstatistikleri */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+                  <div className="bg-[#232323] p-4 rounded-lg flex items-center border border-yellow-500/10">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-yellow-500/10 mr-3">
+                      <i className="fas fa-gift text-yellow-500"></i>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Toplam Bonus</div>
+                      <div className="text-lg font-bold text-white">2,250₺</div>
+                    </div>
+                  </div>
+                  <div className="bg-[#232323] p-4 rounded-lg flex items-center border border-green-500/10">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-500/10 mr-3">
+                      <i className="fas fa-check-circle text-green-500"></i>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Tamamlanan Bonuslar</div>
+                      <div className="text-lg font-bold text-green-400">4</div>
+                    </div>
+                  </div>
+                  <div className="bg-[#232323] p-4 rounded-lg flex items-center border border-gray-700">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gray-700/20 mr-3">
+                      <i className="fas fa-clock text-gray-400"></i>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Aktif Bonuslar</div>
+                      <div className="text-lg font-bold text-white">2</div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Aktif Bonuslar */}
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <h4 className="text-lg font-medium text-white flex items-center">
+                      <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3">
+                        <i className="fas fa-gift text-yellow-500"></i>
+                      </div>
+                      Aktif Bonuslar
+                    </h4>
+                    <div className="text-sm text-yellow-500 flex items-center cursor-pointer hover:text-yellow-400">
+                      <span>Tüm Bonusları Görüntüle</span>
+                      <i className="fas fa-chevron-right ml-1 text-xs"></i>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    {/* Hoşgeldin Bonusu */}
+                    <div className="bg-[#1D1D1D] border border-yellow-500/20 rounded-xl p-4 relative overflow-hidden group hover:border-yellow-500/40 transition-all duration-300">
+                      <div className="absolute -top-10 -right-10 w-24 h-24 bg-yellow-500/10 rounded-full"></div>
+                      <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-yellow-500/5 rounded-full"></div>
+                      
+                      <div className="flex items-center mb-3">
+                        <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3 group-hover:bg-yellow-500/30 transition-all duration-300">
+                          <i className="fas fa-gift text-yellow-500"></i>
+                        </div>
+                        <div>
+                          <h5 className="text-lg font-bold text-white">Hoşgeldin Bonusu</h5>
+                          <span className="text-sm text-gray-400">İlk yatırımınıza özel 100% bonus</span>
+                        </div>
+                        <div className="ml-auto">
+                          <span className="px-2 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/20">
+                            3 gün kaldı
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-1.5 mb-4">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Miktar:</span>
+                          <span className="text-white">1,000₺</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Kalan:</span>
+                          <span className="text-white">500₺</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Son kullanma:</span>
+                          <span className="text-white">12.06.2023</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Çevrim şartı:</span>
+                          <span className="text-white">x35</span>
+                        </div>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="w-full bg-gray-700 h-2 rounded-full overflow-hidden">
+                          <div className="bg-gradient-to-r from-green-500 to-green-400 h-full" style={{ width: '35%' }}></div>
+                        </div>
+                        <div className="flex justify-between text-xs text-gray-400 mt-1 mb-3">
+                          <span>Çevrim Tamamlandı: 35%</span>
+                          <span>1,750₺/5,000₺</span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex space-x-2">
+                        <button className="flex-1 bg-[#232323] hover:bg-[#2a2a2a] text-white font-medium rounded-lg px-4 py-2 transition-colors duration-300 text-sm">
+                          <i className="fas fa-play mr-2"></i> Kullan
+                        </button>
+                        <button className="flex items-center justify-center bg-[#232323] hover:bg-[#2a2a2a] text-gray-300 rounded-lg w-10 h-10 transition-colors duration-300">
+                          <i className="fas fa-info-circle"></i>
+                        </button>
+                      </div>
+                    </div>
+                    
+                    {/* Nakit İade Bonusu */}
+                    <div className="bg-[#1D1D1D] border border-yellow-500/20 rounded-xl p-4 relative overflow-hidden group hover:border-yellow-500/40 transition-all duration-300">
+                      <div className="absolute -top-10 -right-10 w-24 h-24 bg-yellow-500/10 rounded-full"></div>
+                      <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-yellow-500/5 rounded-full"></div>
+                      
+                      <div className="flex items-center mb-3">
+                        <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3 group-hover:bg-yellow-500/30 transition-all duration-300">
+                          <i className="fas fa-redo text-yellow-500"></i>
+                        </div>
+                        <div>
+                          <h5 className="text-lg font-bold text-white">Nakit İade Bonusu</h5>
+                          <span className="text-sm text-gray-400">Haftalık kayıp bonusu 10%</span>
+                        </div>
+                        <div className="ml-auto">
+                          <span className="px-2 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/20">
+                            1 gün kaldı
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-1.5 mb-4">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Miktar:</span>
+                          <span className="text-white">250₺</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Kalan:</span>
+                          <span className="text-white">250₺</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Son kullanma:</span>
+                          <span className="text-white">08.06.2023</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Çevrim şartı:</span>
+                          <span className="text-white">x20</span>
+                        </div>
+                      </div>
+                      
+                      <div className="relative">
+                        <div className="w-full bg-gray-700 h-2 rounded-full overflow-hidden">
+                          <div className="bg-gradient-to-r from-green-500 to-green-400 h-full" style={{ width: '0%' }}></div>
+                        </div>
+                        <div className="flex justify-between text-xs text-gray-400 mt-1 mb-3">
+                          <span>Çevrim Tamamlandı: 0%</span>
+                          <span>0₺/5,000₺</span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex space-x-2">
+                        <button className="flex-1 bg-[#232323] hover:bg-[#2a2a2a] text-white font-medium rounded-lg px-4 py-2 transition-colors duration-300 text-sm">
+                          <i className="fas fa-play mr-2"></i> Kullan
+                        </button>
+                        <button className="flex items-center justify-center bg-[#232323] hover:bg-[#2a2a2a] text-gray-300 rounded-lg w-10 h-10 transition-colors duration-300">
+                          <i className="fas fa-info-circle"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Bonus Geçmişi & Yeni Bonuslar */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                  {/* Geçmiş Bonuslar */}
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                      <div className="w-8 h-8 bg-gray-700/50 rounded-lg flex items-center justify-center mr-3">
+                        <i className="fas fa-history text-gray-400"></i>
+                      </div>
+                      Bonus Geçmişi
+                    </h4>
+                    
+                    <div className="bg-[#1D1D1D] rounded-xl overflow-hidden border border-gray-800">
+                      <div className="overflow-y-auto max-h-[250px]">
+                        <table className="min-w-full">
+                          <thead className="sticky top-0 z-10">
+                            <tr className="bg-[#232323] text-gray-400 text-xs">
+                              <th className="px-4 py-3 text-left">Bonus</th>
+                              <th className="px-4 py-3 text-left">Tutar</th>
+                              <th className="px-4 py-3 text-left">Tarih</th>
+                              <th className="px-4 py-3 text-left">Durum</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-800">
+                            <tr className="hover:bg-[#1A1A1A] text-xs">
+                              <td className="px-4 py-3">
+                                <div className="text-gray-300">Haftalık Geri Ödeme</div>
+                              </td>
+                              <td className="px-4 py-3 text-gray-300 font-medium">250₺</td>
+                              <td className="px-4 py-3 text-gray-400">15.04.2023</td>
+                              <td className="px-4 py-3">
+                                <span className="px-2 py-0.5 text-xs rounded-md bg-gray-700 text-gray-300">
+                                  Sona Erdi
+                                </span>
+                              </td>
+                            </tr>
+                            
+                            <tr className="hover:bg-[#1A1A1A] text-xs">
+                              <td className="px-4 py-3">
+                                <div className="text-gray-300">Doğum Günü Bonusu</div>
+                              </td>
+                              <td className="px-4 py-3 text-gray-300 font-medium">100₺</td>
+                              <td className="px-4 py-3 text-gray-400">10.04.2023</td>
+                              <td className="px-4 py-3">
+                                <span className="px-2 py-0.5 text-xs rounded-md bg-green-900/20 text-green-400">
+                                  Tamamlandı
+                                </span>
+                              </td>
+                            </tr>
+                            
+                            <tr className="hover:bg-[#1A1A1A] text-xs">
+                              <td className="px-4 py-3">
+                                <div className="text-gray-300">Arkadaş Bonusu</div>
+                              </td>
+                              <td className="px-4 py-3 text-gray-300 font-medium">300₺</td>
+                              <td className="px-4 py-3 text-gray-400">01.04.2023</td>
+                              <td className="px-4 py-3">
+                                <span className="px-2 py-0.5 text-xs rounded-md bg-red-900/20 text-red-400">
+                                  İptal Edildi
+                                </span>
+                              </td>
+                            </tr>
+                            
+                            <tr className="hover:bg-[#1A1A1A] text-xs">
+                              <td className="px-4 py-3">
+                                <div className="text-gray-300">Yatırım Bonusu %50</div>
+                              </td>
+                              <td className="px-4 py-3 text-gray-300 font-medium">500₺</td>
+                              <td className="px-4 py-3 text-gray-400">20.03.2023</td>
+                              <td className="px-4 py-3">
+                                <span className="px-2 py-0.5 text-xs rounded-md bg-green-900/20 text-green-400">
+                                  Tamamlandı
+                                </span>
+                              </td>
+                            </tr>
+                            
+                            <tr className="hover:bg-[#1A1A1A] text-xs">
+                              <td className="px-4 py-3">
+                                <div className="text-gray-300">Sadakat Bonusu</div>
+                              </td>
+                              <td className="px-4 py-3 text-gray-300 font-medium">200₺</td>
+                              <td className="px-4 py-3 text-gray-400">15.03.2023</td>
+                              <td className="px-4 py-3">
+                                <span className="px-2 py-0.5 text-xs rounded-md bg-green-900/20 text-green-400">
+                                  Tamamlandı
+                                </span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Mevcut Bonus Teklifleri */}
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                      <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3">
+                        <i className="fas fa-percent text-yellow-500"></i>
+                      </div>
+                      Yeni Bonus Teklifleri
+                    </h4>
+                    
+                    <div className="bg-[#1D1D1D] rounded-xl overflow-hidden border border-gray-800 p-4 space-y-3">
+                      {/* Yatırım Bonusu */}
+                      <div className="bg-[#232323] p-3 rounded-lg border border-gray-700 hover:border-yellow-500/30 transition-all duration-300 flex gap-3 cursor-pointer group">
+                        <div className="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center group-hover:bg-yellow-500/20 transition-all duration-300">
+                          <i className="fas fa-coins text-yellow-500"></i>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-start">
+                            <h5 className="text-sm font-medium text-white group-hover:text-yellow-400 transition-all duration-300">Yatırım Bonusu</h5>
+                            <span className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded">%25</span>
+                          </div>
+                          <p className="text-xs text-gray-400 mt-1">1,000₺'e kadar %25 bonus kazanın</p>
+                          <div className="flex justify-between items-center mt-2">
+                            <p className="text-xs text-gray-500">Min. Yatırım: 100₺</p>
+                            <button className="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded hover:bg-yellow-500/20 transition-all duration-300">
+                              Detaylar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Hafta Sonu Bonusu */}
+                      <div className="bg-[#232323] p-3 rounded-lg border border-gray-700 hover:border-yellow-500/30 transition-all duration-300 flex gap-3 cursor-pointer group">
+                        <div className="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center group-hover:bg-yellow-500/20 transition-all duration-300">
+                          <i className="fas fa-calendar-week text-yellow-500"></i>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-start">
+                            <h5 className="text-sm font-medium text-white group-hover:text-yellow-400 transition-all duration-300">Hafta Sonu Bonusu</h5>
+                            <span className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded">%50</span>
+                          </div>
+                          <p className="text-xs text-gray-400 mt-1">Hafta sonu yatırımlarınıza özel bonus</p>
+                          <div className="flex justify-between items-center mt-2">
+                            <p className="text-xs text-gray-500">Min. Yatırım: 250₺</p>
+                            <button className="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded hover:bg-yellow-500/20 transition-all duration-300">
+                              Detaylar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Freespin Bonusu */}
+                      <div className="bg-[#232323] p-3 rounded-lg border border-gray-700 hover:border-yellow-500/30 transition-all duration-300 flex gap-3 cursor-pointer group">
+                        <div className="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center group-hover:bg-yellow-500/20 transition-all duration-300">
+                          <i className="fas fa-sync-alt text-yellow-500"></i>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-start">
+                            <h5 className="text-sm font-medium text-white group-hover:text-yellow-400 transition-all duration-300">Freespin Paketi</h5>
+                            <span className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded">100 FS</span>
+                          </div>
+                          <p className="text-xs text-gray-400 mt-1">Sweet Bonanza'da 100 Freespin</p>
+                          <div className="flex justify-between items-center mt-2">
+                            <p className="text-xs text-gray-500">500₺ ve üzeri yatırım</p>
+                            <button className="text-[10px] px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded hover:bg-yellow-500/20 transition-all duration-300">
+                              Detaylar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {/* Güvenlik Sekmesi - Geliştirilmiş */}
+            {activeTab === 'security' && (
+              <div className="animate-fadeIn">
+                <div className="mb-5">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    {t('profile.security')}
+                  </h3>
+                  <p className="text-gray-400 mb-4">
+                    {t('profile.security_desc')}
+                  </p>
+                </div>
+                
+                {/* Güvenlik Durumu Kartları */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
+                  <div className="bg-[#232323] p-4 rounded-lg flex items-center border border-green-500/10">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-500/10 mr-3">
+                      <i className="fas fa-shield-alt text-green-500"></i>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">{t('profile.account_security')}</div>
+                      <div className="text-sm font-bold text-green-400">{t('profile.security_strong')}</div>
+                    </div>
+                  </div>
+                  <div className="bg-[#232323] p-4 rounded-lg flex items-center border border-green-500/10">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-500/10 mr-3">
+                      <i className="fas fa-calendar-check text-green-500"></i>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">{t('profile.last_password_change')}</div>
+                      <div className="text-sm font-bold text-white">15 {t('profile.days_ago')}</div>
+                    </div>
+                  </div>
+                  <div className="bg-[#232323] p-4 rounded-lg flex items-center border border-yellow-500/10">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-yellow-500/10 mr-3">
+                      <i className="fas fa-mobile-alt text-yellow-500"></i>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">{t('profile.two_factor_auth')}</div>
+                      <div className="text-sm font-bold text-yellow-400">{t('profile.not_active')}</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* Şifre Değiştirme */}
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                      <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3">
+                        <i className="fas fa-key text-yellow-500"></i>
+                      </div>
+                      Şifre Değiştir
+                    </h4>
+                    
+                    <div className="bg-[#1D1D1D] rounded-xl p-5 border border-gray-800">
+                      <form onSubmit={handlePasswordChange}>
+                        <div className="space-y-4">
+                          <div className="space-y-2">
+                            <label className="block text-sm font-medium text-gray-300">
+                              {t('profile.current_password')}
+                            </label>
+                            <div className="relative">
+                              <input
+                                type="password"
+                                name="oldPassword"
+                                value={formData.oldPassword}
+                                onChange={handleInputChange}
+                                className="w-full bg-[#232323] border border-gray-700 rounded-lg pl-4 pr-10 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300"
+                              />
+                              <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                                <i className="fas fa-eye text-gray-500 cursor-pointer hover:text-gray-300"></i>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="space-y-2">
+                            <label className="block text-sm font-medium text-gray-300">
+                              {t('profile.new_password')}
+                            </label>
+                            <div className="relative">
+                              <input
+                                type="password"
+                                name="newPassword"
+                                value={formData.newPassword}
+                                onChange={handleInputChange}
+                                className="w-full bg-[#232323] border border-gray-700 rounded-lg pl-4 pr-10 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300"
+                              />
+                              <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                                <i className="fas fa-eye text-gray-500 cursor-pointer hover:text-gray-300"></i>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="space-y-2">
+                            <label className="block text-sm font-medium text-gray-300">
+                              {t('profile.confirm_password')}
+                            </label>
+                            <div className="relative">
+                              <input
+                                type="password"
+                                name="confirmPassword"
+                                value={formData.confirmPassword}
+                                onChange={handleInputChange}
+                                className="w-full bg-[#232323] border border-gray-700 rounded-lg pl-4 pr-10 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-transparent transition-all duration-300"
+                              />
+                              <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                                <i className="fas fa-eye text-gray-500 cursor-pointer hover:text-gray-300"></i>
+                              </div>
+                            </div>
+                            
+                            {/* Şifre Gücü Göstergesi */}
+                            {formData.newPassword && (
+                              <div className="mt-2">
+                                <div className="flex justify-between text-xs text-gray-400 mb-1">
+                                  <span>Şifre Gücü</span>
+                                  <span className="text-green-400 font-medium">Güçlü</span>
+                                </div>
+                                <div className="w-full bg-gray-700 h-1 rounded-full overflow-hidden">
+                                  <div className="bg-gradient-to-r from-yellow-500 via-green-500 to-green-400 h-full" style={{ width: '80%' }}></div>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="pt-3">
+                            <button
+                              type="submit"
+                              className="w-full px-4 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-[#121212] font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 group relative overflow-hidden"
+                            >
+                              <span className="relative z-10 flex items-center justify-center">
+                                <i className="fas fa-key mr-2"></i>
+                                <span>{t('profile.change_password')}</span>
+                              </span>
+                              <div className="absolute top-0 left-0 w-full h-full bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                              <div className="absolute top-0 -inset-full h-full w-1/2 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shimmer"></div>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  
+                  {/* İki Faktörlü Doğrulama */}
+                  <div>
+                    <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                      <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-3">
+                        <i className="fas fa-mobile-alt text-yellow-500"></i>
+                      </div>
+                      İki Faktörlü Doğrulama
+                    </h4>
+                    
+                    <div className="bg-[#1D1D1D] rounded-xl p-5 border border-gray-800">
+                      <div className="flex items-start mb-4">
+                        <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                          <i className="fas fa-shield-alt text-yellow-500 text-xl"></i>
+                        </div>
+                        <div>
+                          <h5 className="text-md font-medium text-white mb-1">{t('profile.secure_account')}</h5>
+                          <p className="text-sm text-gray-400">{t('profile.two_factor_desc')}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="rounded-lg bg-[#232323] p-4 mb-5 flex justify-between items-center">
+                        <span className="text-sm text-white">{t('profile.two_factor_status')}</span>
+                        <div className="relative inline-block w-12 h-6 transition duration-200 ease-in-out rounded-full cursor-pointer">
+                          <label htmlFor="toggle" className="block w-12 h-6 overflow-hidden rounded-full bg-gray-700 cursor-pointer">
+                            <span className="sr-only">Toggle</span>
+                            <span className="absolute block w-6 h-6 rounded-full bg-gray-600 shadow transform transition-transform duration-200 ease-in-out" 
+                                  style={{ transform: 'translateX(0)', backgroundColor: '#232323' }}></span>
+                          </label>
+                          <input type="checkbox" id="toggle" name="toggle" className="absolute opacity-0 w-0 h-0" />
+                        </div>
+                      </div>
+                      
+                      <button className="w-full bg-[#232323] hover:bg-[#2a2a2a] text-white font-medium rounded-lg px-4 py-3 transition-colors duration-300 flex items-center justify-center">
+                        <i className="fas fa-lock mr-2 text-yellow-500"></i>
+                        Doğrulamayı Etkinleştir
+                      </button>
+                    </div>
+                    
+                    {/* Güvenlik İpuçları */}
+                    <div className="mt-6 bg-[#1D1D1D] rounded-xl p-5 border border-yellow-500/10">
+                      <h4 className="text-md font-medium text-white mb-4 flex items-center">
+                        <i className="fas fa-shield-alt text-yellow-500 mr-2"></i>
+                        {t('profile.security_tips')}
+                      </h4>
+                      
+                      <ul className="space-y-3">
+                        <li className="flex items-start text-sm">
+                          <i className="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                          <span className="text-gray-300">{t('profile.security_tip_1')}</span>
+                        </li>
+                        <li className="flex items-start text-sm">
+                          <i className="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                          <span className="text-gray-300">{t('profile.security_tip_2')}</span>
+                        </li>
+                        <li className="flex items-start text-sm">
+                          <i className="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                          <span className="text-gray-300">{t('profile.security_tip_3')}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Giriş Geçmişi */}
+                <div className="mt-8">
+                  <h4 className="text-lg font-medium text-white mb-4 flex items-center">
+                    <div className="w-8 h-8 bg-gray-700/50 rounded-lg flex items-center justify-center mr-3">
+                      <i className="fas fa-history text-gray-400"></i>
+                    </div>
+                    Son Oturum Açma Etkinliği
+                  </h4>
+                  
+                  <div className="bg-[#1D1D1D] rounded-xl overflow-hidden border border-gray-800">
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full">
+                        <thead>
+                          <tr className="bg-[#232323] text-gray-400 text-sm">
+                            <th className="px-4 py-3 text-left">{t('profile.date_time')}</th>
+                            <th className="px-4 py-3 text-left">{t('profile.ip_address')}</th>
+                            <th className="px-4 py-3 text-left">{t('profile.device')}</th>
+                            <th className="px-4 py-3 text-left">{t('profile.location')}</th>
+                            <th className="px-4 py-3 text-left">{t('profile.status')}</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-800">
+                          <tr className="hover:bg-[#1A1A1A] text-sm">
+                            <td className="px-4 py-3 text-gray-300">
+                              <div className="flex flex-col">
+                                <span>18.05.2023</span>
+                                <span className="text-xs text-gray-500">14:32</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-gray-300">192.168.1.23</td>
+                            <td className="px-4 py-3">
+                              <div className="flex items-center">
+                                <i className="fas fa-desktop text-gray-500 mr-2"></i>
+                                <span className="text-gray-300">Chrome / Windows</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-gray-300">İstanbul, TR</td>
+                            <td className="px-4 py-3">
+                              <span className="px-2 py-1 text-xs rounded-md bg-green-900/20 text-green-400">
+                                Başarılı
+                              </span>
+                            </td>
+                          </tr>
+                          
+                          <tr className="hover:bg-[#1A1A1A] text-sm">
+                            <td className="px-4 py-3 text-gray-300">
+                              <div className="flex flex-col">
+                                <span>17.05.2023</span>
+                                <span className="text-xs text-gray-500">09:15</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-gray-300">192.168.1.23</td>
+                            <td className="px-4 py-3">
+                              <div className="flex items-center">
+                                <i className="fas fa-mobile-alt text-gray-500 mr-2"></i>
+                                <span className="text-gray-300">Safari / iOS</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-gray-300">İstanbul, TR</td>
+                            <td className="px-4 py-3">
+                              <span className="px-2 py-1 text-xs rounded-md bg-green-900/20 text-green-400">
+                                Başarılı
+                              </span>
+                            </td>
+                          </tr>
+                          
+                          <tr className="hover:bg-[#1A1A1A] text-sm">
+                            <td className="px-4 py-3 text-gray-300">
+                              <div className="flex flex-col">
+                                <span>16.05.2023</span>
+                                <span className="text-xs text-gray-500">22:47</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-gray-300">45.228.124.56</td>
+                            <td className="px-4 py-3">
+                              <div className="flex items-center">
+                                <i className="fas fa-desktop text-gray-500 mr-2"></i>
+                                <span className="text-gray-300">Chrome / Windows</span>
+                              </div>
+                            </td>
+                            <td className="px-4 py-3 text-gray-300">Ankara, TR</td>
+                            <td className="px-4 py-3">
+                              <span className="px-2 py-1 text-xs rounded-md bg-red-900/20 text-red-400">
+                                {t('profile.status_failed')}
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {/* Tercihler Sekmesi */}
+            {activeTab === 'preferences' && (
+              <div className="animate-fadeIn">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {t('profile.preferences')}
+                  </h3>
+                  <p className="text-gray-400 mb-6">
+                    {t('profile.preferences_desc')}
+                  </p>
+                </div>
+                
+                <div className="space-y-8">
+                  {/* Dil Tercihi */}
+                  <div className="bg-[#1D1D1D] rounded-xl p-5 border border-gray-800">
+                    <h4 className="text-lg font-medium text-white mb-4">
+                      {t('profile.language_preference')}
+                    </h4>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      <div className="bg-[#232323] rounded-lg border border-yellow-500 p-3 cursor-pointer">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center">
+                            <img src="https://flagsapi.com/TR/flat/24.png" alt="Türkçe" className="mr-3" />
+                            <span className="text-white">Türkçe</span>
+                          </div>
+                          <i className="fas fa-check text-yellow-500"></i>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-[#232323] rounded-lg border border-gray-700 hover:border-yellow-500/50 p-3 cursor-pointer transition-all duration-300">
+                        <div className="flex items-center">
+                          <img src="https://flagsapi.com/GB/flat/24.png" alt="English" className="mr-3" />
+                          <span className="text-gray-300">English</span>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-[#232323] rounded-lg border border-gray-700 hover:border-yellow-500/50 p-3 cursor-pointer transition-all duration-300">
+                        <div className="flex items-center">
+                          <img src="https://flagsapi.com/GE/flat/24.png" alt="ქართული" className="mr-3" />
+                          <span className="text-gray-300">ქართული</span>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-[#232323] rounded-lg border border-gray-700 hover:border-yellow-500/50 p-3 cursor-pointer transition-all duration-300">
+                        <div className="flex items-center">
+                          <img src="https://flagsapi.com/RU/flat/24.png" alt="Русский" className="mr-3" />
+                          <span className="text-gray-300">Русский</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Bildirim Ayarları */}
+                  <div className="bg-[#1D1D1D] rounded-xl p-5 border border-gray-800">
+                    <h4 className="text-lg font-medium text-white mb-4">
+                      {t('profile.notifications')}
+                    </h4>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-gray-300">{t('profile.email_notifications')}</p>
+                          <p className="text-sm text-gray-500">Önemli güncellemeler ve güvenlik bildirimleri</p>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" className="sr-only peer" defaultChecked />
+                          <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-500"></div>
+                        </label>
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-gray-300">{t('profile.promo_notifications')}</p>
+                          <p className="text-sm text-gray-500">Promosyonlar, bonuslar ve özel teklifler</p>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" className="sr-only peer" />
+                          <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-500"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Tema ve Animasyonlar */}
+                  <div className="bg-[#1D1D1D] rounded-xl p-5 border border-gray-800">
+                    <h4 className="text-lg font-medium text-white mb-4">
+                      {t('profile.theme')}
+                    </h4>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-gray-300">{t('profile.animations')}</p>
+                          <p className="text-sm text-gray-500">Arayüz animasyonlarını etkinleştir</p>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" className="sr-only peer" defaultChecked />
+                          <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-500"></div>
+                        </label>
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-gray-300">{t('profile.dark_mode')}</p>
+                          <p className="text-sm text-gray-500">Koyu tema kullan</p>
+                        </div>
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <input type="checkbox" className="sr-only peer" defaultChecked />
+                          <div className="w-12 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-500"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <button
+                      type="button"
+                      className="px-6 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-[#121212] font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-yellow-500/30 group relative overflow-hidden"
+                    >
+                      <span className="relative z-10 flex items-center">
+                        <i className="fas fa-save mr-2"></i>
+                        <span>{t('profile.save_preferences')}</span>
+                      </span>
+                      <div className="absolute top-0 left-0 w-full h-full bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                      <div className="absolute top-0 -inset-full h-full w-1/2 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shimmer"></div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileModal;
