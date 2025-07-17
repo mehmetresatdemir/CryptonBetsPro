@@ -344,8 +344,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         user_id: Number(user_id), // String'den number'a çevir
         user_name: user_name || req.body.user_name,
         user_email: user_email || req.body.user_email,
-        return_url: req.body.return_url || 'https://www.cryptonbets1.com/payment/return',
-        callback_url: req.body.callback_url || 'https://www.cryptonbets1.com/api/public/deposit/callback',
+        return_url: req.body.return_url || 'https://cryptonbets1.com/payment/return',
+        callback_url: req.body.callback_url || 'https://pay.cryptonbets1.com/api/public/deposit/callback',
         site_reference_number: req.body.site_reference_number || `ORDER_${Date.now()}`,
         firstName: req.body.firstName || 'User',
         lastName: req.body.lastName || 'Name'
@@ -794,6 +794,128 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(500).json({
         success: false,
         error: 'XPay callback processing failed',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
+  // 🔧 Callback Test Endpoint - Debug için
+  app.post('/api/public/callback/test', async (req, res) => {
+    try {
+      console.log('🧪 TEST Callback alındı:', JSON.stringify(req.body, null, 2));
+      console.log('🧪 TEST Headers:', JSON.stringify(req.headers, null, 2));
+      
+      return res.json({
+        success: true,
+        message: 'Callback test başarılı',
+        received_data: req.body,
+        headers: req.headers,
+        timestamp: new Date().toISOString()
+      });
+    } catch (error) {
+      console.error('❌ Callback test error:', error);
+      return res.status(500).json({
+        success: false,
+        error: 'Callback test failed',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
+  // 🧪 Manuel Callback Test - Belirli transaction için
+  app.post('/api/public/test-callback/:transactionId', async (req, res) => {
+    try {
+      const { transactionId } = req.params;
+      console.log(`🧪 Manuel callback test başlatılıyor: ${transactionId}`);
+      
+      // Test callback data oluştur
+      const testCallbackData = {
+        transaction_id: transactionId,
+        status: 'success', // veya 'completed'
+        amount: req.body.amount || 2500,
+        payment_method: req.body.payment_method || 'havale',
+        user_id: req.body.user_id || '1',
+        timestamp: new Date().toISOString(),
+        test: true
+      };
+      
+      console.log('🧪 Test callback data:', testCallbackData);
+      
+      // Normal callback endpoint'ini çağır
+      const callbackResponse = await fetch(`${req.protocol}://${req.get('host')}/api/public/deposit/callback`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(testCallbackData)
+      });
+      
+      const callbackResult = await callbackResponse.json();
+      
+      return res.json({
+        success: true,
+        message: 'Manuel callback test tamamlandı',
+        test_data: testCallbackData,
+        callback_response: callbackResult
+      });
+    } catch (error) {
+      console.error('❌ Manuel callback test hatası:', error);
+      return res.status(500).json({
+        success: false,
+        error: 'Manuel callback test başarısız',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
+  // 🔍 Callback Debug Endpoint - Transaction durumunu kontrol et
+  app.get('/api/public/callback/debug/:transactionId', async (req, res) => {
+    try {
+      const { transactionId } = req.params;
+      console.log('🔍 Callback debug için transaction aranıyor:', transactionId);
+      
+      // Transaction'ı bul
+      const transactionQuery = await db
+        .select()
+        .from(transactions)
+        .where(eq(transactions.transactionId, transactionId))
+        .limit(1);
+      
+      if (transactionQuery.length === 0) {
+        return res.json({
+          success: false,
+          error: 'Transaction bulunamadı',
+          transaction_id: transactionId
+        });
+      }
+      
+      const transaction = transactionQuery[0];
+      
+      // User'ı bul
+      const [user] = await db.select().from(users).where(eq(users.id, transaction.userId));
+      
+      return res.json({
+        success: true,
+        transaction: {
+          id: transaction.transactionId,
+          status: transaction.status,
+          amount: transaction.amount,
+          userId: transaction.userId,
+          createdAt: transaction.createdAt,
+          processedAt: transaction.processedAt
+        },
+        user: user ? {
+          id: user.id,
+          username: user.username,
+          balance: user.balance,
+          totalDeposits: user.totalDeposits
+        } : null
+      });
+    } catch (error) {
+      console.error('❌ Callback debug error:', error);
+      return res.status(500).json({
+        success: false,
+        error: 'Debug failed',
         details: error instanceof Error ? error.message : 'Unknown error'
       });
     }

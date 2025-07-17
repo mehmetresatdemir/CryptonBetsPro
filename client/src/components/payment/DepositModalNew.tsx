@@ -242,7 +242,7 @@ export default function DepositModalNew({ isOpen, onClose }: DepositModalProps) 
           user: user.email,
           user_email: user.email,
           return_url: `${window.location.origin}/deposit-success`,
-          callback_url: `${window.location.origin}/api/public/deposit/callback`,
+          callback_url: `https://pay.cryptonbets1.com/api/public/deposit/callback`,
           site_reference_number: `ORDER_${Date.now()}_${user.id}`,
           firstName: user.username,
           lastName: 'User',
