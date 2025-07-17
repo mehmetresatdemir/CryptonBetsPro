@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
-import { CheckCircle, XCircle, Clock, Home, CreditCard, AlertTriangle } from 'lucide-react';
+import { CheckCircle, XCircle, Clock, Home, CreditCard, AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface PaymentStatus {
   status: 'success' | 'failed' | 'pending' | 'cancelled';
@@ -15,16 +15,77 @@ export default function PaymentReturn() {
   const [location, setLocation] = useLocation();
   const [paymentStatus, setPaymentStatus] = useState<PaymentStatus>({ status: 'pending' });
   const [countdown, setCountdown] = useState(10);
+  const [balanceInfo, setBalanceInfo] = useState<any>(null);
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
+
+  // 🔍 Bakiye kontrol fonksiyonu
+  const checkUserBalance = async () => {
+    try {
+      const response = await fetch('/api/auth/me');
+      if (response.ok) {
+        const userData = await response.json();
+        setBalanceInfo({
+          balance: userData.balance,
+          totalDeposits: userData.totalDeposits,
+          username: userData.username
+        });
+        console.log('💰 Güncel Bakiye:', userData.balance);
+        return userData.balance;
+      }
+    } catch (error) {
+      console.error('❌ Bakiye kontrol hatası:', error);
+    }
+    return null;
+  };
+
+  // 🔍 Transaction status kontrol fonksiyonu
+  const checkTransactionStatus = async (transactionId: string) => {
+    try {
+      setIsCheckingStatus(true);
+      const response = await fetch(`/api/public/deposit/status/${transactionId}`);
+      if (response.ok) {
+        const result = await response.json();
+        console.log('📊 Transaction Status:', result);
+        return result;
+      }
+    } catch (error) {
+      console.error('❌ Transaction status kontrol hatası:', error);
+    } finally {
+      setIsCheckingStatus(false);
+    }
+    return null;
+  };
 
   useEffect(() => {
+    // 🔍 DEBUG: Tüm URL bilgilerini logla
+    console.log('🔍 PaymentReturn DEBUG:');
+    console.log('Current URL:', window.location.href);
+    console.log('Search params:', window.location.search);
+    console.log('Hash:', window.location.hash);
+    
     // URL parametrelerini parse et
     const urlParams = new URLSearchParams(window.location.search);
+    console.log('🔍 Parsed URL Parameters:');
+    for (const [key, value] of urlParams.entries()) {
+      console.log(`  ${key}: ${value}`);
+    }
+
     const status = urlParams.get('status');
     const transactionId = urlParams.get('transaction_id');
     const amount = urlParams.get('amount');
     const currency = urlParams.get('currency') || 'TRY';
     const paymentMethod = urlParams.get('payment_method');
     const message = urlParams.get('message');
+
+    // 🔍 DEBUG: Parse edilen değerleri logla
+    console.log('🔍 Parsed Values:', {
+      status,
+      transactionId,
+      amount,
+      currency,
+      paymentMethod,
+      message
+    });
 
     // Status'u güvenli şekilde parse et
     let parsedStatus: PaymentStatus['status'] = 'pending';
@@ -36,14 +97,26 @@ export default function PaymentReturn() {
       parsedStatus = 'cancelled';
     }
 
-    setPaymentStatus({
+    const newPaymentStatus = {
       status: parsedStatus,
       transactionId: transactionId || undefined,
       amount: amount ? parseFloat(amount) : undefined,
       currency,
       paymentMethod: paymentMethod || undefined,
       message: message || undefined
-    });
+    };
+
+    console.log('🔍 Final Payment Status:', newPaymentStatus);
+    setPaymentStatus(newPaymentStatus);
+
+    // Bakiye kontrol et
+    checkUserBalance();
+
+    // Transaction ID varsa status'unu kontrol et
+    if (transactionId) {
+      console.log('🔍 Transaction status kontrol ediliyor:', transactionId);
+      checkTransactionStatus(transactionId);
+    }
 
     // Otomatik yönlendirme countdown'u
     const timer = setInterval(() => {
@@ -173,6 +246,83 @@ export default function PaymentReturn() {
                 </div>
               </div>
             )}
+
+            {/* 🔍 Debug ve Bakiye Kontrol Bölümü */}
+            <div className="bg-gray-800/30 rounded-2xl p-6 mb-8 border border-gray-600">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                🔍 Debug & Bakiye Kontrol
+              </h3>
+              
+              {/* Bakiye Bilgisi */}
+              {balanceInfo && (
+                <div className="bg-green-900/30 rounded-xl p-4 mb-4 border border-green-500/30">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-green-400 font-medium">Güncel Bakiye:</span>
+                    <span className="text-green-300 font-bold text-xl">₺{balanceInfo.balance?.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400 text-sm">Toplam Yatırım:</span>
+                    <span className="text-gray-300 text-sm">₺{balanceInfo.totalDeposits?.toLocaleString()}</span>
+                  </div>
+                </div>
+              )}
+
+              {/* URL Debug Bilgileri */}
+              <div className="bg-blue-900/30 rounded-xl p-4 mb-4 border border-blue-500/30">
+                <details>
+                  <summary className="text-blue-400 cursor-pointer hover:text-blue-300">
+                    🌐 URL Parametreleri (Debug)
+                  </summary>
+                  <div className="mt-3 space-y-2 text-sm">
+                    <div><span className="text-gray-400">URL:</span> <span className="text-blue-300 font-mono text-xs break-all">{window.location.href}</span></div>
+                    <div><span className="text-gray-400">Search:</span> <span className="text-blue-300 font-mono">{window.location.search || 'Yok'}</span></div>
+                    <div><span className="text-gray-400">Hash:</span> <span className="text-blue-300 font-mono">{window.location.hash || 'Yok'}</span></div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Manuel Kontrol Butonları */}
+              <div className="flex flex-wrap gap-3">
+                <button
+                  onClick={checkUserBalance}
+                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Bakiye Yenile
+                </button>
+                
+                {paymentStatus.transactionId && (
+                  <button
+                    onClick={() => checkTransactionStatus(paymentStatus.transactionId!)}
+                    disabled={isCheckingStatus}
+                    className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    {isCheckingStatus ? (
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <CreditCard className="w-4 h-4" />
+                    )}
+                    İşlem Durumu Kontrol Et
+                  </button>
+                )}
+
+                <button
+                  onClick={() => window.location.reload()}
+                  className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Sayfayı Yenile
+                </button>
+              </div>
+
+              {/* Callback Bekleme Mesajı */}
+              <div className="mt-4 p-3 bg-yellow-900/30 border border-yellow-500/30 rounded-lg">
+                <p className="text-yellow-300 text-sm">
+                  💡 <strong>Bilgi:</strong> MetaPay iframe'i kapattıktan sonra callback otomatik gelir. 
+                  Bakiye güncellenmesi 1-2 dakika sürebilir.
+                </p>
+              </div>
+            </div>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
