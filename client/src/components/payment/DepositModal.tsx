@@ -516,7 +516,7 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
         user_name: user.fullName || user.username,
         user: user.fullName || user.username || user.firstName || 'Kullanıcı', // XPay API için user alanı - garantili
         user_email: user.email,
-        return_url: `${window.location.origin}/payment/return`,
+        return_url: `https://pay.cryptonbets1.com/payment/return`,
         callback_url: `https://pay.cryptonbets1.com/api/public/deposit/callback`,
         site_reference_number: `ORDER_${Date.now()}`,
         // Kredi kartı ödemesi için TC kimlik numarası zorunlu
@@ -562,6 +562,25 @@ export default function DepositModal({ isOpen, onClose }: DepositModalProps) {
       if (result.transaction_id) {
         // Transaction ID'yi kaydet
         setTransactionId(result.transaction_id);
+        
+        // 🔍 DEBUG: Transaction ID'yi localStorage'a kaydet
+        localStorage.setItem('lastTransactionId', result.transaction_id);
+        localStorage.setItem('lastDepositData', JSON.stringify({
+          transactionId: result.transaction_id,
+          amount: depositData.amount,
+          paymentMethod: depositData.payment_method_id,
+          timestamp: new Date().toISOString(),
+          userInfo: {
+            userId: depositData.user_id,
+            userName: depositData.user_name
+          }
+        }));
+        
+        console.log('💾 Transaction saved to localStorage:', {
+          transactionId: result.transaction_id,
+          amount: depositData.amount,
+          method: depositData.payment_method_id
+        });
         
                 if (result.payment_url) {
           // Payment URL'sini kaydet

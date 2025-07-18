@@ -43,7 +43,7 @@ import { authMiddleware, guestChatMiddleware } from './utils/auth';
 import * as chatRoutes from './routes/chat';
 import { db } from './db';
 import { users, transactions, userLogs } from '../shared/schema';
-import { eq, and, desc } from 'drizzle-orm';
+import { eq, and, desc, gt } from 'drizzle-orm';
 
 // Kripto para yardımcı fonksiyonlar
 function validateCryptoAddress(address: string, cryptoType: string): { valid: boolean; error?: string } {
@@ -344,7 +344,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         user_id: Number(user_id), // String'den number'a çevir
         user_name: user_name || req.body.user_name,
         user_email: user_email || req.body.user_email,
-        return_url: req.body.return_url || 'https://cryptonbets1.com/payment/return',
+        return_url: req.body.return_url || 'https://pay.cryptonbets1.com/payment/return',
         callback_url: req.body.callback_url || 'https://pay.cryptonbets1.com/api/public/deposit/callback',
         site_reference_number: req.body.site_reference_number || `ORDER_${Date.now()}`,
         firstName: req.body.firstName || 'User',
@@ -397,6 +397,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       console.log('📤 XPay API Deposit Create Request:', JSON.stringify(xpayRequestBody, null, 2));
+      console.log('🔗 XPay API Return/Callback URLs VERIFICATION:', {
+        return_url: xpayRequestBody.return_url,
+        callback_url: xpayRequestBody.callback_url,
+        site_reference_number: xpayRequestBody.site_reference_number,
+        user_id: xpayRequestBody.user_id,
+        amount: xpayRequestBody.amount,
+        payment_method_id: xpayRequestBody.payment_method_id
+      });
 
       // Gerçek XPay sunucusuna proxy yap
       const fetch = (await import('node-fetch')).default;
@@ -425,6 +433,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
         if (response.ok) {
           const data: any = await response.json();
           console.log('✅ XPay API Deposit Success Response:', JSON.stringify(data, null, 2));
+          
+          // XPay API response'unda payment URL ve iframe bilgilerini özellikle logla
+          console.log('🔗 XPay API Response Analysis:', {
+            hasPaymentUrl: !!data.data?.payment_url,
+            payment_url: data.data?.payment_url,
+            hasIframe: !!data.data?.iframe,
+            iframe_link: data.data?.iframe?.link,
+            iframe_token: data.data?.iframe?.token,
+            transaction_id: data.data?.transaction_id,
+            status: data.data?.status,
+            estimated_time: data.data?.estimated_time,
+            is_public: data.data?.is_public,
+            message: data.message
+          });
           
           // XPay'den başarılı response gelirse, local veritabanına transaction kaydı oluştur
           if (data.success && data.data?.transaction_id) {
@@ -653,7 +675,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // XPay API callback endpoint - ödeme tamamlandığında XPay bu endpoint'e callback yapar
   app.post('/api/public/deposit/callback', async (req, res) => {
     try {
-      console.log('💳 XPay Callback alındı:', JSON.stringify(req.body, null, 2));
+      console.log('💳 XPay Callback FULL DEBUG:', {
+        body: JSON.stringify(req.body, null, 2),
+        headers: {
+          'content-type': req.get('Content-Type'),
+          'user-agent': req.get('User-Agent'),
+          'x-forwarded-for': req.get('X-Forwarded-For'),
+          'authorization': req.get('Authorization') ? 'Present' : 'Not present'
+        },
+        method: req.method,
+        url: req.url,
+        ip: req.ip,
+        timestamp: new Date().toISOString()
+      });
       
       const { transaction_id, status, amount, payment_method, user_id } = req.body;
 
@@ -794,6 +828,181 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(500).json({
         success: false,
         error: 'XPay callback processing failed',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
+  // 🔍 Payment Return URL Debug Endpoint
+  app.all('/payment/return', async (req, res) => {
+    try {
+      // Tüm request detaylarını logla
+      console.log('🔄 Payment Return URL accessed with FULL DEBUG:', {
+        method: req.method,
+        url: req.url,
+        originalUrl: req.originalUrl,
+        query: req.query,
+        body: req.body,
+        headers: {
+          'user-agent': req.get('User-Agent'),
+          'referer': req.get('Referer'),
+          'x-forwarded-for': req.get('X-Forwarded-For'),
+          'x-real-ip': req.get('X-Real-IP')
+        },
+        params: req.params,
+        ip: req.ip,
+        ips: req.ips,
+        // Tüm olası transaction parametrelerini kontrol et
+        transaction_id: req.query.transaction_id || req.body.transaction_id,
+        transactionId: req.query.transactionId || req.body.transactionId,
+        status: req.query.status || req.body.status,
+        token: req.query.token || req.body.token,
+        success: req.query.success || req.body.success,
+        reference: req.query.reference || req.body.reference,
+        order_id: req.query.order_id || req.body.order_id,
+        amount: req.query.amount || req.body.amount,
+        payment_method: req.query.payment_method || req.body.payment_method,
+        // Raw query string de logla
+        rawQuery: req.url.split('?')[1] || 'No query string'
+      });
+
+      // Transaction ID'yi bul (çeşitli parametrelerden)
+      const transactionId = req.query.transaction_id || req.body.transaction_id || 
+                           req.query.reference || req.body.reference ||
+                           req.query.order_id || req.body.order_id;
+
+      // Transaction'ı database'de ara
+      let transaction = null;
+      if (transactionId) {
+        try {
+          const transactionQuery = await db
+            .select()
+            .from(transactions)
+            .where(eq(transactions.transactionId, transactionId as string))
+            .limit(1);
+          
+          if (transactionQuery.length > 0) {
+            transaction = transactionQuery[0];
+            console.log('🔍 Found transaction:', {
+              id: transaction.transactionId,
+              status: transaction.status,
+              amount: transaction.amount,
+              userId: transaction.userId
+            });
+          } else {
+            console.log('🔍 Found transaction: NOT FOUND for ID:', transactionId);
+          }
+        } catch (dbError) {
+          console.error('❌ Database query error:', dbError);
+        }
+      } else {
+        console.log('🔍 No transaction ID found in request parameters');
+        
+        // Transaction ID yoksa alternatif arama yöntemleri dene
+        console.log('🔍 Alternative search: Looking for recent pending transactions...');
+        
+        try {
+          // Son 30 dakikadaki pending transaction'ları ara
+          const recentTransactions = await db
+            .select()
+            .from(transactions)
+            .where(
+              and(
+                eq(transactions.status, 'pending'),
+                gt(transactions.createdAt, new Date(Date.now() - 30 * 60 * 1000)) // Son 30 dakika
+              )
+            )
+            .orderBy(desc(transactions.createdAt))
+            .limit(5);
+          
+          console.log('🔍 Recent pending transactions found:', {
+            count: recentTransactions.length,
+                         transactions: recentTransactions.map((t: any) => ({
+               id: t.transactionId,
+               userId: t.userId,
+               amount: t.amount,
+               createdAt: t.createdAt
+             }))
+          });
+          
+          // En son transaction'ı seç (eğer varsa)
+          if (recentTransactions.length > 0) {
+            transaction = recentTransactions[0];
+            console.log('🔍 Using most recent pending transaction:', {
+              id: transaction.transactionId,
+              userId: transaction.userId,
+              amount: transaction.amount
+            });
+          }
+        } catch (altSearchError) {
+          console.error('❌ Alternative transaction search error:', altSearchError);
+        }
+      }
+
+      // Frontend'e HTML response döndür (client-side routing için)
+      const htmlResponse = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Payment Return - CryptonBets</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <style>
+            body { font-family: Arial, sans-serif; background: #1a1a2e; color: white; }
+            .container { max-width: 600px; margin: 50px auto; text-align: center; padding: 20px; }
+            .debug { background: #16213e; padding: 15px; border-radius: 10px; margin: 20px 0; text-align: left; }
+            .success { color: #4ade80; }
+            .error { color: #f87171; }
+            .pending { color: #fbbf24; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <h1>🔄 Payment Return Debug</h1>
+            <div class="debug">
+              <h3>📊 Request Details:</h3>
+              <pre>${JSON.stringify({
+                query: req.query,
+                body: req.body,
+                transactionId,
+                foundTransaction: !!transaction
+              }, null, 2)}</pre>
+            </div>
+            ${transactionId ? `
+              <div class="debug">
+                <h3>💳 Transaction Info:</h3>
+                <p><strong>Transaction ID:</strong> ${transactionId}</p>
+                <p><strong>Database Status:</strong> ${transaction ? transaction.status : 'NOT FOUND'}</p>
+                <p><strong>Amount:</strong> ${transaction ? transaction.amount : 'N/A'}</p>
+              </div>
+            ` : '<p class="error">❌ No transaction ID found in request</p>'}
+            <div class="debug">
+              <h3>🔄 Next Steps:</h3>
+              <p>This page will redirect to React app in 3 seconds...</p>
+              <script>
+                console.log('🔍 Payment Return Debug:', {
+                  query: ${JSON.stringify(req.query)},
+                  transactionId: '${transactionId || 'N/A'}',
+                  hasTransaction: ${!!transaction}
+                });
+                
+                // React app'e yönlendir (client-side routing)
+                setTimeout(() => {
+                  window.location.href = '/';
+                }, 3000);
+              </script>
+            </div>
+          </div>
+        </body>
+        </html>
+      `;
+
+      res.send(htmlResponse);
+    } catch (error) {
+      console.error('❌ Payment return debug error:', error);
+      res.status(500).json({
+        success: false,
+        error: 'Payment return debug failed',
         details: error instanceof Error ? error.message : 'Unknown error'
       });
     }

@@ -72,8 +72,8 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  // Vite build output: dist/public (vite.config.ts'e göre)
-  const staticPath = path.join(process.cwd(), 'dist', 'public');
+  // dist/index.js çalışıyor, bu yüzden dist/public'e ulaşmak için 'public' yeterli
+  const staticPath = path.join(__dirname, 'public');
 
   if (!fs.existsSync(staticPath)) {
     throw new Error(

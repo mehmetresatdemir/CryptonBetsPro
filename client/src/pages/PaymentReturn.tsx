@@ -9,87 +9,172 @@ interface PaymentStatus {
   currency?: string;
   paymentMethod?: string;
   message?: string;
+  debugInfo?: any;
 }
 
 export default function PaymentReturn() {
   const [location, setLocation] = useLocation();
   const [paymentStatus, setPaymentStatus] = useState<PaymentStatus>({ status: 'pending' });
-  const [countdown, setCountdown] = useState(10);
-  const [balanceInfo, setBalanceInfo] = useState<any>(null);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
+  const [countdown, setCountdown] = useState(30); // 30 saniyeye çıkardım
+  const [isChecking, setIsChecking] = useState(false);
+  const [autoPolling, setAutoPolling] = useState(false);
 
-  // 🔍 Bakiye kontrol fonksiyonu
-  const checkUserBalance = async () => {
-    try {
-      const response = await fetch('/api/auth/me');
-      if (response.ok) {
-        const userData = await response.json();
-        setBalanceInfo({
-          balance: userData.balance,
-          totalDeposits: userData.totalDeposits,
-          username: userData.username
-        });
-        console.log('💰 Güncel Bakiye:', userData.balance);
-        return userData.balance;
-      }
-    } catch (error) {
-      console.error('❌ Bakiye kontrol hatası:', error);
-    }
-    return null;
-  };
-
-  // 🔍 Transaction status kontrol fonksiyonu
+  // Transaction durumunu API'den çek
   const checkTransactionStatus = async (transactionId: string) => {
     try {
-      setIsCheckingStatus(true);
-      const response = await fetch(`/api/public/deposit/status/${transactionId}`);
-      if (response.ok) {
-        const result = await response.json();
-        console.log('📊 Transaction Status:', result);
-        return result;
+      setIsChecking(true);
+      console.log('🔍 Transaction durumu kontrol ediliyor:', transactionId);
+      
+      const response = await fetch(`/api/public/callback/debug/${transactionId}`);
+      const result = await response.json();
+      
+      console.log('📊 Transaction Debug Response:', result);
+      
+      if (result.success && result.transaction) {
+        const transaction = result.transaction;
+        let newStatus: PaymentStatus['status'] = 'pending';
+        
+        if (transaction.status === 'completed') {
+          newStatus = 'success';
+          setAutoPolling(false); // Stop polling when completed
+        } else if (transaction.status === 'failed') {
+          newStatus = 'failed';
+          setAutoPolling(false); // Stop polling when failed
+        } else if (transaction.status === 'cancelled') {
+          newStatus = 'cancelled';
+          setAutoPolling(false); // Stop polling when cancelled
+        }
+        
+        setPaymentStatus(prev => ({
+          ...prev,
+          status: newStatus,
+          amount: transaction.amount,
+          debugInfo: result
+        }));
+
+        return newStatus;
       }
+      return 'pending';
     } catch (error) {
-      console.error('❌ Transaction status kontrol hatası:', error);
+      console.error('❌ Transaction durumu kontrol hatası:', error);
+      return 'pending';
     } finally {
-      setIsCheckingStatus(false);
+      setIsChecking(false);
     }
-    return null;
   };
 
+  // Auto-polling effect
   useEffect(() => {
-    // 🔍 DEBUG: Tüm URL bilgilerini logla
-    console.log('🔍 PaymentReturn DEBUG:');
-    console.log('Current URL:', window.location.href);
-    console.log('Search params:', window.location.search);
-    console.log('Hash:', window.location.hash);
-    
-    // URL parametrelerini parse et
-    const urlParams = new URLSearchParams(window.location.search);
-    console.log('🔍 Parsed URL Parameters:');
-    for (const [key, value] of urlParams.entries()) {
-      console.log(`  ${key}: ${value}`);
-    }
+    if (!autoPolling || !paymentStatus.transactionId) return;
 
+    const pollInterval = setInterval(async () => {
+      console.log('🔄 Auto-polling transaction status...');
+      const status = await checkTransactionStatus(paymentStatus.transactionId!);
+      
+      if (status === 'completed' || status === 'failed' || status === 'cancelled') {
+        setAutoPolling(false);
+      }
+    }, 5000); // Her 5 saniyede bir kontrol
+
+    return () => clearInterval(pollInterval);
+  }, [autoPolling, paymentStatus.transactionId]);
+
+  useEffect(() => {
+    // Tüm URL bilgilerini yakala
+    const fullUrl = window.location.href;
+    const urlParams = new URLSearchParams(window.location.search);
+    const hash = window.location.hash;
+    const pathname = window.location.pathname;
+    
+    // Tüm URL parametrelerini bir object'e çevir
+    const allParams: { [key: string]: string } = {};
+    urlParams.forEach((value, key) => {
+      allParams[key] = value;
+    });
+
+    console.log('🔍 PaymentReturn - FULL URL DEBUG:', {
+      fullUrl,
+      pathname,
+      search: window.location.search,
+      hash,
+      allParams,
+      paramCount: Object.keys(allParams).length
+    });
+
+    // URL parametrelerini parse et
     const status = urlParams.get('status');
-    const transactionId = urlParams.get('transaction_id');
+    const transactionId = urlParams.get('transaction_id') || urlParams.get('transactionId') || urlParams.get('reference') || urlParams.get('order_id');
     const amount = urlParams.get('amount');
     const currency = urlParams.get('currency') || 'TRY';
-    const paymentMethod = urlParams.get('payment_method');
+    const paymentMethod = urlParams.get('payment_method') || urlParams.get('method');
     const message = urlParams.get('message');
+    const token = urlParams.get('token');
+    const success = urlParams.get('success');
 
-    // 🔍 DEBUG: Parse edilen değerleri logla
-    console.log('🔍 Parsed Values:', {
+    console.log('🔍 PaymentReturn - Parsed Parameters:', {
       status,
       transactionId,
       amount,
       currency,
       paymentMethod,
-      message
+      message,
+      token,
+      success,
+      hasAnyParam: !!(status || transactionId || amount || token)
     });
+
+    // Eğer hiç parametre yoksa, local storage'dan kontrol et
+    if (!transactionId && !status && !token) {
+      const lastTransaction = localStorage.getItem('lastTransactionId');
+      const lastDepositData = localStorage.getItem('lastDepositData');
+      
+      console.log('🔍 PaymentReturn - Local Storage Check:', {
+        lastTransaction,
+        lastDepositData: lastDepositData ? JSON.parse(lastDepositData) : null
+      });
+
+      if (lastTransaction) {
+        console.log('🔄 Using transaction from localStorage:', lastTransaction);
+        
+        // Auto-polling'i başlat (sadece son 10 dakikadaki transaction'lar için)
+        if (lastDepositData) {
+          try {
+            const depositData = JSON.parse(lastDepositData);
+            const transactionTime = new Date(depositData.timestamp);
+            const now = new Date();
+            const diffMinutes = (now.getTime() - transactionTime.getTime()) / (1000 * 60);
+            
+            if (diffMinutes <= 10) {
+              console.log('⏰ Recent transaction found, starting auto-polling...');
+              setAutoPolling(true);
+            } else {
+              console.log('⏰ Transaction too old for auto-polling:', diffMinutes, 'minutes');
+            }
+          } catch (e) {
+            console.error('❌ Error parsing deposit data:', e);
+          }
+        }
+        
+        checkTransactionStatus(lastTransaction);
+        setPaymentStatus(prev => ({ 
+          ...prev, 
+          transactionId: lastTransaction,
+          message: 'Transaction localStorage\'dan alındı ve kontrol ediliyor...'
+        }));
+      } else {
+        console.log('📝 No transaction found in localStorage, showing manual input');
+        // Kullanıcıya bilgi mesajı göster
+        setPaymentStatus(prev => ({ 
+          ...prev, 
+          status: 'pending',
+          message: 'Ödeme işlemi kontrol ediliyor. Eğer işlem tamamlandıysa bakiyeniz güncellenecektir.'
+        }));
+      }
+    }
 
     // Status'u güvenli şekilde parse et
     let parsedStatus: PaymentStatus['status'] = 'pending';
-    if (status === 'success' || status === 'completed') {
+    if (status === 'success' || status === 'completed' || success === 'true' || success === '1') {
       parsedStatus = 'success';
     } else if (status === 'failed' || status === 'error') {
       parsedStatus = 'failed';
@@ -97,31 +182,80 @@ export default function PaymentReturn() {
       parsedStatus = 'cancelled';
     }
 
-    const newPaymentStatus = {
+    setPaymentStatus({
       status: parsedStatus,
       transactionId: transactionId || undefined,
       amount: amount ? parseFloat(amount) : undefined,
       currency,
       paymentMethod: paymentMethod || undefined,
       message: message || undefined
-    };
+    });
 
-    console.log('🔍 Final Payment Status:', newPaymentStatus);
-    setPaymentStatus(newPaymentStatus);
-
-    // Bakiye kontrol et
-    checkUserBalance();
-
-    // Transaction ID varsa status'unu kontrol et
+    // Eğer transaction ID varsa, gerçek durumu API'den çek
     if (transactionId) {
-      console.log('🔍 Transaction status kontrol ediliyor:', transactionId);
       checkTransactionStatus(transactionId);
     }
 
-    // Otomatik yönlendirme countdown'u
+    // Iframe'den gelen postMessage'ları dinle
+    const handleIframeMessage = (event: MessageEvent) => {
+      console.log('📨 Iframe Message Received:', event);
+      
+      // Güvenlik kontrolü - sadece MetaPay/XPay domain'lerinden mesaj kabul et
+      const allowedOrigins = [
+        'https://testapi.xpayio.com',
+        'https://api.xpayio.com', 
+        'https://pay.cryptonbets1.com'
+      ];
+      
+      if (!allowedOrigins.some(origin => event.origin.includes(origin))) {
+        console.log('⚠️ Unauthorized iframe message origin:', event.origin);
+        return;
+      }
+
+      try {
+        let data = event.data;
+        if (typeof data === 'string') {
+          data = JSON.parse(data);
+        }
+
+        console.log('📨 Parsed iframe data:', data);
+
+        // MetaPay success callback'ini yakala
+        if (data.type === 'payment_success' || data.status === 'success' || data.status === 'completed') {
+          console.log('✅ Iframe Success Callback:', data);
+          
+          setPaymentStatus(prev => ({
+            ...prev,
+            status: 'success',
+            transactionId: data.transaction_id || data.transactionId || prev.transactionId,
+            amount: data.amount || prev.amount,
+            message: data.message || 'Ödeme iframe üzerinden başarıyla tamamlandı'
+          }));
+
+          // API'den de kontrol et
+          if (data.transaction_id || data.transactionId) {
+            checkTransactionStatus(data.transaction_id || data.transactionId);
+          }
+        } else if (data.type === 'payment_failed' || data.status === 'failed' || data.status === 'error') {
+          console.log('❌ Iframe Failed Callback:', data);
+          
+          setPaymentStatus(prev => ({
+            ...prev,
+            status: 'failed',
+            message: data.message || data.error || 'Ödeme iframe üzerinden başarısız oldu'
+          }));
+        }
+      } catch (error) {
+        console.error('❌ Iframe message parsing error:', error);
+      }
+    };
+
+    window.addEventListener('message', handleIframeMessage);
+
+    // Otomatik yönlendirme countdown'u - sadece success durumunda
     const timer = setInterval(() => {
       setCountdown(prev => {
-        if (prev <= 1) {
+        if (prev <= 1 && parsedStatus === 'success') {
           setLocation('/');
           return 0;
         }
@@ -129,8 +263,17 @@ export default function PaymentReturn() {
       });
     }, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener('message', handleIframeMessage);
+    };
   }, [setLocation]);
+
+  const handleManualCheck = () => {
+    if (paymentStatus.transactionId) {
+      checkTransactionStatus(paymentStatus.transactionId);
+    }
+  };
 
   const getStatusIcon = () => {
     switch (paymentStatus.status) {
@@ -247,83 +390,6 @@ export default function PaymentReturn() {
               </div>
             )}
 
-            {/* 🔍 Debug ve Bakiye Kontrol Bölümü */}
-            <div className="bg-gray-800/30 rounded-2xl p-6 mb-8 border border-gray-600">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                🔍 Debug & Bakiye Kontrol
-              </h3>
-              
-              {/* Bakiye Bilgisi */}
-              {balanceInfo && (
-                <div className="bg-green-900/30 rounded-xl p-4 mb-4 border border-green-500/30">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-green-400 font-medium">Güncel Bakiye:</span>
-                    <span className="text-green-300 font-bold text-xl">₺{balanceInfo.balance?.toLocaleString()}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400 text-sm">Toplam Yatırım:</span>
-                    <span className="text-gray-300 text-sm">₺{balanceInfo.totalDeposits?.toLocaleString()}</span>
-                  </div>
-                </div>
-              )}
-
-              {/* URL Debug Bilgileri */}
-              <div className="bg-blue-900/30 rounded-xl p-4 mb-4 border border-blue-500/30">
-                <details>
-                  <summary className="text-blue-400 cursor-pointer hover:text-blue-300">
-                    🌐 URL Parametreleri (Debug)
-                  </summary>
-                  <div className="mt-3 space-y-2 text-sm">
-                    <div><span className="text-gray-400">URL:</span> <span className="text-blue-300 font-mono text-xs break-all">{window.location.href}</span></div>
-                    <div><span className="text-gray-400">Search:</span> <span className="text-blue-300 font-mono">{window.location.search || 'Yok'}</span></div>
-                    <div><span className="text-gray-400">Hash:</span> <span className="text-blue-300 font-mono">{window.location.hash || 'Yok'}</span></div>
-                  </div>
-                </details>
-              </div>
-
-              {/* Manuel Kontrol Butonları */}
-              <div className="flex flex-wrap gap-3">
-                <button
-                  onClick={checkUserBalance}
-                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Bakiye Yenile
-                </button>
-                
-                {paymentStatus.transactionId && (
-                  <button
-                    onClick={() => checkTransactionStatus(paymentStatus.transactionId!)}
-                    disabled={isCheckingStatus}
-                    className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                  >
-                    {isCheckingStatus ? (
-                      <RefreshCw className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <CreditCard className="w-4 h-4" />
-                    )}
-                    İşlem Durumu Kontrol Et
-                  </button>
-                )}
-
-                <button
-                  onClick={() => window.location.reload()}
-                  className="flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Sayfayı Yenile
-                </button>
-              </div>
-
-              {/* Callback Bekleme Mesajı */}
-              <div className="mt-4 p-3 bg-yellow-900/30 border border-yellow-500/30 rounded-lg">
-                <p className="text-yellow-300 text-sm">
-                  💡 <strong>Bilgi:</strong> MetaPay iframe'i kapattıktan sonra callback otomatik gelir. 
-                  Bakiye güncellenmesi 1-2 dakika sürebilir.
-                </p>
-              </div>
-            </div>
-
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -333,6 +399,18 @@ export default function PaymentReturn() {
                 <Home className="w-5 h-5" />
                 Ana Sayfa
               </button>
+              
+              {/* Manuel Kontrol Butonu */}
+              {paymentStatus.transactionId && (
+                <button
+                  onClick={handleManualCheck}
+                  disabled={isChecking}
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-400 hover:to-indigo-400 transition-all duration-300 hover:transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <RefreshCw className={`w-5 h-5 ${isChecking ? 'animate-spin' : ''}`} />
+                  {isChecking ? 'Kontrol Ediliyor...' : 'Durumu Kontrol Et'}
+                </button>
+              )}
               
               {paymentStatus.status === 'success' && (
                 <button
@@ -354,9 +432,143 @@ export default function PaymentReturn() {
               )}
             </div>
 
-            {/* Auto Redirect Countdown */}
-            <div className="mt-8 text-gray-400 text-sm">
-              {countdown} saniye sonra ana sayfaya yönlendirileceksiniz...
+            {/* Auto Redirect Countdown - Sadece success durumunda göster */}
+            {paymentStatus.status === 'success' && (
+              <div className="mt-8 text-green-400 text-sm">
+                ✅ Ödeme başarılı! {countdown} saniye sonra ana sayfaya yönlendirileceksiniz...
+              </div>
+            )}
+            
+            {/* Pending durumunda bekleme mesajı */}
+            {paymentStatus.status === 'pending' && (
+              <div className="mt-8 text-blue-400 text-sm">
+                ⏳ İşlem durumu kontrol ediliyor... Lütfen bekleyiniz.
+                {autoPolling && (
+                  <div className="mt-2 text-xs text-blue-300">
+                    🔄 Otomatik kontrol aktif (5 saniye aralıklarla)
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Auto-polling kontrolü */}
+            {paymentStatus.transactionId && !autoPolling && paymentStatus.status === 'pending' && (
+              <div className="mt-8">
+                <button
+                  onClick={() => setAutoPolling(true)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-sm"
+                >
+                  🔄 Otomatik Kontrol Başlat
+                </button>
+              </div>
+            )}
+
+            {/* Auto-polling durdurma */}
+            {autoPolling && (
+              <div className="mt-8">
+                <button
+                  onClick={() => setAutoPolling(false)}
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-sm"
+                >
+                  ⏹️ Otomatik Kontrol Durdur
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Debug Information - Development için */}
+          {paymentStatus.debugInfo && (
+            <div className="mt-8 bg-gray-800/30 rounded-2xl p-6 border border-gray-700">
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                🔍 Debug Bilgileri
+              </h3>
+              <div className="bg-gray-900/50 rounded-lg p-4 overflow-auto">
+                <pre className="text-xs text-gray-300 whitespace-pre-wrap">
+                  {JSON.stringify(paymentStatus.debugInfo, null, 2)}
+                </pre>
+              </div>
+            </div>
+          )}
+
+          {/* Transaction ID yoksa manuel giriş */}
+          {!paymentStatus.transactionId && (
+            <div className="mt-8 bg-gray-800/30 rounded-2xl p-6 border border-gray-700">
+              <h3 className="text-lg font-semibold text-white mb-3">Transaction ID ile Kontrol</h3>
+              <p className="text-gray-300 mb-4">
+                İşlem numaranız varsa aşağıya girerek durumunu kontrol edebilirsiniz:
+              </p>
+              <div className="flex gap-3">
+                <input
+                  type="text"
+                  placeholder="pub_1234567890123 veya ORDER_1234567890123"
+                  className="flex-1 bg-gray-700 text-white px-4 py-2 rounded-lg border border-gray-600 focus:border-yellow-500 focus:outline-none"
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      const input = e.target as HTMLInputElement;
+                      if (input.value.trim()) {
+                        checkTransactionStatus(input.value.trim());
+                        setPaymentStatus(prev => ({ ...prev, transactionId: input.value.trim() }));
+                      }
+                    }
+                  }}
+                />
+                <button
+                  onClick={(e) => {
+                    const input = (e.target as HTMLElement).previousElementSibling as HTMLInputElement;
+                    if (input && input.value.trim()) {
+                      checkTransactionStatus(input.value.trim());
+                      setPaymentStatus(prev => ({ ...prev, transactionId: input.value.trim() }));
+                    }
+                  }}
+                  className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded-lg transition-colors"
+                >
+                  Kontrol Et
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Manuel Transaction ID girişi - her zaman göster */}
+          <div className="mt-8 bg-gray-800/30 rounded-2xl p-6 border border-gray-700">
+            <h3 className="text-lg font-semibold text-white mb-3">
+              {paymentStatus.transactionId ? 'Başka Transaction ID Kontrol Et' : 'Transaction ID ile Kontrol'}
+            </h3>
+            <p className="text-gray-300 mb-4">
+              {paymentStatus.transactionId 
+                ? 'Farklı bir işlem numarası kontrol etmek için:'
+                : 'İşlem numaranız varsa aşağıya girerek durumunu kontrol edebilirsiniz:'
+              }
+            </p>
+            <div className="flex gap-3">
+              <input
+                type="text"
+                placeholder="pub_1234567890123 veya ORDER_1234567890123"
+                defaultValue={paymentStatus.transactionId || ''}
+                className="flex-1 bg-gray-700 text-white px-4 py-2 rounded-lg border border-gray-600 focus:border-yellow-500 focus:outline-none"
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    const input = e.target as HTMLInputElement;
+                    if (input.value.trim()) {
+                      checkTransactionStatus(input.value.trim());
+                      setPaymentStatus(prev => ({ ...prev, transactionId: input.value.trim() }));
+                      setAutoPolling(false); // Stop current polling
+                    }
+                  }
+                }}
+              />
+              <button
+                onClick={(e) => {
+                  const input = (e.target as HTMLElement).previousElementSibling as HTMLInputElement;
+                  if (input && input.value.trim()) {
+                    checkTransactionStatus(input.value.trim());
+                    setPaymentStatus(prev => ({ ...prev, transactionId: input.value.trim() }));
+                    setAutoPolling(false); // Stop current polling
+                  }
+                }}
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded-lg transition-colors"
+              >
+                Kontrol Et
+              </button>
             </div>
           </div>
 
