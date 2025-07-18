@@ -81,10 +81,10 @@ export async function initRealMoneyGame(
   console.log('✅ Balance check bypassed - game starts regardless of balance:', { userBalance });
 
   const endpoint = '/games/init';
-  const returnUrl = `${process.env.BASE_URL || 'https://www.cryptonbets1.com'}/games/return`;
+  const returnUrl = `${process.env.BASE_URL || 'https://localhost:3000'}/games/return`;
   const sessionId = `session_${Date.now()}_${userId}`;
   
-  const callbackUrl = `${process.env.BASE_URL || 'https://www.cryptonbets1.com'}/api/slotegrator/callback`;
+  const callbackUrl = `${process.env.BASE_URL || 'https://localhost:3000'}/api/slotegrator/callback`;
   
   const requestParams = {
     game_uuid: gameUuid,

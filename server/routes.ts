@@ -451,7 +451,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           // XPay'den başarılı response gelirse, local veritabanına transaction kaydı oluştur
           if (data.success && data.data?.transaction_id) {
             try {
-              // Local veritabanına transaction kaydı oluştur
+              // Local veritabanına transaction kaydı oluştur (ana transactions tablosuna)
               await db.insert(transactions).values({
                 transactionId: data.data.transaction_id, // XPay transaction ID'si
                 userId: parseInt(user_id),
@@ -1252,6 +1252,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           // Local veritabanına transaction kaydı oluştur
           if (data.success && data.data?.transaction_id) {
             try {
+              // Ana transactions tablosuna kaydet (kullanıcının transaction geçmişinde görünmesi için)
               await db.insert(transactions).values({
                 transactionId: data.data.transaction_id,
                 userId: parseInt(user_id),
@@ -1274,7 +1275,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
                 createdAt: new Date()
               });
               
-              console.log('✅ Local transaction kaydı oluşturuldu:', {
+              console.log('✅ Local transaction kaydı oluşturuldu (ana transactions tablosuna):', {
                 transactionId: data.data.transaction_id,
                 userId: user_id,
                 amount,

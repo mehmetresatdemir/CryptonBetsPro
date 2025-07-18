@@ -9,28 +9,48 @@ import jwt from 'jsonwebtoken';
 const router = Router();
 
 // Game URL creation endpoint with real money gaming support
-router.post('/game-url', async (req: Request, res: Response) => {
+router.post('/game-url', authMiddleware, async (req: Request, res: Response) => {
   try {
-    const { uuid, playerId, playerName, currency = 'TRY', language = 'tr', mode = 'real', device = 'desktop' } = req.body;
+    const { uuid, currency = 'TRY', language = 'tr', mode = 'real', device = 'desktop' } = req.body;
+    const user = req.user;
 
     if (!uuid) {
       return res.status(400).json({ error: 'Game UUID is required' });
     }
 
-    console.log(`🎮 Game URL request: ${uuid} (${mode} mode)`);
+    if (!user) {
+      return res.status(401).json({ error: 'Authentication required' });
+    }
 
-    let sessionId: string | undefined;
+    console.log(`🎮 Game URL request: ${uuid} (${mode} mode) for user ${(user as any).id}`);
+
     let result;
 
-    // Real money game initialization
+    // Real money game initialization with proper user data
     console.log('🔄 Real money mode requested...');
     
     try {
+      // Fetch current user balance from database for real money games
+      console.log('🔍 Fetching user data for real money game - User ID:', (user as any).id);
+      const currentUser = await storage.getUser((user as any).id);
+      
+      if (!currentUser) {
+        console.log('❌ User not found in database for ID:', (user as any).id);
+        return res.status(404).json({ error: 'User not found' });
+      }
+
+      console.log('👤 User data retrieved for game URL:', {
+        id: currentUser.id,
+        username: currentUser.username,
+        balance: currentUser.balance,
+        balanceType: typeof currentUser.balance
+      });
+      
       result = await realMoneyService.initRealMoneyGame(
         uuid,
-        parseInt(playerId),
-        playerName,
-        0, // balance will be fetched from user account
+        currentUser.id,
+        currentUser.username || 'Player',
+        currentUser.balance || 0, // Gerçek kullanıcı bakiyesi
         currency,
         language,
         device,
@@ -38,7 +58,7 @@ router.post('/game-url', async (req: Request, res: Response) => {
       );
       
       if (result.success) {
-        console.log('✅ Real money game initialized successfully');
+        console.log('✅ Real money game initialized successfully with balance:', currentUser.balance);
         return res.json(result);
       }
     } catch (error: any) {

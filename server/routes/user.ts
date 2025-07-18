@@ -2,6 +2,9 @@ import express, { Request, Response } from 'express';
 import { storage } from '../storage';
 import { isAuthenticated, authMiddleware } from '../utils/auth';
 import { z } from 'zod';
+import { eq, desc, sql } from 'drizzle-orm';
+import { transactions, deposits, withdrawals } from '../../shared/schema';
+import { db } from '../db';
 
 // validateRequest middleware için geçici bir çözüm
 const validateRequest = (schema: any) => (req: Request, res: Response, next: Function) => {
@@ -334,17 +337,101 @@ router.get('/transactions', async (req, res) => {
     console.log('İşlem geçmişi alınıyor:', { userId, limit, offset });
     
     try {
-      // Veritabanından kullanıcıya ait işlemleri al
-      const transactions = await storage.getTransactionsByUser(userId, limit);
-      console.log(`Veritabanından ${transactions.length} işlem bulundu`);
+      // Tüm transaction tablolarından veri al ve birleştir
+      const [transactionsResult, depositsResult, withdrawalsResult] = await Promise.all([
+        // Ana transactions tablosundan
+        db.select({
+          id: transactions.id,
+          transactionId: transactions.transactionId,
+          type: transactions.type,
+          amount: transactions.amount,
+          currency: transactions.currency,
+          status: transactions.status,
+          paymentMethod: transactions.paymentMethod,
+          description: transactions.description,
+          createdAt: transactions.createdAt,
+          updatedAt: transactions.updatedAt,
+          processedAt: transactions.processedAt,
+          balanceBefore: transactions.balanceBefore,
+          balanceAfter: transactions.balanceAfter,
+          source: sql`'transactions'`.as('source')
+        })
+        .from(transactions)
+        .where(eq(transactions.userId, userId))
+        .orderBy(desc(transactions.createdAt)),
+
+        // Deposits tablosundan
+        db.select({
+          id: deposits.id,
+          transactionId: deposits.transactionId,
+          type: sql`'deposit'`.as('type'),
+          amount: deposits.amount,
+          currency: deposits.currency,
+          status: deposits.status,
+          paymentMethod: deposits.paymentMethod,
+          description: sql`COALESCE(deposits.payment_method || ' ile para yatırma', 'Para yatırma')`.as('description'),
+          createdAt: deposits.createdAt,
+          updatedAt: deposits.updatedAt,
+          processedAt: deposits.completedAt,
+          balanceBefore: sql`NULL`.as('balanceBefore'),
+          balanceAfter: sql`NULL`.as('balanceAfter'),
+          source: sql`'deposits'`.as('source')
+        })
+        .from(deposits)
+        .where(eq(deposits.userId, userId))
+        .orderBy(desc(deposits.createdAt)),
+
+        // Withdrawals tablosundan
+        db.select({
+          id: withdrawals.id,
+          transactionId: withdrawals.transactionId,
+          type: sql`'withdrawal'`.as('type'),
+          amount: withdrawals.amount,
+          currency: withdrawals.currency,
+          status: withdrawals.status,
+          paymentMethod: withdrawals.withdrawalMethod,
+          description: sql`COALESCE(withdrawals.withdrawal_method || ' ile para çekme', 'Para çekme')`.as('description'),
+          createdAt: withdrawals.createdAt,
+          updatedAt: withdrawals.updatedAt,
+          processedAt: withdrawals.completedAt,
+          balanceBefore: sql`NULL`.as('balanceBefore'),
+          balanceAfter: sql`NULL`.as('balanceAfter'),
+          source: sql`'withdrawals'`.as('source')
+        })
+        .from(withdrawals)
+        .where(eq(withdrawals.userId, userId))
+        .orderBy(desc(withdrawals.createdAt))
+      ]);
+
+      // Tüm sonuçları birleştir ve tarihe göre sırala
+      const allTransactions = [
+        ...transactionsResult,
+        ...depositsResult,
+        ...withdrawalsResult
+      ]
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+      .slice(offset, offset + limit)
+      .map(tx => ({
+        id: tx.id,
+        transactionId: tx.transactionId,
+        type: tx.type,
+        amount: parseFloat(tx.amount?.toString() || '0'),
+        currency: tx.currency || 'TRY',
+        status: tx.status,
+        paymentMethod: tx.paymentMethod,
+        description: tx.description,
+        createdAt: tx.createdAt,
+        updatedAt: tx.updatedAt,
+        processedAt: tx.processedAt,
+        balanceBefore: tx.balanceBefore ? parseFloat(tx.balanceBefore.toString()) : null,
+        balanceAfter: tx.balanceAfter ? parseFloat(tx.balanceAfter.toString()) : null,
+        source: tx.source
+      }));
       
-      // Kullanıcının henüz işlem kaydı yoksa boş liste gönderelim
-      if (transactions.length === 0) {
-        console.log(`${userId} ID'li kullanıcının henüz işlem kaydı yok.`);
-      }
+      console.log(`Birleştirilmiş ${allTransactions.length} işlem bulundu - Transactions: ${transactionsResult.length}, Deposits: ${depositsResult.length}, Withdrawals: ${withdrawalsResult.length}`);
       
-      // Kullanıcının işlemlerini döndür (boş olabilir)
-      return res.json(transactions);
+      // Kullanıcının işlemlerini döndür
+      return res.json(allTransactions);
       
     } catch (dbError) {
       console.error('Veritabanı sorgusu sırasında hata:', dbError);

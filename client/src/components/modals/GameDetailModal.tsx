@@ -270,6 +270,15 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
       ? '/api/slotegrator/games/lobby' 
       : '/api/slotegrator/game-url';
 
+    console.log('🎮 Oyun başlatılıyor:', {
+      gameUuid: game.uuid,
+      gameName: game.name,
+      isAuthenticated,
+      selectedEndpoint: endpoint,
+      gameMode,
+      userBalance: user?.balance || 'Bilinmiyor'
+    });
+
     const token = localStorage.getItem('token');
     const headers: Record<string, string> = {
       'Content-Type': 'application/json'
@@ -277,9 +286,14 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
     
     if (token) {
       headers['Authorization'] = `Bearer ${token}`;
+      console.log('🔑 Token eklendi - authenticated oyun başlatılıyor');
+    } else {
+      console.log('⚠️ Token bulunamadı - unauthenticated oyun başlatılacak');
     }
 
     // API çağrısını direkt burada yapıyoruz
+    console.log('📡 API çağrısı gönderiliyor:', endpoint);
+    
     fetch(endpoint, {
       method: 'POST',
       headers,
@@ -292,13 +306,29 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
         currency: 'TRY'
       })
     })
-    .then(response => response.json())
+    .then(response => {
+      console.log('📡 API yanıtı alındı:', {
+        status: response.status,
+        ok: response.ok,
+        endpoint
+      });
+      return response.json();
+    })
     .then(data => {
-      console.log('Game response received:', data);
+      console.log('🎯 Game response received:', {
+        success: data.success,
+        hasUrl: !!data.url,
+        endpoint,
+        gameUuid: game.uuid,
+        message: data.message
+      });
       
       if (data.success && data.url) {
         // Tüm oyunları modal içinde iframe'de aç
-        console.log('Loading game in modal iframe:', data.url);
+        console.log('✅ Oyun başarıyla yüklendi - modal iframe açılıyor:', {
+          gameUrl: data.url.substring(0, 50) + '...',
+          gameName: game.name
+        });
         setGameUrl(data.url);
         setShowGame(true);
       } else {
@@ -306,7 +336,12 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
       }
     })
     .catch(error => {
-      console.error('Oyun başlatma hatası:', error);
+      console.error('❌ Oyun başlatma hatası:', {
+        error: error.message,
+        endpoint,
+        gameUuid: game.uuid,
+        isAuthenticated
+      });
       
       // Handle authentication errors
       if (error.message?.includes('authentication required')) {
@@ -495,7 +530,7 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
                   <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-2 md:p-3">
                     <div className="flex items-center text-xs md:text-sm text-blue-700 dark:text-blue-300">
                       <Info className="h-3 w-3 md:h-4 md:w-4 mr-2 flex-shrink-0" />
-                      <span className="truncate">{tr.deviceAutoDetected}: <strong className="ml-1">{deviceInfo.deviceCategory === 'mobile' ? tr.mobile : (deviceInfo.deviceCategory === 'tablet' ? tr.tablet : tr.desktop)}</strong></span>
+                      <span className="truncate">{tr.deviceAutoDetected}: <strong className="ml-1">{deviceInfo.deviceCategory === 'mobile' ? tr.mobile : tr.desktop}</strong></span>
                     </div>
                   </div>
                 </div>
@@ -641,7 +676,7 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
                                     (el.textContent.toLowerCase().includes('play') || 
                                      el.textContent.toLowerCase().includes('start') ||
                                      el.textContent.toLowerCase().includes('başla'))) {
-                                  if (el.offsetParent !== null) {
+                                  if ((el as HTMLElement).offsetParent !== null) {
                                     console.log('Text-based play button found, clicking...');
                                     (el as HTMLElement).click();
                                     (el as HTMLElement).style.display = 'none';
