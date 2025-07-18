@@ -833,6 +833,167 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // KA Games API callback endpoint - farklı oyun sağlayıcısı için
+  app.all('/api/kaga-games/callback', async (req, res) => {
+    try {
+      console.log('🎮 KA Games Callback alındı:', {
+        method: req.method,
+        query: req.query,
+        body: req.body,
+        headers: {
+          'content-type': req.get('Content-Type'),
+          'user-agent': req.get('User-Agent')
+        }
+      });
+      
+      const { command, u: userId, ak: apiKey, cr: currency } = req.query;
+      
+      // Command tipine göre işleme
+      switch (command) {
+        case 'balance':
+          // Bakiye sorgusu
+          console.log(`💰 KA Games Balance Request: User ${userId}`);
+          
+          try {
+            // User ID'yi parse et - KA Games format: "915bd839e28e49bdae4ef8808ed82ef0TRY"
+            const userIdStr = userId as string;
+            let actualUserId: number | null = null;
+            
+            // User ID formatını parse et (sayısal kısmı çıkar)
+            const match = userIdStr.match(/(\d+)/);
+            if (match) {
+              actualUserId = parseInt(match[1]);
+            }
+            
+            console.log('User ID parsing:', {
+              original: userIdStr,
+              parsed: actualUserId
+            });
+            
+            if (!actualUserId) {
+              console.log('❌ Geçersiz User ID format:', userIdStr);
+              return res.json({
+                status: 'error',
+                balance: 0,
+                currency: currency || 'TRY',
+                error: 'Invalid user ID'
+              });
+            }
+            
+            // Kullanıcıyı veritabanından bul
+            const user = await db.select()
+              .from(users)
+              .where(eq(users.id, actualUserId))
+              .limit(1);
+            
+            if (!user.length) {
+              console.log(`❌ KA Games: User ${actualUserId} bulunamadı`);
+              return res.json({
+                status: 'error',
+                balance: 0,
+                currency: currency || 'TRY',
+                error: 'User not found'
+              });
+            }
+            
+            const currentBalance = user[0].balance || 0;
+            console.log(`✅ KA Games Balance: User ${actualUserId}, Balance: ${currentBalance} ${currency}`);
+            
+            // KA Games format için response
+            return res.json({
+              status: 'success',
+              balance: currentBalance,
+              currency: currency || 'TRY',
+              user_id: actualUserId
+            });
+            
+          } catch (balanceError) {
+            console.error('❌ KA Games balance error:', balanceError);
+            return res.json({
+              status: 'error',
+              balance: 0,
+              currency: currency || 'TRY',
+              error: 'Internal server error'
+            });
+          }
+          
+        case 'bet':
+          // Bahis işlemi
+          const { amount: betAmount, transaction_id } = req.query;
+          console.log(`🎰 KA Games Bet: ${betAmount} ${currency}, Transaction: ${transaction_id}`);
+          
+          // Bet işlemini handle et
+          return res.json({
+            status: 'success',
+            transaction_id,
+            balance: 0 // Güncellenmiş bakiye
+          });
+          
+        case 'win':
+          // Kazanç işlemi
+          const { amount: winAmount, transaction_id: winTxId } = req.query;
+          console.log(`🎉 KA Games Win: ${winAmount} ${currency}, Transaction: ${winTxId}`);
+          
+          // Win işlemini handle et
+          return res.json({
+            status: 'success',
+            transaction_id: winTxId,
+            balance: 0 // Güncellenmiş bakiye
+          });
+          
+        default:
+          console.log(`⚠️ KA Games: Bilinmeyen command: ${command}`);
+          return res.json({
+            status: 'error',
+            error: 'Unknown command'
+          });
+      }
+      
+    } catch (error) {
+      console.error('❌ KA Games callback error:', error);
+      return res.status(500).json({
+        status: 'error',
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
+  // KA Games balance endpoint - Ping komutu için
+  app.all('/api/kaga-games/ping', async (req, res) => {
+    try {
+      console.log('🏓 KA Games Ping:', {
+        method: req.method,
+        query: req.query,
+        body: req.body
+      });
+      
+      const { u: userId, ak: apiKey, cr: currency, m: balance } = req.query;
+      
+      console.log('KA Games Ping Parameters:', {
+        userId,
+        apiKey: apiKey ? 'Present' : 'Missing',
+        currency,
+        currentBalance: balance
+      });
+      
+      // Ping response
+      return res.json({
+        status: 'success',
+        message: 'KA Games API active',
+        balance: balance || 0,
+        currency: currency || 'TRY'
+      });
+      
+    } catch (error) {
+      console.error('❌ KA Games ping error:', error);
+      return res.status(500).json({
+        status: 'error',
+        error: 'Ping failed'
+      });
+    }
+  });
+
   // 🔍 Payment Return URL Debug Endpoint
   app.all('/payment/return', async (req, res) => {
     try {

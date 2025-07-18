@@ -324,12 +324,51 @@ const GameDetailModal: React.FC<GameDetailModalProps> = ({ game, isOpen, onClose
       });
       
       if (data.success && data.url) {
+        // URL'deki balance parametresini gerçek kullanıcı bakiyesi ile güncelle
+        let finalGameUrl = data.url;
+        const userBalance = user?.balance || 0;
+        
+        console.log('🔧 URL balance parameter fixing:', {
+          originalUrl: finalGameUrl.substring(0, 100) + '...',
+          userBalance,
+          hasBalance: userBalance > 0
+        });
+        
+        // KA Games URL formatı için balance (m parametresi) düzeltmesi
+        if (finalGameUrl.includes('ka.games') && finalGameUrl.includes('m=')) {
+          const urlObj = new URL(finalGameUrl);
+          const currentBalance = urlObj.searchParams.get('m');
+          
+          console.log('🎮 KA Games URL detected:', {
+            currentBalance,
+            newBalance: userBalance,
+            willUpdate: currentBalance !== userBalance.toString()
+          });
+          
+          // Balance parametresini güncelle
+          urlObj.searchParams.set('m', userBalance.toString());
+          finalGameUrl = urlObj.toString();
+          
+          console.log('✅ Balance parameter updated:', {
+            from: currentBalance,
+            to: userBalance,
+            updatedUrl: finalGameUrl.substring(0, 100) + '...'
+          });
+        }
+        
+        // Genel URL balance parametresi düzeltmesi (diğer provider'lar için)
+        if (finalGameUrl.includes('balance=0') || finalGameUrl.includes('balance=') && userBalance > 0) {
+          finalGameUrl = finalGameUrl.replace(/balance=\d+(\.\d+)?/, `balance=${userBalance}`);
+          console.log('✅ Generic balance parameter updated to:', userBalance);
+        }
+        
         // Tüm oyunları modal içinde iframe'de aç
         console.log('✅ Oyun başarıyla yüklendi - modal iframe açılıyor:', {
-          gameUrl: data.url.substring(0, 50) + '...',
-          gameName: game.name
+          gameUrl: finalGameUrl.substring(0, 50) + '...',
+          gameName: game.name,
+          userBalance
         });
-        setGameUrl(data.url);
+        setGameUrl(finalGameUrl);
         setShowGame(true);
       } else {
         throw new Error(data.message || 'Oyun başlatılamadı');
